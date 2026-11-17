@@ -1,0 +1,60 @@
+/* PetCard · páginas legales y de soporte con el diseño de la app */
+@font-face { font-family: "Space Grotesk"; font-weight: 400; font-display: swap; src: url("/fonts/SpaceGrotesk-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 500; font-display: swap; src: url("/fonts/SpaceGrotesk-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 600; font-display: swap; src: url("/fonts/SpaceGrotesk-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 700; font-display: swap; src: url("/fonts/SpaceGrotesk-Bold.woff2") format("woff2"); }
+:root { --naranja: #FF8A3D; --naranja-oscuro: #C2580F; --texto: #2A1C12; --suave: #6F5B4D; --fondo: #F4EBE2; --durazno: #FFE3CF; --salvia: #E3EEDC; --lila: #ECE6F6; --cielo: #E2EEF6; --curva: cubic-bezier(.22, 1, .36, 1); }
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; font: 500 17px/1.65 "Space Grotesk", system-ui, sans-serif; color: var(--texto); background: var(--fondo); -webkit-font-smoothing: antialiased; }
+a { color: var(--naranja-oscuro); }
+h1, h2, h3, p { margin: 0; }
+.ico { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.barra { position: sticky; top: 12px; z-index: 5; width: min(1100px, calc(100% - 24px)); margin: 12px auto 0; height: 60px; display: flex; align-items: center; gap: 16px; padding: 0 8px 0 18px; border-radius: 999px; background: rgba(255, 255, 255, .86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.marca { display: inline-flex; align-items: center; gap: 0; font-weight: 700; font-size: 19px; letter-spacing: -.02em; color: var(--texto); text-decoration: none; }
+.marca b { color: var(--naranja); }
+.barra nav { margin-left: auto; display: flex; gap: 4px; }
+.barra nav a { padding: 9px 14px; border-radius: 999px; color: var(--suave); font-weight: 600; font-size: 14px; text-decoration: none; transition: background-color .25s, color .25s; }
+.barra nav a:hover, .barra nav a[aria-current] { background: var(--fondo); color: var(--texto); }
+.hoja { width: min(860px, calc(100% - 32px)); margin: 40px auto 60px; }
+.cabeza { padding: clamp(28px, 5vw, 48px); border-radius: 40px; background: var(--durazno); }
+.cabeza .chip { display: inline-flex; align-items: center; gap: 8px; min-height: 34px; padding: 5px 14px 5px 5px; line-height: 1.25; border-radius: 999px; background: #fff; font-size: 14px; font-weight: 600; color: var(--naranja-oscuro); }
+.cabeza .chip i { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: var(--durazno); }
+.cabeza h1 { margin-top: 16px; font-size: clamp(36px, 6vw, 58px); font-weight: 700; letter-spacing: -.04em; line-height: 1.02; }
+.cabeza p { margin-top: 12px; color: rgba(42, 28, 18, .72); max-width: 40em; }
+.indice { margin-top: 14px; padding: 18px; border-radius: 30px; background: #fff; display: flex; flex-wrap: wrap; gap: 8px; }
+.indice a { display: inline-flex; align-items: center; height: 36px; padding: 0 14px; border-radius: 999px; background: var(--fondo); color: var(--texto); font-size: 14px; font-weight: 600; text-decoration: none; transition: background-color .25s, transform .4s cubic-bezier(.34, 1.4, .64, 1); }
+.indice a:hover { background: var(--durazno); transform: translateY(-2px); }
+.seccion { margin-top: 14px; padding: clamp(22px, 4vw, 34px); border-radius: 32px; background: #fff; }
+.seccion h2 { display: flex; align-items: center; gap: 12px; font-size: clamp(21px, 2.4vw, 26px); font-weight: 700; letter-spacing: -.025em; line-height: 1.15; }
+.seccion h2 span { flex: none; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; background: var(--durazno); color: var(--naranja-oscuro); font-size: 15px; }
+.seccion:nth-of-type(4n+2) h2 span { background: var(--salvia); color: #3F7334; }
+.seccion:nth-of-type(4n+3) h2 span { background: var(--lila); color: #5C4A99; }
+.seccion:nth-of-type(4n) h2 span { background: var(--cielo); color: #2F6B9A; }
+.seccion p, .seccion li { color: #4A3B30; }
+.seccion p + p, .seccion p + ul, .seccion ul + p { margin-top: 12px; }
+.seccion > p:first-of-type { margin-top: 14px; }
+.seccion ul { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.seccion li { padding: 12px 16px; border-radius: 20px; background: var(--fondo); }
+.seccion li b { color: var(--texto); }
+.aviso { margin-top: 14px; padding: 16px 18px; border-radius: 22px; background: var(--durazno); color: var(--texto); font-weight: 600; }
+.contacto { margin-top: 14px; padding: clamp(24px, 4vw, 36px); border-radius: 36px; background: var(--texto); color: #fff; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; justify-content: space-between; }
+.contacto h2 { font-size: 24px; font-weight: 700; letter-spacing: -.02em; }
+.contacto p { color: rgba(255, 255, 255, .7); margin-top: 4px; }
+.boton { display: inline-flex; align-items: center; gap: 10px; height: 50px; padding: 0 22px; border-radius: 999px; background: var(--naranja); color: #fff; font-weight: 700; text-decoration: none; transition: transform .45s cubic-bezier(.34, 1.4, .64, 1); }
+.boton:hover { transform: translateY(-2px); }
+.pie { width: min(860px, calc(100% - 32px)); margin: 0 auto 32px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; color: var(--suave); font-size: 14px; }
+.pie a { color: var(--suave); text-decoration: none; }
+.pie nav { display: flex; gap: 18px; }
+.aparece { animation: aparece .8s var(--curva) both; }
+.seccion.aparece { animation-delay: calc(var(--i, 0) * 40ms); }
+@keyframes aparece { from { opacity: 0; transform: translateY(16px); } }
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .barra nav a { padding: 8px 10px; font-size: 13px; }
+  .barra nav a:not([aria-current]):nth-child(n+3) { display: none; }
+  .hoja { margin-top: 24px; }
+  .cabeza { border-radius: 32px; }
+  .seccion { border-radius: 28px; }
+}
+@media (prefers-reduced-motion: reduce) { .aparece { animation: none; } html { scroll-behavior: auto; } }
