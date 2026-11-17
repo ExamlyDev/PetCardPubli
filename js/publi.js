@@ -89,6 +89,28 @@
     [...fila.children].forEach((n) => { const c = n.cloneNode(true); c.setAttribute("aria-hidden", "true"); fila.appendChild(c); });
   });
 
+  // Contacto: valida y abre el correo con el mensaje listo
+  const forma = $("[data-contacto]");
+  if (forma) {
+    const aviso = $(".formulario__aviso", forma);
+    const avisar = (t, mal) => { aviso.hidden = false; aviso.textContent = t; aviso.classList.toggle("mal", !!mal); };
+    forma.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const d = Object.fromEntries(new FormData(forma));
+      const malos = [];
+      if (!String(d.nombre || "").trim()) malos.push("nombre");
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(d.correo || "").trim())) malos.push("correo");
+      if (!String(d.mensaje || "").trim()) malos.push("mensaje");
+      $$(".campo", forma).forEach((c) => c.classList.toggle("error", malos.includes($("input, textarea", c)?.name)));
+      if (malos.length) { avisar(malos.includes("correo") && malos.length === 1 ? "Ese correo no parece válido. Revisa que tenga @ y dominio" : "Revisa los campos marcados para continuar", true); $(`[name="${malos[0]}"]`, forma)?.focus(); return; }
+      const asunto = `${d.perfil === "Veterinaria" ? "PetCard Vet" : "PetCard"} · Mensaje de ${d.nombre.trim()}`;
+      const cuerpo = `${d.mensaje.trim()}\n\n${d.nombre.trim()}\n${d.correo.trim()}\n${d.perfil}`;
+      location.href = `mailto:contacto@zootrack.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+      avisar(`Gracias, ${d.nombre.trim().split(" ")[0]}. Abrimos tu correo con el mensaje listo, solo envíalo.`);
+    });
+    $$("input, textarea", forma).forEach((el) => el.addEventListener("input", () => el.closest(".campo")?.classList.remove("error")));
+  }
+
   // Año del pie
   $$("[data-anio]").forEach((el) => { el.textContent = new Date().getFullYear(); });
 })();
