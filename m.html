@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Perfil de mascota | PetCard</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FFFBF7">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/estilos.css">
+  <style>
+    .perfil{max-width:520px;margin:0 auto;padding:28px 18px 60px}
+    .perfil__marca{display:flex;justify-content:center;margin-bottom:22px}
+    .perfil__foto{position:relative;aspect-ratio:1.2;border-radius:32px;background:var(--durazno);overflow:hidden;display:grid;place-items:center}
+    .perfil__foto img{width:100%;height:100%;object-fit:cover}
+    .perfil__foto .amelie-svg{width:72%;color:var(--naranja)}
+    .perdido{margin-bottom:16px;padding:16px 18px;border-radius:22px;background:var(--rojoFondo,#FBE3E3);color:#A32F2F;font-weight:600;display:none}
+    .perdido.si{display:block;animation:pulsoRojo 2s var(--e-suave) infinite}
+    @keyframes pulsoRojo{50%{box-shadow:0 0 0 8px rgba(214,69,69,.12)}}
+    .perfil h1{margin-top:22px;font-size:44px;letter-spacing:-.045em;line-height:1}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .chip{padding:7px 14px;border-radius:999px;background:#fff;border:1px solid var(--borde);font-weight:500;font-size:14px}
+    .bloque{margin-top:18px;padding:18px;border-radius:24px;background:#fff;border:1px solid var(--borde)}
+    .bloque h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja-800);margin-bottom:10px}
+    .vac{display:flex;justify-content:space-between;padding:8px 0;border-top:1px solid var(--borde);font-size:15px}
+    .vac:first-of-type{border-top:0}
+    .acciones{display:grid;gap:10px;margin-top:20px}
+    .estado{text-align:center;padding:80px 20px;color:var(--suave)}
+    [data-ver]{opacity:0;transform:translateY(18px);transition:transform .9s var(--e-sale),opacity .6s}
+    .listo [data-ver]{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  
+  <main class="perfil">
+    <a class="perfil__marca marca" href="/" aria-label="PetCard"><span class="marca__texto">Pet<b>Card</b></span></a>
+    <div id="contenido"><p class="estado">Buscando a la mascota…</p></div>
+  </main>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+    import { firebaseConfig } from "/js/firebase-config.js";
+
+    const caja = document.getElementById("contenido");
+    const id = location.pathname.split("/").filter(Boolean).pop();
+    const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const amelie = await fetch("/img/amelie.svg").then(r => r.text()).catch(() => "");
+
+    try {
+      const app = initializeApp(firebaseConfig);
+      const snap = await getDoc(doc(getFirestore(app), "perfilesPublicos", id));
+      if (!snap.exists()) throw new Error("no existe");
+      const m = snap.data();
+      document.title = `${m.nombre} | PetCard`;
+      const vacunas = (m.vacunas || []).map(v => {
+        const f = v.aplicada?.toDate ? v.aplicada.toDate().toLocaleDateString("es-MX", { day: "numeric", month: "short", year: "numeric" }) : "";
+        return `<div class="vac"><span>${esc(v.nombre)}</span><span style="color:var(--suave)">${esc(f)}</span></div>`;
+      }).join("");
+      const tel = (m.contacto || m.veterinariaTelefono || "").replace(/[^\d+]/g, "");
+      caja.innerHTML = `
+        <div class="perdido ${m.perdido ? "si" : ""}" data-ver>🚨 ${esc(m.nombre)} está perdido. Si lo encontraste, avisa a su familia.</div>
+        <div class="perfil__foto" data-ver>${m.foto ? `<img src="${esc(m.foto)}" alt="${esc(m.nombre)}">` : amelie.replace("<svg", '<svg class="amelie-svg" style="width:72%;color:#FF8A3D"').replace(/fill="#FF8A3D"/, 'fill="currentColor"')}</div>
+        <h1 data-ver>${esc(m.nombre)}</h1>
+        <div class="chips" data-ver>${[m.especie, m.raza, m.edad, m.sexo].filter(Boolean).map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div>
+        ${m.familia ? `<div class="bloque" data-ver><h2>Familia</h2><p>@${esc(m.familia)}</p></div>` : ""}
+        ${m.alergias ? `<div class="bloque" data-ver><h2>Alergias o condiciones</h2><p>${esc(m.alergias)}</p></div>` : ""}
+        ${vacunas ? `<div class="bloque" data-ver><h2>Vacunas</h2>${vacunas}</div>` : ""}
+        ${m.veterinaria ? `<div class="bloque" data-ver><h2>Su veterinaria</h2><p>${esc(m.veterinaria)}</p></div>` : ""}
+        <div class="acciones" data-ver>
+          ${tel ? `<a class="boton boton--naranja" href="tel:${tel}">${m.contacto ? "Llamar a su familia" : "Llamar a su veterinaria"}</a>` : ""}
+          <a class="boton" style="background:#fff;border:1px solid var(--borde)" href="/">Conoce PetCard</a>
+        </div>`;
+    } catch (e) {
+      caja.innerHTML = `<div class="estado">${amelie.replace("<svg", '<svg style="width:180px;margin:0 auto 18px;display:block"')}<p>No encontramos este perfil.</p></div>`;
+    }
+    requestAnimationFrame(() => document.body.classList.add("listo"));
+  </script>
+</body>
+</html>
