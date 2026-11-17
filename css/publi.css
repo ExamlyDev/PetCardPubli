@@ -592,3 +592,8 @@ html,body{overflow-x:clip}
 .dispositivos__ipad { top: 14%; width: 80%; }
 .dispositivos__tel { top: 32%; }
 @media (max-width: 680px) { .dispositivos__ipad { top: 12%; width: 84%; } .dispositivos__tel { top: 34%; width: 48%; } }
+.pie__legal .potenciado { display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 14px 0 4px; border-radius: 999px; background: rgba(255, 255, 255, .92); color: var(--texto); text-decoration: none; font-size: 13.5px; transition: transform .5s var(--rebote); }
+.pie__legal .potenciado:hover { transform: translateY(-2px); }
+.pie__legal .potenciado i { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--salvia); color: var(--salvia-t); }
+.pie__legal .potenciado .ico { width: 15px; height: 15px; }
+.pie__legal .potenciado b { color: var(--salvia-t); }
