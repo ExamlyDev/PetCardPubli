@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Comparte a tu mascota con tu veterinaria | PetCard</title>
+  <meta name="description" content="Abre este enlace en tu iPhone con PetCard para compartir a tu mascota con tu veterinaria.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F4EBE2">
+  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("/fonts/SpaceGrotesk-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+    @font-face { font-family: "Space Grotesk"; src: url("/fonts/SpaceGrotesk-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+    :root { --crema: #F4EBE2; --naranja: #FF8A3D; --cafe: #7A3610; --texto: #2A1C12; --suave: #6F5B4D; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100dvh; display: grid; place-items: center; padding: 24px 16px; background: var(--crema); color: var(--texto); font: 500 16px/1.5 "Space Grotesk", system-ui, sans-serif; }
+    main { width: min(440px, 100%); padding: 32px 26px; border-radius: 34px; background: #fff; text-align: center; animation: entra .7s cubic-bezier(.34, 1.56, .64, 1) both; }
+    @keyframes entra { from { opacity: 0; transform: translateY(18px) scale(.97); } }
+    .perro { width: 150px; margin: 0 auto 10px; }
+    .chip { display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px; border-radius: 999px; background: #FFE3CF; color: var(--cafe); font-weight: 700; font-size: 14px; }
+    h1 { margin: 16px 0 8px; font-size: 30px; line-height: 1.05; letter-spacing: -.03em; }
+    p { margin: 0; color: var(--suave); }
+    ol { margin: 22px 0; padding: 0; list-style: none; display: grid; gap: 10px; text-align: left; counter-reset: paso; }
+    li { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border-radius: 20px; background: var(--crema); counter-increment: paso; }
+    li::before { content: counter(paso); flex: none; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; background: var(--naranja); color: #fff; font-weight: 700; font-size: 14px; }
+    .boton { display: flex; align-items: center; justify-content: center; gap: 10px; height: 54px; border-radius: 999px; background: var(--texto); color: #fff; font-weight: 700; text-decoration: none; transition: transform .4s cubic-bezier(.34, 1.56, .64, 1); }
+    .boton:active { transform: scale(.97); }
+    .boton small { display: block; font-size: 11px; font-weight: 500; opacity: .8; line-height: 1; }
+    .nota { margin-top: 14px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="perro" src="/img/amelie.svg" alt="">
+    <span class="chip" data-clinica>Tu veterinaria en PetCard Vet</span>
+    <h1>Comparte a tu mascota con tu veterinaria</h1>
+    <p>Su cartilla llega al instante a su expediente y recibes ahí sus recetas, estudios y citas.</p>
+    <ol>
+      <li><span>Instala <b>PetCard</b> en tu iPhone y crea tu cuenta con tus mascotas.</span></li>
+      <li><span>Vuelve a escanear el código de tu veterinaria con la cámara.</span></li>
+      <li><span>Elige qué mascotas compartir y listo.</span></li>
+    </ol>
+    <a class="boton" href="/descargar"><span><small>Muy pronto en</small>App Store</span></a>
+    <p class="nota">¿Ya tienes PetCard? Abre este enlace desde la cámara de tu iPhone.</p>
+  </main>
+  <script>
+    // Nombre de la veterinaria (ficha pública del buscador)
+    (async () => {
+      const uid = location.pathname.split("/").filter(Boolean)[1];
+      if (!uid || !/^[A-Za-z0-9]{10,40}$/.test(uid)) return;
+      try {
+        const r = await fetch(`https://firestore.googleapis.com/v1/projects/zootrack-c97ea/databases/(default)/documents/petcardClinicas/${uid}?key=AIzaSyAFGmVbrPdvotGpf1xQHhy28RL3wq4w9x8`);
+        const nombre = (await r.json())?.fields?.nombre?.stringValue;
+        if (nombre) document.querySelector("[data-clinica]").textContent = nombre;
+      } catch {}
+    })();
+  </script>
+</body>
+</html>

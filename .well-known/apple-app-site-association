@@ -2,9 +2,18 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["QZTT8WYHL2.cloud.petcard.app"],
+        "appIDs": [
+          "QZTT8WYHL2.cloud.petcard.app"
+        ],
         "components": [
-          { "/": "/m/*", "comment": "Perfil de mascota de placa NFC o QR" }
+          {
+            "/": "/m/*",
+            "comment": "Perfil de mascota de placa NFC o QR"
+          },
+          {
+            "/": "/alta/*",
+            "comment": "Alta con QR: compartir mascotas con una veterinaria de PetCard Vet"
+          }
         ]
       }
     ]

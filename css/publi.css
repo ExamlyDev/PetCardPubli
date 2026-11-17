@@ -666,3 +666,14 @@ i.cara-ceiba span::after { animation-delay: .04s; }
 @media (max-width: 960px) { .contacto { grid-template-columns: 1fr; } }
 @media (max-width: 680px) { .formulario__dos { grid-template-columns: 1fr; } .formulario { border-radius: 28px; } .formulario .boton { justify-self: stretch; } .canal { border-radius: 22px; } }
 .nav__links a { white-space: nowrap; }
+
+/* Pie: cada opción resalta al pasar el cursor */
+.pie__col a:not(.boton) { justify-self: start; margin-left: -12px; padding: 6px 12px; border-radius: 999px; transition: color .25s, background-color .25s, transform .45s var(--rebote); }
+.pie__col a:not(.boton):hover, .pie__col a:not(.boton):focus-visible { background: var(--durazno); color: var(--naranja-oscuro); transform: translateX(4px); }
+.pie__col a:not(.boton) .ico { transition: transform .45s var(--rebote); }
+.pie__col a:not(.boton):hover .ico { transform: translate(2px, -2px); }
+.pie__col .boton { transition: transform .45s var(--rebote), background-color .25s; }
+.pie__col .boton:hover { transform: translateY(-2px); }
+.pie__col .boton--blanco:hover { background: var(--crema); }
+.pie__col .boton--oscuro:hover { background: #3a2a1f; }
+@media (hover: none) { .pie__col a:not(.boton):hover { transform: none; } }
