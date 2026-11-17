@@ -31,7 +31,7 @@
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="preload" href="/fonts/BricolageGrotesque-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/SpaceGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/landing.css?v=5">
+  <link rel="stylesheet" href="/css/landing.css?v=6">
   <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__petcardListo)document.documentElement.classList.remove("js")},3500);</script>
 </head>
 <body>
@@ -96,15 +96,15 @@
   <section class="portada contenedor" id="inicio">
     <div class="portada__texto">
       <p class="detalle aparecer">PetCard · iPhone y Android</p>
-      <h1 class="portada__titulo aparecer">Todo lo de tu mascota, <span class="subrayado">en un solo lugar</span>.</h1>
+      <h1 class="portada__titulo" data-partir>Todo lo de tu mascota, <span class="subrayado">en un solo lugar</span>.</h1>
       <p class="portada__sub aparecer">Su cartilla, sus citas, sus estudios y una placa con QR para que siempre vuelva a casa. Sin papeles, sin buscar en mil chats.</p>
       <div class="portada__acciones aparecer">
         <a class="boton boton--oscuro" href="#descargar">Descargar gratis <svg class="ico"><use href="#i-flecha"/></svg></a>
         <a class="enlace" href="#funciones">Ver cómo funciona</a>
       </div>
     </div>
-    <figure class="portada__foto aparecer">
-      <img src="/img/amelie-foto.jpg" alt="Amelie, una perrita salchicha, sentada en el auto" width="1000" height="1333" fetchpriority="high">
+    <figure class="portada__foto" data-revelar>
+      <div class="marco"><img src="/img/amelie-foto.jpg" alt="Amelie, una perrita salchicha, sentada en el auto" width="1000" height="1333" fetchpriority="high"></div>
       <figcaption>
         <span class="punto"></span>
         <span><b>Amelie</b> · cartilla al día</span>
@@ -114,7 +114,7 @@
 
   <!-- Manifiesto -->
   <section class="manifiesto contenedor">
-    <p class="manifiesto__texto aparecer">
+    <p class="manifiesto__texto" data-encender>
       La cartilla de papel se moja, los estudios se pierden en el correo y la cita <span class="tachado">se olvida</span>.
       PetCard junta <em>su salud, su identidad y su veterinaria</em> en una app que siempre traes contigo.
     </p>
@@ -152,7 +152,7 @@
     </div>
 
     <div class="funciones__telefono">
-      <div class="telefono">
+      <div class="telefono" data-flotar>
         <div class="telefono__pantalla">
           <div class="app-barra"><span>9:41</span><span class="isla"></span><span>100%</span></div>
 
@@ -203,18 +203,19 @@
           </div>
         </div>
       </div>
+      <div class="segmentos" aria-hidden="true"><span class="activo"></span><span></span><span></span><span></span><span></span></div>
     </div>
   </section>
 
   <!-- Veterinaria conectada -->
   <section class="conectada">
     <div class="conectada__grid contenedor">
-      <figure class="conectada__foto aparecer">
-        <img src="/img/veterinario.jpg" alt="Veterinario revisando a un perro salchicha" loading="lazy" width="1100" height="1650">
+      <figure class="conectada__foto" data-revelar>
+        <div class="marco"><img src="/img/veterinario.jpg" alt="Veterinario revisando a un perro salchicha" loading="lazy" width="1100" height="1650"></div>
       </figure>
       <div class="conectada__texto">
         <p class="detalle aparecer">Su veterinaria, del mismo lado</p>
-        <h2 class="titulo aparecer">Lo que pasa en la consulta llega a tu teléfono.</h2>
+        <h2 class="titulo" data-partir>Lo que pasa en la consulta llega a tu teléfono.</h2>
         <ol class="pasos">
           <li class="aparecer"><span>1</span><p><b>Registra a tu mascota.</b> Especie, raza, peso y una foto. Menos de un minuto.</p></li>
           <li class="aparecer"><span>2</span><p><b>Elige su veterinaria.</b> Busca entre las clínicas de PetCard cerca de ti y pide cita desde la app.</p></li>
@@ -227,8 +228,8 @@
   <!-- Especies -->
   <section class="especies contenedor">
     <p class="detalle aparecer">Para todas las de la casa</p>
-    <p class="especies__lista aparecer">
-      <b>Perros <i>/</i></b> <b>Gatos <i>/</i></b> <b>Conejos <i>/</i></b> <b>Erizos <i>/</i></b> <b>Aves <i>/</i></b> <b>Hurones <i>/</i></b> <b>Tortugas <i>/</i></b> <span>y las que vengan</span>
+    <p class="especies__lista" data-partir>
+      <b>Perros <i>/</i></b> <b>Gatos <i>/</i></b> <b>Conejos <i>/</i></b> <b>Erizos <i>/</i></b> <b>Aves <i>/</i></b> <b>Hurones <i>/</i></b> <b>Tortugas <i>/</i></b> <span class="resto">y las que vengan</span>
     </p>
   </section>
 
@@ -236,7 +237,7 @@
   <section class="planes contenedor" id="planes">
     <div class="planes__cabeza">
       <p class="detalle aparecer">Planes</p>
-      <h2 class="titulo aparecer">Empieza gratis. Crece cuando quieras.</h2>
+      <h2 class="titulo" data-partir>Empieza gratis. Crece cuando quieras.</h2>
     </div>
     <div class="planes__columnas">
       <article class="plan aparecer">
@@ -268,7 +269,7 @@
     <div class="vet__grid contenedor">
       <div class="vet__texto">
         <p class="detalle detalle--claro aparecer">PetCard Vet</p>
-        <h2 class="titulo aparecer">¿Tienes una veterinaria? Úsala gratis.</h2>
+        <h2 class="titulo" data-partir>¿Tienes una veterinaria? Úsala gratis.</h2>
         <p class="aparecer">Tu agenda, tus pacientes y la app de tus clientes, conectados. Ellos ven lo que tú decides compartir, en cuanto lo guardas.</p>
         <a class="boton boton--naranja aparecer" href="https://platform.petcard.cloud/#registro">Registrar mi veterinaria <svg class="ico"><use href="#i-flecha"/></svg></a>
       </div>
@@ -283,7 +284,7 @@
 
   <!-- Preguntas -->
   <section class="preguntas contenedor" id="preguntas">
-    <h2 class="titulo aparecer">Preguntas frecuentes</h2>
+    <h2 class="titulo" data-partir>Preguntas frecuentes</h2>
     <div class="acordeon">
       <details class="aparecer">
         <summary>¿PetCard es gratis?<svg class="ico"><use href="#i-mas"/></svg></summary>
@@ -310,8 +311,8 @@
 
   <!-- Cierre -->
   <section class="cierre contenedor" id="descargar">
-    <h2 class="cierre__titulo aparecer">
-      Amelie <img src="/img/amelie-foto.jpg" alt="" width="1000" height="1333" loading="lazy"> ya tiene su PetCard. <span>¿Y&nbsp;la&nbsp;tuya?</span>
+    <h2 class="cierre__titulo" data-partir>
+      Amelie <img src="/img/amelie-foto.jpg" alt="" width="1000" height="1333" loading="lazy"> ya tiene su PetCard. <span class="acento">¿Y&nbsp;la&nbsp;tuya?</span>
     </h2>
     <div class="cierre__tiendas aparecer">
       <a class="tienda" href="#descargar"><small>Muy pronto en</small>App Store</a>
@@ -330,6 +331,6 @@
   <p>© <span data-anio>2026</span> PetCard · Hecho en México</p>
 </footer>
 
-<script src="/js/landing.js?v=5" defer></script>
+<script src="/js/landing.js?v=6" defer></script>
 </body>
 </html>
