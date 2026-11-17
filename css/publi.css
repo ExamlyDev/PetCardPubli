@@ -597,3 +597,10 @@ html,body{overflow-x:clip}
 .pie__legal .potenciado i { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--salvia); color: var(--salvia-t); }
 .pie__legal .potenciado .ico { width: 15px; height: 15px; }
 .pie__legal .potenciado b { color: var(--salvia-t); }
+
+/* Cara de Ceiba en lugar del ícono de destellos */
+i.cara-ceiba { display: grid !important; place-items: center; aspect-ratio: 1; border-radius: 50% !important; background: var(--texto) !important; color: #fff !important; }
+i.cara-ceiba span { width: 46%; height: 30%; display: flex; justify-content: space-between; }
+i.cara-ceiba span::before, i.cara-ceiba span::after { content: ""; width: 30%; height: 100%; border-radius: 999px; background: #fff; animation: parpadeo 4.5s infinite; }
+i.cara-ceiba span::after { animation-delay: .04s; }
+@media (prefers-reduced-motion: reduce) { i.cara-ceiba span::before, i.cara-ceiba span::after { animation: none; } }
