@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>PetCard | Todo lo de tu mascota, en una sola app</title>
   <meta name="description" content="PetCard es la app para iOS y Android donde guardas la cartilla, consultas, estudios y radiografías de tus mascotas, recibes recordatorios y encuentras veterinarias cerca. Con Amelie, todo está en un solo lugar.">
-  <meta name="theme-color" content="#FFFBF7">
+  <meta name="theme-color" content="#EEF0F3">
   <meta name="color-scheme" content="light only">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PetCard">
@@ -29,9 +29,8 @@
   <link rel="icon" href="/icono-192.png?v=2" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="preload" href="/fonts/BricolageGrotesque-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/SpaceGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/landing.css?v=7">
+  <link rel="stylesheet" href="/css/landing.css?v=8">
   <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__petcardListo)document.documentElement.classList.remove("js")},3500);</script>
 </head>
 <body>
@@ -74,45 +73,45 @@
   </a>
   <nav class="nav__links" aria-label="Principal">
     <a href="#funciones">Funciones</a>
-    <a href="#veterinaria">Tu vete</a>
+    <a href="#como">Cómo funciona</a>
     <a href="#planes">Planes</a>
     <a href="#vet">Veterinarias</a>
     <a href="#preguntas">Preguntas</a>
   </nav>
-  <a class="boton boton--oscuro boton--chico nav__cta" href="#descargar">Descargar</a>
+  <a class="boton boton--oscuro boton--chico nav__cta" href="#descargar">Descargar <svg class="ico"><use href="#i-flecha"/></svg></a>
   <button class="nav__menu" aria-label="Abrir menú" aria-expanded="false" data-menu><span></span><span></span></button>
 </header>
 
 <div class="menu-movil" data-menu-panel>
   <a href="#funciones">Funciones</a>
-  <a href="#veterinaria">Tu vete</a>
+  <a href="#como">Cómo funciona</a>
   <a href="#planes">Planes</a>
   <a href="#vet">Veterinarias</a>
   <a href="#preguntas">Preguntas</a>
-  <a class="boton boton--naranja" href="#descargar">Descargar PetCard</a>
+  <a class="boton boton--naranja" href="#descargar">Descargar PetCard <svg class="ico"><use href="#i-flecha"/></svg></a>
 </div>
 
 <main>
 
   <!-- Portada -->
   <section class="portada" id="inicio">
-    <div class="portada__panel">
+    <div class="portada__fondo" aria-hidden="true" data-fondo></div>
+    <div class="portada__rejilla contenedor">
       <div class="portada__texto">
-        <p class="pastilla-clara aparecer"><span class="punto"></span> Gratis en iPhone y Android</p>
-        <h1 class="portada__titulo" data-partir>Todo lo de tu mascota, <span class="subrayado">en un solo lugar</span>.</h1>
-        <p class="portada__sub aparecer">Cartilla, citas, estudios y una placa con QR para que siempre vuelva a casa.</p>
+        <p class="meta aparecer"><span class="punto"></span>PetCard · iPhone y Android</p>
+        <h1 class="portada__titulo" data-partir>Todo lo de tu mascota → en un solo lugar</h1>
+        <p class="portada__sub aparecer">Cartilla, citas, estudios y una placa con QR para que siempre vuelva a casa. Gratis para empezar.</p>
         <div class="portada__acciones aparecer">
           <a class="boton boton--oscuro" href="#descargar">Descargar gratis <svg class="ico"><use href="#i-flecha"/></svg></a>
-          <a class="boton boton--claro" href="#funciones">Ver funciones</a>
+          <a class="boton boton--borde" href="#como">Ver cómo funciona</a>
         </div>
       </div>
 
-      <div class="portada__escena" data-escena>
-        <div class="circulo-foto" data-capa="-0.4">
-          <img src="/img/amelie-foto.jpg" alt="Amelie, una perrita salchicha" width="1000" height="1333" fetchpriority="high">
-        </div>
-
-        <div class="telefono telefono--portada" data-capa="0.6">
+      <div class="portada__visual" data-escena>
+        <figure class="sesgo sesgo--portada" data-revelar data-capa="-0.5">
+          <div class="marco"><img src="/img/amelie-foto.jpg" alt="Amelie, una perrita salchicha" width="1000" height="1333" fetchpriority="high"></div>
+        </figure>
+        <div class="telefono telefono--portada" data-capa="0.7">
           <div class="telefono__pantalla">
             <div class="app-barra"><span>9:41</span><span class="isla"></span><span>100%</span></div>
             <div class="app-cuerpo">
@@ -124,213 +123,151 @@
               </div>
               <p class="app-seccion">Próximo</p>
               <div class="app-fila"><i class="app-ico app-ico--durazno"><svg class="ico"><use href="#i-calendario"/></svg></i><div><b>Consulta general</b><small>Mañana · 10:00</small></div></div>
-              <div class="app-fila"><i class="app-ico app-ico--salvia"><svg class="ico"><use href="#i-jeringa"/></svg></i><div><b>Refuerzo de rabia</b><small>12 de diciembre</small></div></div>
+              <div class="app-fila"><i class="app-ico app-ico--lila"><svg class="ico"><use href="#i-jeringa"/></svg></i><div><b>Refuerzo de rabia</b><small>12 de diciembre</small></div></div>
               <div class="app-sos"><svg class="ico"><use href="#i-sirena"/></svg> SOS veterinario</div>
             </div>
           </div>
         </div>
-
-        <div class="flotante flotante--a" data-capa="1.2">
-          <i class="app-ico app-ico--salvia"><svg class="ico"><use href="#i-check"/></svg></i>
-          <div><b>Vacuna registrada</b><small>Múltiple · hoy</small></div>
-        </div>
-        <div class="flotante flotante--b" data-capa="1.6">
-          <i class="app-ico app-ico--noche"><svg class="ico"><use href="#i-qr"/></svg></i>
-          <div><b>Placa escaneada</b><small>Cerca de Parque México</small></div>
-        </div>
-        <div class="flotante flotante--c" data-capa="0.9">
-          <svg class="ico"><use href="#i-chispas"/></svg> Ceiba: «Le toca baño el sábado»
-        </div>
+        <div class="etiqueta-flotante" data-capa="1.3"><svg class="ico"><use href="#i-qr"/></svg> Placa escaneada · te avisamos</div>
       </div>
     </div>
 
-    <div class="cinta" aria-hidden="true">
-      <div class="cinta__pista">
-        <span><svg class="ico"><use href="#i-archivo"/></svg>Cartilla digital</span>
-        <span><svg class="ico"><use href="#i-calendario"/></svg>Citas</span>
-        <span><svg class="ico"><use href="#i-campana"/></svg>Recordatorios</span>
-        <span><svg class="ico"><use href="#i-qr"/></svg>Placa QR y NFC</span>
-        <span><svg class="ico"><use href="#i-huella"/></svg>Huella de nariz</span>
-        <span><svg class="ico"><use href="#i-chispas"/></svg>Ceiba</span>
-        <span><svg class="ico"><use href="#i-sirena"/></svg>SOS</span>
-        <span><svg class="ico"><use href="#i-pin"/></svg>Veterinarias cerca</span>
-        <span><svg class="ico"><use href="#i-archivo"/></svg>Cartilla digital</span>
-        <span><svg class="ico"><use href="#i-calendario"/></svg>Citas</span>
-        <span><svg class="ico"><use href="#i-campana"/></svg>Recordatorios</span>
-        <span><svg class="ico"><use href="#i-qr"/></svg>Placa QR y NFC</span>
-        <span><svg class="ico"><use href="#i-huella"/></svg>Huella de nariz</span>
-        <span><svg class="ico"><use href="#i-chispas"/></svg>Ceiba</span>
-        <span><svg class="ico"><use href="#i-sirena"/></svg>SOS</span>
-        <span><svg class="ico"><use href="#i-pin"/></svg>Veterinarias cerca</span>
-      </div>
+    <div class="portada__pie contenedor aparecer">
+      <ol class="indice">
+        <li><span>01</span>Cartilla digital</li>
+        <li><span>02</span>Citas y recordatorios</li>
+        <li><span>03</span>Placa QR y NFC</li>
+        <li><span>04</span>Huella de nariz</li>
+        <li><span>05</span>Ceiba, tu asistente</li>
+      </ol>
+      <p class="meta meta--derecha">Hecho en México · 2026</p>
     </div>
   </section>
 
-  <!-- Manifiesto con píldoras dentro del texto -->
-  <section class="manifiesto contenedor">
-    <p class="manifiesto__texto" data-encender>
-      La cartilla de papel se moja <span class="chip-texto chip-texto--agua"><svg class="ico"><use href="#i-x"/></svg></span>, los estudios se pierden en el correo y la cita <span class="tachado">se olvida</span>.
-      PetCard junta su salud <span class="chip-texto chip-texto--foto"><img src="/img/amelie-foto.jpg" alt="" width="1000" height="1333" loading="lazy"></span>, su identidad y su veterinaria <span class="chip-texto chip-texto--vete"><svg class="ico"><use href="#i-estetoscopio"/></svg></span> en una app que siempre traes contigo.
-    </p>
+  <!-- Cifras -->
+  <section class="cifras contenedor" aria-label="PetCard en cifras">
+    <div class="cifra aparecer"><b><span data-contar="0" data-prefijo="$">$0</span></b><p>Para empezar con tu primera mascota</p></div>
+    <div class="cifra aparecer"><b><span data-contar="12">12</span>+</b><p>Especies: perros, gatos, aves, conejos, erizos…</p></div>
+    <div class="cifra aparecer"><b><span data-contar="24">24</span> h</b><p>SOS para llamar a su vete o a urgencias</p></div>
+    <div class="cifra aparecer"><b><span data-contar="1">1</span> toque</b><p>Para que quien la encuentre te avise</p></div>
   </section>
 
-  <!-- Mosaico de funciones -->
+  <!-- Funciones en tarjetas pastel -->
   <section class="funciones contenedor" id="funciones">
-    <div class="seccion-cabeza">
-      <p class="detalle aparecer">Funciones</p>
-      <h2 class="titulo" data-partir>Una app. Todo lo que tu mascota necesita.</h2>
+    <div class="cabeza-seccion">
+      <p class="meta aparecer">Funciones</p>
+      <h2 class="titulo" data-partir>Una app → todo lo que tu mascota necesita</h2>
     </div>
 
-    <div class="mosaico">
-      <article class="bloque bloque--cartilla aparecer">
-        <div class="bloque__texto">
-          <h3>Cartilla digital</h3>
-          <p>Vacunas, estudios y antecedentes. Toma una foto de la de papel y la pasamos a la app.</p>
+    <div class="tarjetas">
+      <article class="tarjeta tarjeta--durazno aparecer">
+        <span class="tarjeta__marca"><svg class="perro"><use href="#perro"/></svg></span>
+        <h3>La cartilla de papel se moja. La de PetCard no.</h3>
+        <div class="mini-lista">
+          <div><i class="app-ico app-ico--blanco"><svg class="ico"><use href="#i-jeringa"/></svg></i><span>Rabia<small>12 dic 2025</small></span><em class="pildora pildora--verde">Al día</em></div>
+          <div><i class="app-ico app-ico--blanco"><svg class="ico"><use href="#i-archivo"/></svg></i><span>Biometría<small>PDF · 2 páginas</small></span><em class="pildora">Ver</em></div>
         </div>
-        <div class="mini-cartilla">
-          <div class="mini-cartilla__cabeza">
-            <img src="/img/amelie-foto.jpg" alt="" width="1000" height="1333" loading="lazy">
-            <div><b>Amelie</b><small>Salchicha · 6.2 kg</small></div>
-          </div>
-          <ul>
-            <li><i class="app-ico app-ico--salvia"><svg class="ico"><use href="#i-jeringa"/></svg></i><span>Rabia<small>12 dic 2025</small></span><em class="pildora pildora--verde">Al día</em></li>
-            <li><i class="app-ico app-ico--salvia"><svg class="ico"><use href="#i-jeringa"/></svg></i><span>Múltiple<small>3 oct 2026</small></span><em class="pildora pildora--verde">Al día</em></li>
-            <li><i class="app-ico app-ico--durazno"><svg class="ico"><use href="#i-archivo"/></svg></i><span>Biometría<small>PDF · 2 páginas</small></span><em class="pildora">Ver</em></li>
-            <li><i class="app-ico app-ico--lila"><svg class="ico"><use href="#i-pata"/></svg></i><span>Desparasitación<small>En 12 días</small></span><em class="pildora pildora--naranja">Pronto</em></li>
-          </ul>
-        </div>
+        <p class="tarjeta__dato"><b>01</b> Vacunas, estudios y antecedentes. Pásala a la app con una foto.</p>
       </article>
 
-      <article class="bloque bloque--avisos aparecer">
+      <article class="tarjeta tarjeta--cielo aparecer">
+        <span class="tarjeta__marca"><svg class="perro"><use href="#perro"/></svg></span>
+        <h3>Si se escapa, su placa la trae de vuelta.</h3>
+        <div class="placa"><img src="/img/petcard-qr.svg" alt="" width="168" height="168" loading="lazy"><span class="placa__onda"></span><span class="placa__onda"></span></div>
+        <p class="tarjeta__dato"><b>02</b> Placa con QR y NFC, más su huella de nariz, única como una huella digital.</p>
+      </article>
+
+      <article class="tarjeta tarjeta--lila aparecer">
+        <span class="tarjeta__marca"><svg class="perro"><use href="#perro"/></svg></span>
+        <h3>Nada se te olvida. Ni la desparasitación.</h3>
         <div class="pila-avisos">
-          <div class="aviso"><i class="app-ico app-ico--durazno"><svg class="ico"><use href="#i-campana"/></svg></i><div><b>Mañana, consulta de Amelie</b><small>Clínica Huellitas · 10:00</small></div></div>
-          <div class="aviso"><i class="app-ico app-ico--salvia"><svg class="ico"><use href="#i-jeringa"/></svg></i><div><b>Desparasitación en 3 días</b><small>Toca para posponer</small></div></div>
-          <div class="aviso"><i class="app-ico app-ico--lila"><svg class="ico"><use href="#i-volumen"/></svg></i><div><b>«¡Guau!» · su ladrido</b><small>Tu alarma personalizada</small></div></div>
+          <div class="aviso"><i class="app-ico app-ico--durazno"><svg class="ico"><use href="#i-campana"/></svg></i><div><b>Mañana, consulta de Amelie</b><small>10:00</small></div></div>
+          <div class="aviso"><i class="app-ico app-ico--lila"><svg class="ico"><use href="#i-volumen"/></svg></i><div><b>«¡Guau!» · su ladrido</b><small>Tu alarma</small></div></div>
         </div>
-        <div class="bloque__texto">
-          <h3>Recordatorios</h3>
-          <p>Vacunas, medicinas y citas a tiempo. Hasta con el ladrido de tu mascota.</p>
-        </div>
+        <p class="tarjeta__dato"><b>03</b> Recordatorios de vacunas, medicinas y citas. Hasta con su ladrido.</p>
       </article>
+    </div>
 
-      <article class="bloque bloque--placa aparecer">
-        <div class="placa">
-          <img src="/img/petcard-qr.svg" alt="" width="168" height="168" loading="lazy">
-          <span class="placa__onda"></span><span class="placa__onda"></span>
-        </div>
-        <div class="bloque__texto">
-          <h3>Placa QR y NFC</h3>
-          <p>Si se pierde, quien la encuentre te avisa con su ubicación.</p>
-        </div>
-      </article>
-
-      <article class="bloque bloque--ceiba aparecer">
-        <div class="bloque__texto">
-          <p class="pastilla-oscura"><svg class="ico"><use href="#i-chispas"/></svg> Ceiba</p>
-          <h3>Tu asistente, a cualquier hora</h3>
-          <p>Pregunta sobre su cuidado, revisa su calendario y agenda por ti.</p>
-        </div>
-        <div class="chat" data-chat>
-          <p class="chat__yo">¿Cuándo le toca su vacuna a Amelie?</p>
-          <p class="chat__ceiba">El refuerzo de rabia es el 12 de diciembre. ¿Lo agendo con Clínica Huellitas?</p>
-          <p class="chat__yo">Sí, en la mañana</p>
-          <p class="chat__ceiba chat__escribiendo"><span></span><span></span><span></span></p>
-        </div>
-      </article>
-
-      <article class="bloque bloque--nariz aparecer">
-        <div class="nariz">
-          <img src="/img/amelie-foto.jpg" alt="" width="1000" height="1333" loading="lazy">
-          <span class="nariz__marco"></span>
-          <span class="nariz__linea"></span>
-          <span class="nariz__dato">98.6 % coincidencia</span>
-        </div>
-        <div class="bloque__texto">
-          <h3>Huella de nariz</h3>
-          <p>Única como una huella digital. La identifica aunque no traiga placa.</p>
-        </div>
-      </article>
-
-      <article class="bloque bloque--mapa aparecer">
-        <div class="mapa" aria-hidden="true">
-          <span class="mapa__calle mapa__calle--1"></span><span class="mapa__calle mapa__calle--2"></span><span class="mapa__calle mapa__calle--3"></span>
-          <span class="mapa__pin mapa__pin--1"><svg class="ico"><use href="#i-estetoscopio"/></svg></span>
-          <span class="mapa__pin mapa__pin--2"><svg class="ico"><use href="#i-estetoscopio"/></svg></span>
-          <span class="mapa__pin mapa__pin--3"><svg class="ico"><use href="#i-sirena"/></svg></span>
-          <span class="mapa__yo"></span>
-        </div>
-        <div class="bloque__texto">
-          <h3>Veterinarias cerca y SOS</h3>
-          <p>Encuentra clínicas de PetCard y llama a urgencias 24 h en un toque.</p>
-        </div>
-      </article>
+    <div class="banda aparecer">
+      <div class="banda__texto">
+        <p class="meta">Ceiba</p>
+        <h3>¿Dudas a las 2 a.m.? → Pregúntale a Ceiba</h3>
+        <p>Tu asistente con IA responde sobre su cuidado, revisa su calendario y agenda con su veterinaria por ti.</p>
+      </div>
+      <div class="chat" data-chat>
+        <p class="chat__yo">¿Cuándo le toca su vacuna a Amelie?</p>
+        <p class="chat__ceiba">El refuerzo de rabia es el 12 de diciembre. ¿Lo agendo con su veterinaria?</p>
+        <p class="chat__yo">Sí, en la mañana</p>
+        <p class="chat__ceiba chat__escribiendo"><span></span><span></span><span></span></p>
+      </div>
     </div>
   </section>
 
-  <!-- Veterinaria conectada -->
-  <section class="conectada" id="veterinaria">
-    <div class="conectada__grid contenedor">
-      <figure class="conectada__foto" data-revelar>
-        <div class="marco"><img src="/img/veterinario.jpg" alt="Veterinario revisando a un perro salchicha" loading="lazy" width="1100" height="1650"></div>
-        <div class="tarjeta-flotante tarjeta-flotante--1">
-          <i class="app-ico app-ico--salvia"><svg class="ico"><use href="#i-check"/></svg></i>
-          <div><b>Cita confirmada</b><small>Mañana · 10:00 · Clínica Huellitas</small></div>
-        </div>
-        <div class="tarjeta-flotante tarjeta-flotante--2">
-          <i class="app-ico app-ico--durazno"><svg class="ico"><use href="#i-archivo"/></svg></i>
-          <div><b>Nuevo estudio</b><small>Radiografía de tórax</small></div>
-        </div>
-      </figure>
-      <div class="conectada__texto">
-        <p class="detalle aparecer">Su veterinaria, del mismo lado</p>
-        <h2 class="titulo" data-partir>Lo que pasa en la consulta llega a tu teléfono.</h2>
-        <ol class="pasos">
-          <li class="aparecer"><span>01</span><p><b>Registra a tu mascota.</b> Especie, raza, peso y una foto. Menos de un minuto.</p></li>
-          <li class="aparecer"><span>02</span><p><b>Elige su veterinaria.</b> Busca clínicas de PetCard cerca de ti y pide cita desde la app.</p></li>
-          <li class="aparecer"><span>03</span><p><b>Recibe todo ahí.</b> Diagnóstico, estudios, recetas y la siguiente vacuna.</p></li>
+  <!-- Cómo funciona (bloque carbón) -->
+  <section class="como" id="como">
+    <div class="como__grid contenedor">
+      <div>
+        <p class="meta meta--claro aparecer">Cómo funciona</p>
+        <h2 class="titulo titulo--claro" data-partir>4 pasos → cero papeles</h2>
+        <ol class="pasos" data-pasos>
+          <li class="activo"><span>01</span><div><b>Crea tu cuenta</b><p>Tu nombre y listo. Menos de un minuto.</p></div></li>
+          <li><span>02</span><div><b>Registra a tu mascota</b><p>Especie, raza, peso, foto y su cartilla anterior.</p></div></li>
+          <li><span>03</span><div><b>Conecta su veterinaria</b><p>Pide citas y recibe consultas, estudios y recetas en la app.</p></div></li>
+          <li><span>04</span><div><b>Vive tranquilo</b><p>PetCard te recuerda todo. Tú disfruta los paseos.</p></div></li>
         </ol>
       </div>
+      <figure class="sesgo sesgo--como" data-revelar>
+        <div class="marco"><img src="/img/veterinario.jpg" alt="Veterinario revisando a un perro salchicha" loading="lazy" width="1100" height="1650"></div>
+        <div class="tarjeta-flotante tarjeta-flotante--1"><i class="app-ico app-ico--salvia"><svg class="ico"><use href="#i-check"/></svg></i><div><b>Cita confirmada</b><small>Mañana · 10:00</small></div></div>
+        <div class="tarjeta-flotante tarjeta-flotante--2"><i class="app-ico app-ico--durazno"><svg class="ico"><use href="#i-archivo"/></svg></i><div><b>Nuevo estudio</b><small>Radiografía de tórax</small></div></div>
+      </figure>
     </div>
-  </section>
-
-  <!-- Especies -->
-  <section class="especies" aria-label="Especies">
-    <p class="especies__fila" data-deslizar="1">Perros <i>✦</i> Gatos <i>✦</i> Conejos <i>✦</i> Erizos <i>✦</i> Aves <i>✦</i> Perros <i>✦</i> Gatos <i>✦</i> Conejos <i>✦</i></p>
-    <p class="especies__fila especies__fila--borde" data-deslizar="-1">Hurones <i>✦</i> Tortugas <i>✦</i> Cerdos mini <i>✦</i> Hámsters <i>✦</i> Hurones <i>✦</i> Tortugas <i>✦</i> Cerdos mini <i>✦</i></p>
   </section>
 
   <!-- Planes -->
   <section class="planes contenedor" id="planes">
-    <div class="seccion-cabeza seccion-cabeza--centro">
-      <p class="detalle aparecer">Planes</p>
-      <h2 class="titulo" data-partir>Empieza gratis. Crece cuando quieras.</h2>
+    <div class="cabeza-seccion">
+      <p class="meta aparecer">Planes</p>
+      <h2 class="titulo" data-partir>Empieza gratis → crece cuando quieras</h2>
     </div>
     <div class="planes__rejilla">
       <article class="plan aparecer">
         <p class="plan__nombre">Gratis</p>
         <p class="plan__precio"><b>$0</b> para siempre</p>
-        <p class="plan__lema">Lo esencial para una mascota.</p>
         <ul>
-          <li><svg class="ico"><use href="#i-check"/></svg>1 mascota</li>
-          <li><svg class="ico"><use href="#i-check"/></svg>Cartilla, citas y recordatorios</li>
-          <li><svg class="ico"><use href="#i-check"/></svg>Placa QR, huella de nariz y SOS</li>
-          <li><svg class="ico"><use href="#i-check"/></svg>Conexión con su veterinaria</li>
+          <li><span>01</span>1 mascota</li>
+          <li><span>02</span>Cartilla, citas y recordatorios</li>
+          <li><span>03</span>Placa QR, huella de nariz y SOS</li>
+          <li><span>04</span>Conexión con su veterinaria</li>
         </ul>
-        <a class="boton boton--borde" href="#descargar">Empezar gratis</a>
+        <a class="boton boton--borde" href="#descargar">Empezar gratis <svg class="ico"><use href="#i-flecha"/></svg></a>
       </article>
       <article class="plan plan--mas aparecer">
-        <span class="plan__insignia">Un mes gratis con el cupón de tu vete</span>
+        <p class="plan__insignia">Un mes gratis con el cupón de tu vete</p>
         <p class="plan__nombre">PetCard<span>+</span></p>
         <p class="plan__precio"><b>$129</b> MXN al mes</p>
-        <p class="plan__lema">Para familias con más patas.</p>
         <ul>
-          <li><svg class="ico"><use href="#i-check"/></svg>Mascotas ilimitadas</li>
-          <li><svg class="ico"><use href="#i-check"/></svg>Chat con Ceiba</li>
-          <li><svg class="ico"><use href="#i-check"/></svg>Condición corporal con una foto</li>
-          <li><svg class="ico"><use href="#i-check"/></svg>Migra su cartilla de papel con IA</li>
+          <li><span>01</span>Mascotas ilimitadas</li>
+          <li><span>02</span>Chat con Ceiba</li>
+          <li><span>03</span>Condición corporal con una foto</li>
+          <li><span>04</span>Migra su cartilla de papel con IA</li>
         </ul>
-        <a class="boton boton--naranja" href="#descargar">Probar PetCard+ <svg class="ico"><use href="#i-flecha"/></svg></a>
+        <a class="boton boton--oscuro" href="#descargar">Probar PetCard+ <svg class="ico"><use href="#i-flecha"/></svg></a>
       </article>
+    </div>
+  </section>
+
+  <!-- Bloque divertido -->
+  <section class="divertido contenedor">
+    <div class="divertido__panel aparecer">
+      <figure class="sesgo sesgo--divertido" data-revelar>
+        <div class="marco"><img src="/img/amelie-foto.jpg" alt="Amelie sonriendo" loading="lazy" width="1000" height="1333"></div>
+      </figure>
+      <div class="divertido__texto">
+        <h2 class="titulo" data-partir>«¿PetCard? Muchas vacunas, cero papeles. Muy ordenada.»</h2>
+        <p>— Amelie, salchicha y probadora oficial</p>
+        <a class="boton boton--oscuro" href="#descargar">Quiero la mía <svg class="ico"><use href="#i-flecha"/></svg></a>
+      </div>
     </div>
   </section>
 
@@ -338,18 +275,17 @@
   <section class="vet" id="vet">
     <div class="vet__grid contenedor">
       <div class="vet__texto">
-        <p class="detalle detalle--claro aparecer">PetCard Vet</p>
-        <h2 class="titulo" data-partir>¿Tienes una veterinaria? Úsala gratis.</h2>
+        <p class="meta meta--claro aparecer">PetCard Vet</p>
+        <h2 class="titulo titulo--claro" data-partir>¿Tienes una veterinaria? → Úsala gratis</h2>
         <p class="aparecer">Tu agenda, tus pacientes y la app de tus clientes, conectados. Ellos ven lo que tú decides compartir, en cuanto lo guardas.</p>
-        <ul class="vet__lista">
-          <li class="aparecer"><svg class="ico"><use href="#i-estetoscopio"/></svg>Consultas y expediente</li>
-          <li class="aparecer"><svg class="ico"><use href="#i-calendario"/></svg>Citas pedidas desde la app</li>
-          <li class="aparecer"><svg class="ico"><use href="#i-cama"/></svg>Hospitalización y estancias</li>
-          <li class="aparecer"><svg class="ico"><use href="#i-boleto"/></svg>Cupones y cliente frecuente</li>
-        </ul>
+        <ol class="indice indice--claro aparecer">
+          <li><span>01</span>Consultas y expediente</li>
+          <li><span>02</span>Citas pedidas desde la app</li>
+          <li><span>03</span>Hospitalización y estancias</li>
+          <li><span>04</span>Cupones y cliente frecuente</li>
+        </ol>
         <a class="boton boton--naranja aparecer" href="https://platform.petcard.cloud/#registro">Registrar mi veterinaria <svg class="ico"><use href="#i-flecha"/></svg></a>
       </div>
-
       <div class="panel-vet aparecer" aria-hidden="true">
         <div class="panel-vet__barra"><span></span><span></span><span></span><b>platform.petcard.cloud</b></div>
         <div class="panel-vet__cuerpo">
@@ -359,12 +295,10 @@
             <div><small>Solicitudes</small><b data-contar="3">3</b></div>
             <div><small>Pacientes</small><b data-contar="214">214</b></div>
           </div>
-          <p class="panel-vet__titulo">Hoy</p>
           <div class="panel-vet__cita"><span>09:30</span><div><b>Toby · Golden</b><small>Vacunación</small></div><em class="pildora pildora--verde">Confirmada</em></div>
-          <div class="panel-vet__cita"><span>10:00</span><div><b>Amelie · Salchicha</b><small>Consulta general · desde PetCard</small></div><em class="pildora pildora--naranja">Nueva</em></div>
+          <div class="panel-vet__cita"><span>10:00</span><div><b>Amelie · Salchicha</b><small>Desde PetCard</small></div><em class="pildora pildora--naranja">Nueva</em></div>
           <div class="panel-vet__cita"><span>11:30</span><div><b>Michi · Siamés</b><small>Revisión dental</small></div><em class="pildora pildora--verde">Confirmada</em></div>
         </div>
-        <div class="panel-vet__menu"><span class="activo"></span><span></span><span></span><span></span></div>
       </div>
     </div>
   </section>
@@ -372,40 +306,29 @@
   <!-- Preguntas -->
   <section class="preguntas contenedor" id="preguntas">
     <div>
-      <h2 class="titulo" data-partir>Preguntas frecuentes</h2>
-      <p class="preguntas__nota aparecer">¿Tienes una veterinaria? <a class="enlace" href="https://platform.petcard.cloud/#registro">Conoce PetCard Vet</a></p>
+      <p class="meta aparecer">Preguntas</p>
+      <h2 class="titulo" data-partir>Lo que siempre nos preguntan</h2>
     </div>
     <div class="acordeon">
-      <details class="aparecer">
-        <summary>¿PetCard es gratis?<svg class="ico"><use href="#i-mas"/></svg></summary>
-        <div class="acordeon__cuerpo"><p>Sí. El plan Gratis incluye 1 mascota con cartilla, citas, recordatorios, placa QR y SOS. PetCard+ te deja registrar todas las que tengas y suma las funciones con Ceiba.</p></div>
-      </details>
-      <details class="aparecer">
-        <summary>¿Sirve para mascotas que no son perros o gatos?<svg class="ico"><use href="#i-mas"/></svg></summary>
-        <div class="acordeon__cuerpo"><p>Claro. Puedes registrar conejos, erizos, aves, reptiles, hurones y más, con peso en kilos, gramos o libras.</p></div>
-      </details>
-      <details class="aparecer">
-        <summary>¿Qué pasa si mi mascota se pierde?<svg class="ico"><use href="#i-mas"/></svg></summary>
-        <div class="acordeon__cuerpo"><p>Repórtala como perdida en un toque. Quien la encuentre puede escanear su placa con QR o NFC, o buscarla por su huella de nariz, y contactarte.</p></div>
-      </details>
-      <details class="aparecer">
-        <summary>¿Mi veterinaria tiene que usar PetCard?<svg class="ico"><use href="#i-mas"/></svg></summary>
-        <div class="acordeon__cuerpo"><p>No es obligatorio. Pero si usa PetCard Vet, puedes pedirle cita desde la app y recibir sus consultas, estudios y avisos ahí mismo.</p></div>
-      </details>
-      <details class="aparecer">
-        <summary>¿Qué es Ceiba?<svg class="ico"><use href="#i-mas"/></svg></summary>
-        <div class="acordeon__cuerpo"><p>Es el asistente con IA de PetCard. Responde dudas de cuidado, revisa su calendario y puede pasar su cartilla de papel a la app desde una foto.</p></div>
-      </details>
+      <details class="aparecer"><summary><span>01</span>¿PetCard es gratis?<svg class="ico"><use href="#i-mas"/></svg></summary>
+        <div class="acordeon__cuerpo"><p>Sí. El plan Gratis incluye 1 mascota con cartilla, citas, recordatorios, placa QR y SOS. PetCard+ te deja registrar todas las que tengas y suma las funciones con Ceiba.</p></div></details>
+      <details class="aparecer"><summary><span>02</span>¿Sirve para mascotas que no son perros o gatos?<svg class="ico"><use href="#i-mas"/></svg></summary>
+        <div class="acordeon__cuerpo"><p>Claro. Puedes registrar conejos, erizos, aves, reptiles, hurones y más, con peso en kilos, gramos o libras.</p></div></details>
+      <details class="aparecer"><summary><span>03</span>¿Qué pasa si mi mascota se pierde?<svg class="ico"><use href="#i-mas"/></svg></summary>
+        <div class="acordeon__cuerpo"><p>Repórtala como perdida en un toque. Quien la encuentre puede escanear su placa con QR o NFC, o buscarla por su huella de nariz, y contactarte.</p></div></details>
+      <details class="aparecer"><summary><span>04</span>¿Mi veterinaria tiene que usar PetCard?<svg class="ico"><use href="#i-mas"/></svg></summary>
+        <div class="acordeon__cuerpo"><p>No es obligatorio. Pero si usa PetCard Vet, puedes pedirle cita desde la app y recibir sus consultas, estudios y avisos ahí mismo.</p></div></details>
+      <details class="aparecer"><summary><span>05</span>¿Qué es Ceiba?<svg class="ico"><use href="#i-mas"/></svg></summary>
+        <div class="acordeon__cuerpo"><p>Es el asistente con IA de PetCard. Responde dudas de cuidado, revisa su calendario y puede pasar su cartilla de papel a la app desde una foto.</p></div></details>
     </div>
   </section>
 
   <!-- Cierre -->
-  <section class="cierre" id="descargar">
+  <section class="cierre contenedor" id="descargar">
     <div class="cierre__panel">
+      <div class="cierre__fondo" aria-hidden="true"></div>
       <svg class="cierre__perro" aria-hidden="true"><use href="#perro"/></svg>
-      <h2 class="cierre__titulo" data-partir>
-        Amelie <img src="/img/amelie-foto.jpg" alt="" width="1000" height="1333" loading="lazy"> ya tiene su PetCard. <span class="acento">¿Y&nbsp;la&nbsp;tuya?</span>
-      </h2>
+      <h2 class="cierre__titulo" data-partir>Amelie ya tiene su PetCard → <span class="acento">¿y&nbsp;la&nbsp;tuya?</span></h2>
       <p class="aparecer">Descárgala gratis y ten su salud, su identidad y su veterinaria siempre contigo.</p>
       <div class="cierre__tiendas aparecer">
         <a class="tienda" href="#descargar"><svg class="ico"><use href="#i-telefono"/></svg><span><small>Muy pronto en</small>App Store</span></a>
@@ -425,9 +348,9 @@
     </nav>
     <p>© <span data-anio>2026</span> PetCard · Hecho en México</p>
   </div>
-  <p class="pie__grande" aria-hidden="true"><span class="wordmark"><b>Pet</b>Card</span></p>
+  <p class="pie__grande" aria-hidden="true">PETCARD →</p>
 </footer>
 
-<script src="/js/landing.js?v=7" defer></script>
+<script src="/js/landing.js?v=8" defer></script>
 </body>
 </html>

@@ -31,7 +31,7 @@
           frag.append(ESP.test(p) ? envolver(document.createTextNode(p)) : " ");
         });
         h.replaceWith(frag);
-      } else if (h.nodeType === 1 && (h.tagName === "IMG" || h.classList.contains("chip-texto"))) {
+      } else if (h.nodeType === 1 && (h.tagName === "IMG" || false)) {
         h.replaceWith(envolver(h.cloneNode(true)));
       } else if (h.nodeType === 1) recorrer(h);
     });
@@ -41,8 +41,6 @@
     n.setAttribute("aria-label", n.textContent.replace(/\s+/g, " ").trim());
     partir(n, "palabra", true);
   });
-  const encender = document.querySelector("[data-encender]");
-  if (encender) partir(encender, "pal", false);
 
   // Apariciones
   const ver = new IntersectionObserver((es) => es.forEach((e) => {
@@ -53,11 +51,11 @@
   document.querySelectorAll(".aparecer, [data-partir], [data-revelar]").forEach((n) => ver.observe(n));
 
   // Entrada de la portada
-  const panel = document.querySelector(".portada__panel");
+  const panel = document.querySelector(".portada");
   requestAnimationFrame(() => requestAnimationFrame(() => {
     panel.classList.add("listo");
-    panel.querySelectorAll(".aparecer").forEach((n, k) => n.style.setProperty("--retraso", `${0.45 + 0.1 * k}s`));
-    panel.querySelectorAll(".aparecer, [data-partir]").forEach((n) => n.classList.add("visible"));
+    panel.querySelectorAll(".aparecer").forEach((n, k) => n.style.setProperty("--retraso", `${0.5 + 0.1 * k}s`));
+    panel.querySelectorAll(".aparecer, [data-partir], [data-revelar]").forEach((n) => n.classList.add("visible"));
   }));
 
   // Menú móvil
@@ -91,12 +89,13 @@
 
   // Efectos ligados al scroll (solo lo visible)
   const nav = document.querySelector("[data-nav]");
+  const fondo = document.querySelector("[data-fondo]");
+  const pasos = [...document.querySelectorAll("[data-pasos] li")];
+  const listaPasos = document.querySelector("[data-pasos]");
   const enPantalla = new Set();
   const vista = new IntersectionObserver((es) => es.forEach((e) => (e.isIntersecting ? enPantalla.add(e.target) : enPantalla.delete(e.target))));
-  const filas = [...document.querySelectorAll("[data-deslizar]")];
   const revelar = [...document.querySelectorAll("[data-revelar]")];
-  const palabras = encender ? [...encender.querySelectorAll(".pal")] : [];
-  [panel, encender, ...filas, ...revelar].filter(Boolean).forEach((n) => vista.observe(n));
+  [panel, listaPasos, ...revelar].filter(Boolean).forEach((n) => vista.observe(n));
 
   let pendiente = false;
   const pintar = () => {
@@ -109,17 +108,15 @@
       const avance = (alto - r.top) / (alto + r.height);
       if (n === panel) {
         const s = Math.max(0, -r.top);
+        fondo?.style.setProperty("--fy", `${(s * 0.25).toFixed(1)}px`);
         capas.forEach(({ n: c, f }) => c.style.setProperty("--sy", `${(s * f * -0.12).toFixed(1)}px`));
-      } else if (n === encender) {
-        const p = Math.min(1, Math.max(0, (alto * 0.85 - r.top) / (r.height + alto * 0.3)));
-        const total = palabras.length;
-        palabras.forEach((w, k) => { w.style.opacity = (0.16 + Math.min(1, Math.max(0, p * total * 1.15 - k)) * 0.84).toFixed(2); });
-        encender.classList.toggle("encendido", p > 0.5);
-      } else if (n.hasAttribute("data-deslizar")) {
-        const dir = Number(n.dataset.deslizar);
-        n.style.setProperty("--px", `${((avance - 0.5) * -dir * Math.min(innerWidth, 1400) * 0.35 - (dir > 0 ? 0 : innerWidth * 0.25)).toFixed(1)}px`);
-      } else if (n.hasAttribute("data-revelar")) {
-        n.querySelector(".marco img").style.setProperty("--py", `${((avance - 0.5) * -r.height * 0.12).toFixed(1)}px`);
+      } else if (n === listaPasos) {
+        const p = Math.min(0.999, Math.max(0, (alto * 0.7 - r.top) / r.height));
+        const activo = Math.floor(p * pasos.length);
+        pasos.forEach((li, k) => li.classList.toggle("activo", k <= activo));
+      }
+      if (n.hasAttribute("data-revelar")) {
+        n.querySelector(".marco img").style.setProperty("--py", `${((avance - 0.5) * -r.height * 0.1).toFixed(1)}px`);
       }
     });
   };
@@ -137,7 +134,7 @@
     const t0 = performance.now();
     const paso = (t) => {
       const k = Math.min(1, (t - t0) / 1200);
-      e.target.textContent = Math.round(fin * (1 - Math.pow(1 - k, 3)));
+      e.target.textContent = `${e.target.dataset.prefijo || ""}${Math.round(fin * (1 - Math.pow(1 - k, 3)))}`;
       if (k < 1) requestAnimationFrame(paso);
     };
     requestAnimationFrame(paso);
