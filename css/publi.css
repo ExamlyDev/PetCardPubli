@@ -604,3 +604,27 @@ i.cara-ceiba span { width: 46%; height: 30%; display: flex; justify-content: spa
 i.cara-ceiba span::before, i.cara-ceiba span::after { content: ""; width: 30%; height: 100%; border-radius: 999px; background: #fff; animation: parpadeo 4.5s infinite; }
 i.cara-ceiba span::after { animation-delay: .04s; }
 @media (prefers-reduced-motion: reduce) { i.cara-ceiba span::before, i.cara-ceiba span::after { animation: none; } }
+
+/* ———— Portada con la app real ———— */
+.portada__visual--app { aspect-ratio: 1 / 1.02; }
+.escena { position: absolute; inset: 2% 4% 4% 8%; overflow: hidden; border-radius: 44px; background: var(--naranja); }
+.escena__perro { position: absolute; left: -12%; bottom: 6%; width: 124%; height: auto; aspect-ratio: 1943 / 847; color: rgba(255, 255, 255, .22); }
+.escena img { position: absolute; height: auto; transition: transform .9s var(--rebote); }
+.escena__atras { right: -9%; top: 17%; width: 54%; rotate: 7deg; }
+.escena__frente { left: 6%; top: 7%; width: 64%; }
+.portada__visual--app:hover .escena__frente { transform: translateY(-8px); }
+.portada__visual--app:hover .escena__atras { transform: translateY(-4px) rotate(1deg); }
+.flotante--ceiba { right: 0; bottom: 9%; animation-delay: -3s; }
+.flotante--android { left: 0; bottom: 22%; animation-delay: -5s; }
+.flotante--android i { background: var(--salvia); color: var(--salvia-t); }
+.flotante--android .ico { fill: currentColor; stroke: none; }
+.portada .tiendas .tienda { min-width: 0; }
+@media (max-width: 960px) { .portada__visual--app { width: min(560px, 100%); margin-inline: auto; } }
+@media (max-width: 680px) {
+  .escena { inset: 2% 2% 4% 2%; border-radius: 32px; }
+  .flotante--ceiba { right: -2%; bottom: 4%; }
+  .flotante--android { left: -2%; bottom: 26%; }
+}
+.flotante--android { bottom: 4%; left: -1%; }
+.flotante--ceiba { bottom: 15%; }
+@media (max-width: 680px) { .flotante--android { bottom: 2%; } .flotante--ceiba { bottom: 14%; } }

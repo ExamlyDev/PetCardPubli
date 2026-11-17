@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>PetCard | Todo lo de tu mascota en un solo lugar</title>
-  <meta name="description" content="PetCard es la app para iPhone y iPad donde guardas la cartilla, consultas, estudios y recetas de tus mascotas, con placa QR y NFC, recordatorios y Ceiba. Y PetCard Vet, la plataforma gratis para veterinarias.">
+  <meta name="description" content="PetCard es la app para iPhone, iPad y pronto Android donde guardas la cartilla, consultas, estudios y recetas de tus mascotas, con placa QR y NFC, recordatorios y Ceiba. Y PetCard Vet, la plataforma gratis para veterinarias.">
   <meta name="theme-color" content="#F4EBE2">
   <meta name="color-scheme" content="light only">
   <meta property="og:type" content="website">
@@ -23,7 +23,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="preload" href="/fonts/SpaceGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/publi.css?v=2">
+  <link rel="stylesheet" href="/css/publi.css?v=3">
   <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__petcardListo)document.documentElement.classList.remove("js")},3500);</script>
 </head>
 <body>
@@ -86,6 +86,7 @@
     <symbol id="i-grafica" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
     <symbol id="i-gafete" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 18c.6-1.8 2.2-3 4-3s3.4 1.2 4 3"/></symbol>
     <symbol id="i-pc" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5Z"/></symbol>
   </defs>
 </svg>
 <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -122,18 +123,19 @@
     <div class="contenedor">
       <div class="portada__grid">
         <div>
-          <p class="chip" data-entra style="--i:0"><i><svg class="ico"><use href="#i-pata"/></svg></i>iPhone, iPad y web</p>
-          <h1 data-entra style="--i:1">La salud de tu mascota <span class="resalte">en tu bolsillo</span></h1>
+          <h1 data-entra style="--i:0">La salud de tu mascota <span class="resalte">en tu bolsillo</span></h1>
           <p class="portada__sub" data-entra style="--i:2">Cartilla, citas, estudios y una placa con QR para que siempre vuelva a casa. Todo lo de tu mascota en un solo lugar, conectado con su veterinaria.</p>
-          <div class="tiendas" data-entra style="--i:3"><a class="boton boton--oscuro tienda" href="/descargar" aria-label="PetCard en App Store, muy pronto"><svg class="ico"><use href="#i-apple"/></svg><span><small>Muy pronto en</small><b>App Store</b></span></a><a class="boton boton--blanco tienda" href="https://platform.petcard.cloud/"><svg class="ico"><use href="#i-pc"/></svg><span><small>Para veterinarias</small><b>Web</b></span></a></div>
+          <div class="tiendas" data-entra style="--i:3"><a class="boton boton--oscuro tienda" href="/descargar" aria-label="PetCard en App Store, muy pronto"><svg class="ico"><use href="#i-apple"/></svg><span><small>Muy pronto en</small><b>App Store</b></span></a><a class="boton boton--blanco tienda" href="/descargar" aria-label="PetCard en Google Play, muy pronto"><svg class="ico"><use href="#i-play"/></svg><span><small>Muy pronto en</small><b>Google Play</b></span></a><a class="boton boton--blanco tienda" href="https://platform.petcard.cloud/"><svg class="ico"><use href="#i-pc"/></svg><span><small>Para veterinarias</small><b>Web</b></span></a></div>
           <p class="portada__nota" data-entra style="--i:4">Gratis para empezar · PetCard Vet gratis para veterinarias</p>
         </div>
-        <div class="portada__visual">
-          <figure class="foto" data-entra style="--i:2"><img src="/img/veterinario.jpg" alt="Veterinario revisando a un perro" width="900" height="1200" fetchpriority="high"></figure>
-          <div class="flotante flotante--1" data-entra style="--i:0"><i><svg class="ico"><use href="#i-jeringa"/></svg></i><div><b>Rabia</b><small>Próximo refuerzo · 12 dic</small></div><span class="ok">Al día</span></div>
-          <div class="flotante flotante--2" data-entra style="--i:1"><i><svg class="ico"><use href="#i-campana"/></svg></i><div><b>Consulta mañana</b><small>10:00 · Luna</small></div></div>
-          <div class="flotante flotante--3" data-entra style="--i:2"><i><svg class="ico"><use href="#i-qr"/></svg></i><div><b>Su placa con QR</b><small>Para que vuelva a casa</small></div></div>
-          <div class="flotante flotante--4" data-entra style="--i:3"><i class="cara-ceiba" aria-hidden="true"><span></span></i><div><b>Ceiba</b><small>¿Cuándo le toca su vacuna?</small></div></div>
+        <div class="portada__visual portada__visual--app">
+          <div class="escena" data-entra style="--i:1">
+            <svg class="perro escena__perro" aria-hidden="true"><use href="#perro"/></svg>
+            <img class="escena__atras" src="/img/app/placa.webp" alt="Placa NFC y código QR de Amelie en PetCard" width="900" height="1650" decoding="async">
+            <img class="escena__frente" src="/img/app/inicio.webp" alt="Inicio de la app de PetCard con Amelie y sus pendientes del día" width="900" height="1546" fetchpriority="high" decoding="async">
+          </div>
+          <div class="flotante flotante--ceiba" data-entra style="--i:3"><i class="cara-ceiba" aria-hidden="true"><span></span></i><div><b>Ceiba</b><small>¿Cuándo le toca su vacuna?</small></div></div>
+          <div class="flotante flotante--android" data-entra style="--i:4"><i><svg class="ico"><use href="#i-play"/></svg></i><div><b>Android</b><small>Muy pronto</small></div></div>
         </div>
       </div>
       <div class="portada__pie" data-entra style="--i:5">
@@ -151,10 +153,10 @@
       <div class="cabeza cabeza--centro">
         <p class="chip" data-aparece><i><svg class="ico"><use href="#i-chispas"/></svg></i>Conoce PetCard</p>
         <h2 class="titulo" data-aparece>Todo lo que puedes hacer, <span class="acento">en una sola app</span></h2>
-        <p class="bajada" data-aparece>Para familias en iPhone y iPad, y para veterinarias en iPhone, iPad y la web.</p>
+        <p class="bajada" data-aparece>Para familias en iPhone, iPad y muy pronto Android, y para veterinarias también en la web.</p>
       </div>
       <div class="explora">
-        <a class="explora__tarjeta explora__tarjeta--grande" href="/funcionamiento" style="--fondo:var(--durazno)" data-aparece><i><svg class="ico"><use href="#i-pata"/></svg></i><h3>Cómo funciona</h3><p>Registra a tu mascota, conecta su placa y recibe todo de su veterinaria.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span><span class="explora__foto"><img src="/img/app/perfil.webp" alt="Perfil de Amelie en PetCard" loading="lazy" decoding="async" width="900" height="1650"></span></a><a class="explora__tarjeta explora__tarjeta--grande" href="/veterinarias" style="--fondo:var(--salvia)" data-aparece><i><svg class="ico"><use href="#i-estetoscopio"/></svg></i><h3>PetCard Vet</h3><p>Agenda, expediente, recetas, hospital, tu página y tu equipo. Gratis.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span><span class="explora__foto"><img src="/img/app/vet.webp" alt="Inicio de PetCard Vet" loading="lazy" decoding="async" width="900" height="1650"></span></a><a class="explora__tarjeta explora__tarjeta--grande" href="/ceiba" style="--fondo:var(--lila)" data-aparece><i class="cara-ceiba" aria-hidden="true"><span></span></i><h3>Ceiba</h3><p>La asistente con IA que ya conoce a tu mascota y agenda por ti.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span><span class="explora__foto"><img src="/img/app/ceiba.webp" alt="Chat con Ceiba" loading="lazy" decoding="async" width="900" height="1650"></span></a><a class="explora__tarjeta" href="/planes" style="--fondo:var(--cielo)" data-aparece><i><svg class="ico"><use href="#i-boleto"/></svg></i><h3>Planes</h3><p>Empieza gratis. PetCard+ para mascotas ilimitadas y Ceiba.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span></a><a class="explora__tarjeta" href="/descargar" style="--fondo:var(--rosa)" data-aparece><i><svg class="ico"><use href="#i-telefono"/></svg></i><h3>Descargar</h3><p>iPhone, iPad y web, sincronizados al instante.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span></a><a class="explora__tarjeta" href="/preguntas" style="--fondo:var(--blanco)" data-aparece><i><svg class="ico"><use href="#i-mas"/></svg></i><h3>Preguntas</h3><p>Respuestas para familias y veterinarias.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span></a>
+        <a class="explora__tarjeta explora__tarjeta--grande" href="/funcionamiento" style="--fondo:var(--durazno)" data-aparece><i><svg class="ico"><use href="#i-pata"/></svg></i><h3>Cómo funciona</h3><p>Registra a tu mascota, conecta su placa y recibe todo de su veterinaria.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span><span class="explora__foto"><img src="/img/app/perfil.webp" alt="Perfil de Amelie en PetCard" loading="lazy" decoding="async" width="900" height="1650"></span></a><a class="explora__tarjeta explora__tarjeta--grande" href="/veterinarias" style="--fondo:var(--salvia)" data-aparece><i><svg class="ico"><use href="#i-estetoscopio"/></svg></i><h3>PetCard Vet</h3><p>Agenda, expediente, recetas, hospital, tu página y tu equipo. Gratis.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span><span class="explora__foto"><img src="/img/app/vet.webp" alt="Inicio de PetCard Vet" loading="lazy" decoding="async" width="900" height="1650"></span></a><a class="explora__tarjeta explora__tarjeta--grande" href="/ceiba" style="--fondo:var(--lila)" data-aparece><i class="cara-ceiba" aria-hidden="true"><span></span></i><h3>Ceiba</h3><p>La asistente con IA que ya conoce a tu mascota y agenda por ti.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span><span class="explora__foto"><img src="/img/app/ceiba.webp" alt="Chat con Ceiba" loading="lazy" decoding="async" width="900" height="1650"></span></a><a class="explora__tarjeta" href="/planes" style="--fondo:var(--cielo)" data-aparece><i><svg class="ico"><use href="#i-boleto"/></svg></i><h3>Planes</h3><p>Empieza gratis. PetCard+ para mascotas ilimitadas y Ceiba.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span></a><a class="explora__tarjeta" href="/descargar" style="--fondo:var(--rosa)" data-aparece><i><svg class="ico"><use href="#i-telefono"/></svg></i><h3>Descargar</h3><p>iPhone, iPad, web y muy pronto Android, sincronizados al instante.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span></a><a class="explora__tarjeta" href="/preguntas" style="--fondo:var(--blanco)" data-aparece><i><svg class="ico"><use href="#i-mas"/></svg></i><h3>Preguntas</h3><p>Respuestas para familias y veterinarias.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span></a>
       </div>
     </div>
   </section>
@@ -208,7 +210,7 @@
     <div class="pie__cols">
       <div class="pie__col"><h3>Ayuda</h3><a href="/funcionamiento">Cómo funciona</a><a href="/planes">Planes</a><a href="/soporte">Ayuda y soporte</a><a href="/preguntas">Preguntas frecuentes</a></div>
       <div class="pie__col"><h3>Veterinarias</h3><a href="https://platform.petcard.cloud/#registro">Registrar mi veterinaria<svg class="ico"><use href="#i-externo"/></svg></a><a href="https://platform.petcard.cloud/">Iniciar sesión<svg class="ico"><use href="#i-externo"/></svg></a><a href="/veterinarias#paginas">Creador de páginas</a><a href="mailto:contacto@zootrack.com">contacto@zootrack.com</a></div>
-      <div class="pie__col"><h3>Descarga la app</h3><a class="boton boton--oscuro tienda boton--chico" href="/descargar" aria-label="PetCard en App Store, muy pronto"><svg class="ico"><use href="#i-apple"/></svg><span><small>Muy pronto en</small><b>App Store</b></span></a><a class="boton boton--blanco tienda boton--chico" href="https://platform.petcard.cloud/"><svg class="ico"><use href="#i-pc"/></svg><span><small>Para veterinarias</small><b>Web</b></span></a></div>
+      <div class="pie__col"><h3>Descarga la app</h3><a class="boton boton--oscuro tienda boton--chico" href="/descargar" aria-label="PetCard en App Store, muy pronto"><svg class="ico"><use href="#i-apple"/></svg><span><small>Muy pronto en</small><b>App Store</b></span></a><a class="boton boton--blanco tienda boton--chico" href="/descargar" aria-label="PetCard en Google Play, muy pronto"><svg class="ico"><use href="#i-play"/></svg><span><small>Muy pronto en</small><b>Google Play</b></span></a><a class="boton boton--blanco tienda boton--chico" href="https://platform.petcard.cloud/"><svg class="ico"><use href="#i-pc"/></svg><span><small>Para veterinarias</small><b>Web</b></span></a></div>
       <div class="pie__col"><h3>Legal</h3><a href="/privacidad">Aviso de privacidad</a><a href="/terminos">Términos de uso</a><a href="/soporte#s1">Eliminar mi cuenta</a></div>
     </div>
     <div class="pie__legal"><span>© <span data-anio>2026</span> PetCard · Hecho en México</span><a class="potenciado" href="https://zootrack.cloud/" aria-label="Potenciado por ZooTrack"><i><svg class="ico"><use href="#i-hoja"/></svg></i><span>Potenciado por <b>ZooTrack</b></span></a><nav aria-label="Legal"><a href="/terminos">Términos</a><a href="/privacidad">Privacidad</a></nav></div>
