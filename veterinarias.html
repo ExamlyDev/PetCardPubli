@@ -25,7 +25,7 @@
 
   <link rel="preload" href="/fonts/Urbanist-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/SpaceGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/inicio.css?v=4">
+  <link rel="stylesheet" href="/css/inicio.css?v=5">
   <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__petcardListo)document.documentElement.classList.remove("js")},3500);</script>
 </head>
 <body>
@@ -108,7 +108,7 @@
       <a href="/contacto">Contacto</a>
     </nav>
     <div class="nav__acciones">
-      <a class="nav__entrar" href="https://platform.petcard.cloud/">Iniciar sesión</a>
+      <a class="nav__entrar" href="/entrar">Iniciar sesión</a>
       <a class="boton" href="/descargar">Descarga la app</a>
       <button class="nav__menu" type="button" aria-label="Menú" aria-expanded="false" aria-controls="menu-movil"><svg class="ico"><use href="#i-menu"/></svg></button>
     </div>
@@ -120,7 +120,7 @@
   <a href="/ceiba">Ceiba</a>
   <a href="/planes">Planes</a>
   <a href="/contacto">Contacto</a>
-  <a href="https://platform.petcard.cloud/">Iniciar sesión</a>
+  <a href="/entrar">Iniciar sesión</a>
   <a class="boton" href="/descargar">Descarga la app</a>
 </nav>
 
@@ -129,8 +129,8 @@
     <div class="contenedor">
       <div class="encabezado__dentro">
         <p class="etiqueta" data-aparece>PetCard Vet</p>
-        <h1 data-aparece style="--i:1">Una herramienta para cada momento de tu clínica</h1>
-        <p class="texto" data-aparece style="--i:2">Gratis para veterinarias. En la web, el iPhone y el iPad, conectada con la app de tus clientes.</p>
+        <h1 data-aparece style="--i:1">La consulta veterinaria, <span class="degradado">sin papeles</span></h1>
+        <p class="texto" data-aparece style="--i:2">Expediente, agenda, recetas, vacunas y hospitalización para tu clínica, con perros, gatos, exóticos y fauna silvestre. Gratis, en la web, el iPhone y el iPad.</p>
         <div class="tiendas" data-aparece style="--i:3"><a class="boton" href="https://platform.petcard.cloud/#registro">Registrar mi veterinaria<svg class="ico"><use href="#i-flecha"/></svg></a><a class="boton boton--claro" href="https://platform.petcard.cloud/">Iniciar sesión</a></div>
       </div>
     </div>
@@ -142,6 +142,60 @@
         <div class="navegador"><div class="navegador__barra" aria-hidden="true"><i></i><i></i><i></i><span>platform.petcard.cloud</span></div><img src="/img/app/web-equipo.webp" alt="Panel web de PetCard Vet con el equipo de la clínica" width="1800" height="962" loading="lazy" decoding="async"></div>
         <div class="escaparate__movil"><img src="/img/app/vet.webp" alt="PetCard Vet en el iPhone con las consultas del día" width="900" height="1650" loading="lazy"></div>
       </div>
+    </div>
+  </section>
+  <section class="seccion">
+    <div class="contenedor dividido">
+      <div class="dividido__texto">
+        <p class="etiqueta" data-aparece>Expediente clínico</p>
+        <h2 class="titulo" data-aparece style="--i:1">Todo su historial <em>en una línea de tiempo</em></h2>
+        <p class="texto" data-aparece style="--i:2">Cada paciente con su historia completa: signos vitales, diagnósticos, estudios de laboratorio y archivos, ordenados por fecha.</p>
+        <div data-aparece style="--i:3"><ul class="lista"><li>Signos vitales y exploración por especie</li><li>Diagnósticos, estudios y archivos adjuntos</li><li>Perros, gatos, exóticos y fauna silvestre</li></ul></div>
+      </div>
+      <div class="vitrina vitrina--luz vitrina--ancha" data-aparece style="--i:1"><img src="/img/app/ipad-vet.webp" alt="Expediente en PetCard Vet en el iPad" width="1300" height="1381" loading="lazy"></div>
+    </div>
+  </section>
+  <section class="seccion">
+    <div class="contenedor dividido dividido--al-reves">
+      <div class="dividido__texto">
+        <p class="etiqueta" data-aparece>Agenda</p>
+        <h2 class="titulo" data-aparece style="--i:1">Tu día, <em>sin huecos ni olvidos</em></h2>
+        <p class="texto" data-aparece style="--i:2">Ve tus citas por día o por semana, confirma con un toque y deja que los recordatorios lleguen solos a cada familia.</p>
+        <div data-aparece style="--i:3"><ul class="lista"><li>Vista por día y por semana</li><li>Recordatorios automáticos al dueño</li><li>Lista de espera y solicitudes desde la app</li></ul></div>
+      </div>
+      <div class="vitrina vitrina--luz" data-aparece style="--i:1"><img src="/img/app/vet.webp" alt="Consultas del día en PetCard Vet" width="900" height="1650" loading="lazy"></div>
+    </div>
+  </section>
+  <section class="seccion">
+    <div class="contenedor dividido">
+      <div class="dividido__texto">
+        <p class="etiqueta" data-aparece>Recetas y vacunas</p>
+        <h2 class="titulo" data-aparece style="--i:1">Recetas firmadas y <em>vacunas al día</em></h2>
+        <p class="texto" data-aparece style="--i:2">Indica dosis y horarios, imprime la receta en PDF con tu firma y lleva el calendario de vacunas de cada especie.</p>
+        <div data-aparece style="--i:3"><ul class="lista"><li>Receta en PDF con firma y cédula</li><li>Seguimiento de cada toma</li><li>Esquemas de vacunación por especie, con lote</li><li>Inventario con caducidades</li></ul></div>
+      </div>
+      <div class="vitrina" data-aparece style="--i:1"><img src="/img/app/receta.webp" alt="Receta firmada que llega a la app de la familia" width="900" height="1642" loading="lazy"></div>
+    </div>
+  </section>
+  <section class="seccion">
+    <div class="contenedor dividido dividido--al-reves">
+      <div class="dividido__texto">
+        <p class="etiqueta" data-aparece>Conexión con PetCard</p>
+        <h2 class="titulo" data-aparece style="--i:1">Lo que registras <em>llega a su familia</em></h2>
+        <p class="texto" data-aparece style="--i:2">Vacunas, consultas, recetas y estudios aparecen al instante en la cartilla digital de la mascota. Con permiso del dueño, tú también ves su historial.</p>
+        <div data-aparece style="--i:3"><ul class="lista"><li>Cartilla digital que se actualiza sola</li><li>Avisos de próximas dosis al dueño</li><li>Historial compartido con permiso</li></ul></div>
+      </div>
+      <div class="vitrina vitrina--luz" data-aparece style="--i:1"><img src="/img/app/perfil.webp" alt="Perfil de la mascota en la app de PetCard" width="900" height="1753" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="cabeza">
+        <p class="etiqueta" data-aparece>Y además</p>
+        <h2 class="titulo" data-aparece style="--i:1">Hospital, nutrición <em>y estancias</em></h2>
+      </div>
+      <div class="funciones funciones--tres"><article class="funcion" data-aparece style="--i:0"><span class="funcion__icono"><svg class="ico"><use href="#i-cama"/></svg></span><h3>Hospitalización</h3><p>Gráficas de signos vitales, medicación y alimentación programadas, y notas de entrega de turno.</p></article><article class="funcion" data-aparece style="--i:1"><span class="funcion__icono"><svg class="ico"><use href="#i-hoja"/></svg></span><h3>Nutrición clínica</h3><p>Calcula su dieta por especie, peso y condición, con el balance de nutrientes y el costo diario.</p></article><article class="funcion" data-aparece style="--i:2"><span class="funcion__icono"><svg class="ico"><use href="#i-casa"/></svg></span><h3>Guardería, hotel y grooming</h3><p>Estancias con requisitos y tableros por etapas, con avisos a la familia.</p></article></div>
     </div>
   </section>
 
@@ -171,22 +225,19 @@
   </section>
 
   <section class="seccion">
-    <div class="contenedor dividido dividido--al-reves">
-      <div class="dividido__texto">
-        <p class="etiqueta" data-aparece>Tu equipo</p>
-        <h2 class="titulo" data-aparece style="--i:1">Tu clínica y tu equipo, <em>desde un solo panel</em></h2>
-        <div data-aparece style="--i:2"><ul class="lista"><li>Cada persona con su cuenta, rol y gafete</li><li>Permisos para consultas, recetas e inventario</li><li>Horarios, datos de la clínica y bitácora</li></ul></div>
+    <div class="contenedor">
+      <div class="planes">
+        <article class="plan plan--mas" data-aparece style="grid-column:1/-1;max-width:none"><p class="plan__nombre">PetCard Vet<small>Para veterinarias</small></p><p class="plan__precio">$0<small>gratis de por vida</small></p><ul class="lista"><li>Expediente, agenda, recetas y vacunas</li><li>Hospitalización, estancias e inventario</li><li>Tu equipo con roles y tu página web</li><li>Conectada con la app de cada familia</li></ul><a class="boton" href="https://platform.petcard.cloud/#registro">Registrar mi veterinaria<svg class="ico"><use href="#i-flecha"/></svg></a></article>
       </div>
-      <div class="vitrina vitrina--luz vitrina--ancha" data-aparece style="--i:1"><img src="/img/app/ipad-vet.webp" alt="PetCard Vet en el iPad" width="1300" height="1381" loading="lazy"></div>
     </div>
   </section>
   <section class="seccion">
     <div class="contenedor">
       <div class="llamado" data-aparece>
         <svg class="perro" aria-hidden="true"><use href="#perro"/></svg>
-        <h2 class="titulo">Registra tu veterinaria gratis</h2>
-        <p class="texto">Agenda, expediente, recetas y tu página. Todo conectado con la app de tus clientes.</p>
-        <div class="tiendas"><a class="tienda" href="https://platform.petcard.cloud/#registro" style="padding:0 22px">Registrar mi veterinaria</a></div>
+        <h2 class="titulo">Lleva tu clínica a PetCard Vet</h2>
+        <p class="texto">¿Quieres una demostración o tienes dudas? Escríbenos y te ayudamos a empezar.</p>
+        <div class="tiendas"><a class="tienda" href="https://platform.petcard.cloud/#registro" style="padding:0 22px">Registrar mi veterinaria</a><a class="tienda" href="/contacto" style="padding:0 22px;background:#fff;color:var(--texto)">Pedir una demostración</a></div>
       </div>
     </div>
   </section>
@@ -205,6 +256,6 @@
   </div>
 </footer>
 
-<script src="/js/inicio.js?v=4" defer></script>
+<script src="/js/inicio.js?v=5" defer></script>
 </body>
 </html>
