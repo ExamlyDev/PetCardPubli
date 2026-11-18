@@ -211,14 +211,19 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
 /* Pie */
 .pie { margin-top: var(--aire); padding-bottom: 36px; }
 .pie__arriba { display: grid; grid-template-columns: 1.3fr repeat(4, 1fr); gap: 32px; padding-top: 48px; border-top: 1px solid var(--linea); }
-.pie__marca p { margin-top: 14px; color: var(--suave); font-size: 15px; max-width: 16em; }
+.pie__marca p { margin-top: 14px; color: var(--suave); font-size: 15px; line-height: 1.45; }
 .pie__col { display: grid; align-content: start; gap: 12px; font-size: 15px; }
 .pie__col h3 { font: 600 13px/1 var(--texto-f); text-transform: uppercase; letter-spacing: .08em; color: var(--tenue); margin-bottom: 6px; }
-.pie__col a { color: var(--suave); transition: color .2s; }
-.pie__col a:hover { color: var(--texto); }
+.pie__col a { position: relative; justify-self: start; color: var(--suave); transition: color .25s, translate .5s var(--resorte); }
+.pie__col a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 1.5px; border-radius: 2px; background: var(--degradado); scale: 0 1; transform-origin: right; transition: scale .45s var(--curva); }
+.pie__col a:hover { color: var(--texto); translate: 4px 0; }
+.pie__col a:hover::after { scale: 1 1; transform-origin: left; }
 .pie__abajo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-top: 56px; font-size: 14px; color: var(--tenue); }
-.potenciado { display: inline-flex; align-items: center; gap: 8px; color: var(--suave); }
+.potenciado { display: inline-flex; align-items: center; gap: 8px; color: var(--suave); transition: color .25s; }
+.potenciado .ico { width: 16px; height: 16px; color: #3F7334; stroke-width: 1.6; transition: transform .7s var(--resorte); }
 .potenciado b { color: #3F7334; font-weight: 600; }
+.potenciado:hover { color: var(--texto); }
+.potenciado:hover .ico { transform: rotate(-18deg) scale(1.15); }
 
 /* Aparición con resorte */
 .js [data-aparece] { opacity: 0; transform: translateY(28px); transition: opacity .7s var(--curva), transform 1s var(--resorte); transition-delay: calc(var(--i, 0) * 80ms); }
