@@ -539,8 +539,9 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
 .boton .ico { transition: transform .7s var(--resorte); }
 .boton:hover .ico { transform: translateX(4px); }
 .tienda { border-radius: 999px; }
-.nav__entrar { position: relative; padding: 10px 16px; border-radius: 999px; transition: background-color .35s var(--salida); }
-.nav__entrar:hover { background: rgba(29, 27, 25, .06); }
+.nav__entrar { position: relative; padding: 4px 0; }
+.nav__entrar::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.5px; border-radius: 2px; background: var(--degradado); scale: 0 1; transform-origin: right; transition: scale .5s var(--salida); }
+.nav__entrar:hover::after, .nav__entrar:focus-visible::after { scale: 1 1; transform-origin: left; }
 
 /* Tarjetas: se levantan con resorte */
 .funcion:hover, .plan:hover, .canal:hover { transform: translateY(-4px); }
