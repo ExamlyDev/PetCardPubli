@@ -1,664 +1,225 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-MX">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>PetCard | Todo lo de tu mascota en un solo lugar</title>
-  <meta name="description" content="PetCard es la app donde vive la salud de tu mascota: cartilla, citas, estudios, recetas, recordatorios y una placa con QR y NFC. Y PetCard Vet, gratis para veterinarias.">
-  <meta name="theme-color" content="#F8F2EB">
+  <meta name="description" content="PetCard es la app para iPhone, iPad y pronto Android donde guardas la cartilla, consultas, estudios y recetas de tus mascotas, con placa QR y NFC, recordatorios y Ceiba. Y PetCard Vet, la plataforma gratis para veterinarias.">
+  <meta name="theme-color" content="#F4EBE2">
   <meta name="color-scheme" content="light only">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PetCard">
   <meta property="og:title" content="PetCard | Todo lo de tu mascota en un solo lugar">
-  <meta property="og:description" content="PetCard es la app donde vive la salud de tu mascota: cartilla, citas, estudios, recetas, recordatorios y una placa con QR y NFC. Y PetCard Vet, gratis para veterinarias.">
+  <meta property="og:description" content="Cartilla, consultas, estudios, recetas, placa QR y recordatorios de tus mascotas. Y PetCard Vet para veterinarias.">
   <meta property="og:locale" content="es_MX">
   <meta property="og:url" content="https://petcard.cloud/">
   <meta property="og:image" content="https://petcard.cloud/img/og-petcard.jpg?v=1">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PetCard | Todo lo de tu mascota en un solo lugar">
-  <meta name="twitter:description" content="PetCard es la app donde vive la salud de tu mascota: cartilla, citas, estudios, recetas, recordatorios y una placa con QR y NFC. Y PetCard Vet, gratis para veterinarias.">
-  <meta name="twitter:image" content="https://petcard.cloud/img/og-petcard.jpg?v=1">
   <link rel="canonical" href="https://petcard.cloud/">
   <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="preload" href="/fonts/SpaceGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/SpaceGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/iconos.css?v=2">
-  <link rel="stylesheet" href="/css/sitio.css?v=2">
-  <script type="module" src="/js/sitio.js?v=2"></script>
+  <link rel="stylesheet" href="/css/publi.css?v=6">
+  <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__petcardListo)document.documentElement.classList.remove("js")},3500);</script>
 </head>
 <body>
-  <a class="saltar" href="#contenido">Saltar al contenido</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="perro" viewBox="28 576 1943 847"><path fill="currentColor" fill-rule="evenodd" stroke="currentColor" stroke-width="12" stroke-linejoin="round" d="M1207.5 1404.8C1229.3 1399.7 1250.5 1387.2 1272.0 1366.6C1287.2 1352.1 1289.0 1351.2 1311.3 1348.9C1321.3 1347.9 1332.0 1346.4 1335.0 1345.6C1338.0 1344.8 1343.2 1343.6 1346.5 1343.0C1361.0 1340.1 1387.4 1329.7 1396.5 1323.4C1400.5 1320.5 1403.7 1321.6 1406.6 1326.8C1423.3 1356.6 1435.7 1364.9 1461.4 1363.8C1476.7 1363.1 1487.3 1358.1 1499.7 1345.9C1509.8 1335.9 1519.0 1312.4 1519.0 1296.5C1519.0 1290.6 1515.8 1274.8 1513.5 1269.3C1511.0 1263.3 1511.9 1261.9 1525.3 1252.3C1538.4 1242.9 1563.6 1224.2 1587.0 1206.3C1625.1 1177.3 1640.0 1167.3 1688.0 1138.7C1813.6 1063.7 1824.3 1056.7 1862.0 1025.4C1931.3 967.9 1968.6 884.1 1951.9 823.5C1941.1 784.1 1900.4 730.9 1869.0 715.1C1841.9 701.4 1786.3 690.3 1758.0 692.9C1730.5 695.4 1725.4 696.7 1664.1 716.9C1628.5 728.7 1612.1 730.6 1580.9 726.6C1566.3 724.7 1566.3 724.7 1550.9 726.9C1535.7 729.1 1532.4 729.7 1512.0 734.7C1458.0 747.7 1400.2 771.4 1383.2 787.3C1374.4 795.7 1366.2 809.7 1358.6 829.5C1357.1 833.4 1355.2 838.1 1354.5 840.0C1353.7 841.9 1351.5 848.1 1349.6 853.7C1333.0 902.7 1319.2 924.7 1298.7 934.9C1291.2 938.6 1288.8 939.3 1275.4 941.1C1253.9 944.0 1209.1 944.8 1188.0 942.7C1179.5 941.8 1169.6 940.8 1166.0 940.5C1137.9 938.2 1107.2 934.6 1076.5 930.0C1069.3 928.9 1056.1 927.1 1047.0 926.0C1037.9 924.8 1025.8 923.2 1020.0 922.5C1014.2 921.7 1005.0 920.6 999.5 920.0C988.6 919.0 969.0 916.8 948.0 914.5C932.4 912.7 894.8 909.4 881.0 908.5C875.8 908.2 864.1 907.2 855.0 906.5C845.9 905.7 834.2 904.8 829.0 904.5C823.8 904.1 811.9 903.2 802.5 902.5C793.1 901.7 777.2 900.6 767.0 900.0C756.8 899.4 746.7 898.7 744.5 898.5C742.3 898.2 730.4 897.3 718.0 896.4C705.7 895.6 694.6 894.7 693.5 894.5C692.4 894.2 685.9 893.6 679.0 893.0C672.1 892.4 657.3 891.1 646.0 890.0C634.7 888.9 615.6 887.1 603.5 886.0C489.5 875.2 391.8 854.0 323.0 825.1C277.9 806.1 242.6 781.4 221.5 754.0C197.9 723.2 183.1 694.3 154.9 624.6C148.9 609.7 143.2 596.8 142.2 595.7C136.3 589.9 113.4 591.2 92.0 598.7C68.5 606.9 54.5 625.3 46.8 658.0C43.5 672.1 43.6 707.9 46.9 726.0C51.3 750.0 56.4 766.1 66.6 787.8C85.6 828.6 125.8 874.4 168.6 904.0C174.5 908.1 183.0 914.2 187.5 917.6C211.4 935.6 236.0 948.1 255.0 952.1C260.5 953.2 264.0 955.3 264.0 957.5C264.0 958.1 258.1 966.7 250.9 976.6C243.7 986.4 235.3 998.3 232.2 1003.0C217.9 1025.0 193.8 1068.0 184.1 1088.9C172.5 1113.8 161.1 1143.0 156.0 1160.5C155.0 1163.8 153.1 1170.3 151.8 1175.0C139.7 1216.3 134.4 1258.5 136.1 1298.7C137.3 1327.3 145.4 1349.8 161.2 1368.1C176.7 1386.2 196.4 1395.5 219.0 1395.4C243.5 1395.4 258.6 1388.8 275.6 1370.6C285.6 1360.0 289.2 1358.5 304.0 1358.6C310.3 1358.6 320.7 1359.5 327.0 1360.5C333.3 1361.5 343.9 1362.4 350.5 1362.6C357.1 1362.7 363.1 1362.9 363.8 1362.9C364.6 1363.0 367.9 1365.6 371.3 1368.8C384.2 1381.1 392.9 1385.9 409.1 1389.9C418.6 1392.3 437.8 1392.9 443.7 1391.1C450.6 1389.0 458.9 1381.4 466.7 1370.0C473.7 1359.7 466.6 1360.6 538.2 1361.3C621.1 1362.1 691.6 1363.7 727.1 1365.5C742.8 1366.3 771.6 1367.4 791.1 1368.0C810.6 1368.5 836.9 1369.4 849.5 1370.0C908.6 1372.7 927.9 1373.1 1021.0 1373.6C1083.3 1373.9 1121.5 1374.5 1123.1 1375.2C1124.6 1375.7 1130.4 1380.8 1135.9 1386.6C1148.5 1399.5 1158.4 1404.7 1175.5 1407.4C1181.3 1408.3 1198.6 1406.9 1207.5 1404.8ZM1175.2 1376.4C1163.0 1373.8 1153.2 1366.3 1151.0 1358.0C1149.8 1353.4 1150.7 1347.1 1154.1 1337.6C1158.4 1325.3 1156.3 1313.1 1146.7 1294.8C1128.4 1259.9 1090.1 1223.8 1045.0 1199.0C1018.1 1184.3 976.5 1167.8 948.0 1160.6C945.0 1159.8 938.9 1158.2 934.5 1157.1C889.3 1145.1 834.2 1139.5 785.0 1141.9C740.3 1144.0 708.7 1148.0 627.5 1161.6C595.9 1166.9 572.8 1172.0 559.5 1176.6C491.5 1200.3 464.7 1218.2 432.8 1261.2C407.0 1295.8 394.2 1306.4 370.5 1312.5C357.2 1315.9 348.7 1320.7 344.0 1327.6C340.2 1333.1 338.8 1333.4 323.4 1332.5C310.4 1331.8 307.1 1330.6 308.6 1327.1C311.5 1320.0 309.3 1312.0 304.4 1312.0C296.9 1312.0 282.3 1323.5 268.9 1340.0C261.7 1349.0 250.9 1358.5 243.9 1362.1C224.9 1371.8 196.7 1366.0 180.8 1349.2C159.5 1326.6 155.1 1298.5 165.5 1252.0C166.3 1248.4 169.0 1235.4 171.5 1223.0C186.1 1151.6 194.7 1124.4 218.4 1075.6C238.4 1034.3 260.7 999.2 282.9 974.0C289.9 966.0 295.1 961.5 305.0 954.6C313.5 948.8 317.9 939.5 314.6 934.4C310.4 928.1 301.4 926.4 288.5 929.5C273.6 933.1 255.5 930.2 237.3 921.3C231.1 918.3 216.1 909.2 203.8 901.1C191.5 893.0 178.0 884.4 173.7 882.0C125.4 854.6 83.8 791.2 70.9 725.0C67.8 708.7 67.7 680.6 70.7 667.5C78.3 635.2 95.9 618.0 121.2 618.0C127.0 618.0 129.2 620.9 133.4 634.1C135.4 640.4 138.0 647.8 139.0 650.5C140.1 653.2 143.0 660.7 145.4 667.0C163.3 713.4 199.4 768.4 234.7 803.2C242.0 810.4 245.3 812.8 254.0 817.3C259.8 820.2 272.0 826.7 281.1 831.7C366.7 878.5 383.8 884.7 453.0 894.0C461.5 895.1 473.9 897.2 480.5 898.5C493.9 901.2 516.6 904.7 549.5 909.1C561.6 910.7 576.5 912.7 582.5 913.5C588.5 914.3 598.9 915.5 605.5 916.0C612.1 916.6 621.1 917.5 625.5 918.0C635.1 919.1 669.8 921.5 705.5 923.5C734.8 925.1 761.2 927.1 793.5 930.0C822.6 932.7 845.8 934.8 855.0 935.5C859.1 935.8 870.1 937.0 879.5 938.0C888.9 939.0 907.5 940.9 921.0 942.0C956.1 945.1 1016.6 951.8 1042.5 955.5C1048.5 956.3 1059.8 957.7 1067.5 958.5C1075.2 959.4 1088.0 960.9 1096.0 962.0C1104.0 963.0 1115.7 964.6 1122.0 965.4C1128.3 966.3 1138.9 967.4 1145.5 968.0C1152.1 968.6 1158.2 969.3 1159.0 969.5C1162.7 970.6 1206.0 973.0 1232.0 973.6C1266.8 974.4 1278.8 973.0 1302.5 965.3C1321.1 959.3 1330.0 953.2 1341.2 938.6C1352.4 924.2 1359.6 907.3 1373.0 864.5C1378.6 846.6 1384.4 834.0 1387.1 834.0C1388.5 834.0 1388.2 843.5 1386.5 853.0C1382.3 876.6 1382.5 924.4 1387.0 950.0C1393.5 986.8 1403.4 1014.5 1418.7 1038.0C1432.2 1058.8 1452.1 1078.1 1463.0 1081.0C1471.5 1083.3 1498.7 1078.0 1512.7 1071.4C1544.6 1056.3 1587.3 1013.8 1612.5 972.3C1643.5 921.4 1658.4 862.3 1653.1 812.1C1651.2 795.0 1645.7 772.4 1640.4 760.3C1637.8 754.5 1637.3 750.5 1639.1 749.5C1639.7 749.1 1642.5 748.2 1645.3 747.5C1648.2 746.8 1658.2 743.7 1667.5 740.7C1696.1 731.4 1744.4 721.7 1750.5 724.0C1753.1 725.0 1754.5 728.1 1756.4 737.5C1763.9 773.5 1787.8 814.4 1816.1 839.9C1831.9 854.1 1839.5 859.4 1857.9 868.5C1879.7 879.4 1890.0 882.8 1905.3 884.1C1921.1 885.4 1922.4 885.9 1921.7 891.0C1921.0 896.2 1910.5 919.9 1903.0 932.9C1879.4 974.0 1838.5 1014.8 1785.7 1049.8C1760.1 1066.8 1708.1 1098.0 1680.5 1113.0C1668.0 1119.8 1621.0 1148.3 1605.5 1158.4C1581.6 1174.1 1566.8 1185.7 1541.8 1208.0C1535.9 1213.3 1528.7 1218.9 1525.8 1220.5C1517.1 1225.1 1506.2 1232.8 1495.0 1242.0C1478.6 1255.7 1478.5 1256.0 1484.2 1265.0C1496.5 1284.6 1495.0 1310.4 1480.5 1325.9C1473.6 1333.3 1466.4 1336.5 1457.0 1336.4C1442.1 1336.3 1434.8 1329.7 1420.5 1302.9C1412.7 1288.1 1408.8 1283.0 1405.5 1283.0C1404.3 1283.0 1400.6 1284.9 1397.4 1287.3C1376.0 1303.0 1359.6 1310.6 1332.3 1317.5C1308.7 1323.4 1307.4 1321.2 1323.6 1302.5C1330.3 1294.8 1335.0 1286.7 1335.0 1283.0C1335.0 1274.8 1320.2 1275.9 1307.2 1285.0C1300.4 1289.8 1296.5 1293.9 1271.2 1323.5C1247.5 1351.2 1229.5 1366.7 1212.8 1373.9C1203.5 1377.9 1187.0 1379.0 1175.2 1376.4ZM409.7 1364.0C403.4 1362.4 398.0 1359.2 398.0 1357.0C398.0 1353.5 400.8 1353.4 432.5 1355.9C439.5 1356.4 440.5 1356.7 440.5 1358.4C440.5 1362.6 435.7 1364.5 424.2 1364.7C418.3 1364.8 411.8 1364.5 409.7 1364.0ZM950.0 1345.3C917.4 1344.8 856.9 1342.9 843.5 1342.0C766.6 1336.6 648.9 1333.4 495.0 1332.5C444.1 1332.2 400.4 1331.7 397.8 1331.4C390.1 1330.5 390.7 1329.6 405.5 1318.8C416.1 1311.1 438.1 1288.3 451.4 1271.2C471.6 1245.2 488.9 1229.5 509.6 1218.4C527.6 1208.7 558.3 1196.8 580.0 1190.9C608.8 1183.1 640.0 1175.8 654.0 1173.6C663.1 1172.1 674.5 1170.3 679.5 1169.5C703.8 1165.6 709.2 1164.8 727.2 1162.6C767.1 1157.5 818.0 1156.7 849.0 1160.5C909.5 1167.9 944.2 1176.1 994.5 1195.0C1058.1 1218.8 1115.5 1266.9 1129.5 1308.1C1131.5 1313.7 1132.0 1317.4 1132.0 1324.6C1132.0 1339.8 1131.2 1340.7 1115.3 1342.1C1077.8 1345.4 1022.3 1346.4 950.0 1345.3ZM1471.0 1060.7C1454.7 1057.1 1434.2 1035.8 1422.0 1009.6C1394.7 951.3 1394.8 853.0 1422.3 807.6C1431.6 792.1 1438.6 786.7 1456.5 781.5C1461.5 780.0 1477.2 775.0 1491.4 770.4C1535.8 755.8 1553.3 752.0 1575.2 752.0C1607.4 752.0 1625.2 763.7 1633.2 790.0C1635.8 798.4 1636.8 832.1 1635.0 848.0C1626.7 920.8 1589.0 991.5 1541.5 1023.8C1537.7 1026.4 1526.7 1034.3 1517.1 1041.4C1492.6 1059.5 1483.4 1063.4 1471.0 1060.7ZM1800.8 985.1C1809.4 982.8 1811.0 981.7 1811.0 977.8C1811.0 975.0 1806.6 965.1 1804.8 963.9C1804.3 963.6 1794.8 963.5 1783.7 963.8C1765.0 964.2 1762.7 964.0 1751.8 961.7C1726.9 956.3 1707.4 943.0 1698.0 924.8C1692.7 914.6 1691.6 914.6 1680.5 924.0C1667.7 934.8 1664.0 940.6 1664.0 949.4C1664.0 962.4 1670.9 964.8 1680.9 955.5C1686.7 950.0 1687.6 950.0 1693.1 954.9C1701.4 962.2 1713.0 969.8 1723.2 974.8C1732.9 979.5 1753.2 986.3 1761.0 987.3C1768.5 988.4 1793.5 986.9 1800.8 985.1ZM1899.5 857.5C1879.9 854.3 1871.5 851.8 1856.1 844.4C1816.3 825.4 1789.2 789.8 1775.4 738.5C1772.4 727.1 1772.3 722.4 1775.0 721.5C1779.8 720.0 1806.3 723.2 1820.2 727.0C1859.5 737.8 1888.5 758.9 1908.4 791.3C1919.8 809.7 1931.9 850.8 1928.0 858.0C1926.5 860.7 1918.1 860.6 1899.5 857.5ZM1707.5 836.0C1722.6 831.0 1730.0 816.3 1728.8 794.0C1727.8 776.9 1719.2 765.0 1708.0 765.0C1704.2 765.0 1703.8 765.3 1702.3 768.8C1701.0 772.0 1700.9 773.9 1701.9 783.0C1704.1 803.4 1703.1 809.5 1697.1 811.9C1689.5 815.1 1686.8 810.7 1685.9 794.1C1685.1 778.9 1683.8 773.9 1679.3 770.0C1674.8 766.0 1672.0 766.2 1667.8 770.8C1661.3 778.0 1659.5 783.2 1659.5 795.0C1659.5 805.0 1659.7 805.8 1663.2 813.2C1669.0 825.4 1676.9 832.9 1688.2 837.1C1694.2 839.3 1698.2 839.0 1707.5 836.0Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-abajo" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-mas" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-campana" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-calendario" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-jeringa" viewBox="0 0 24 24"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/><path d="m14 4 6 6"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></symbol>
+    <symbol id="i-chispas" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></symbol>
+    <symbol id="i-huella" viewBox="0 0 24 24"><path d="M2 12C2 6.5 6.5 2 12 2a10 10 0 0 1 8 4"/><path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"/><path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"/><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"/><path d="M8.65 22c.21-.66.45-1.32.57-2"/><path d="M14 13.12c0 2.38 0 6.38-1 8.88"/><path d="M2 16h.01"/><path d="M21.8 16c.2-2 .131-5.354 0-6"/><path d="M9 6.8a6 6 0 0 1 9 5.2c0 .47 0 1.17-.02 2"/></symbol>
+    <symbol id="i-archivo" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-buscar" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-sirena" viewBox="0 0 24 24"><path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"/><path d="M21 12h1"/><path d="M18.5 4.5 18 5"/><path d="M2 12h1"/><path d="M12 2v1"/><path d="m4.929 4.929.707.707"/><path d="M12 12v6"/></symbol>
+    <symbol id="i-volumen" viewBox="0 0 24 24"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></symbol>
+    <symbol id="i-telefono" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-estetoscopio" viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
+    <symbol id="i-cama" viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></symbol>
+    <symbol id="i-caja" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.733 4.467a2 2 0 0 0 1.934 0L20.7 7"/></symbol>
+    <symbol id="i-boleto" viewBox="0 0 24 24"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></symbol>
+    <symbol id="i-nfc" viewBox="0 0 24 24"><path d="M6 8.32a7.43 7.43 0 0 1 0 7.36"/><path d="M9.46 6.21a11.76 11.76 0 0 1 0 11.58"/><path d="M12.91 4.1a15.91 15.91 0 0 1 .01 15.8"/><path d="M16.37 2a20.16 20.16 0 0 1 0 20"/></symbol>
+    <symbol id="i-pata" viewBox="0 0 24 24"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></symbol>
+    <symbol id="i-corazon" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+    <symbol id="i-globo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+    <symbol id="i-tableta" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-personas" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.2 3.5a.5.5 0 0 0 .8-.4V7.9a.5.5 0 0 0-.8-.4L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+    <symbol id="i-llamada" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-pastilla" viewBox="0 0 24 24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></symbol>
+    <symbol id="i-matraz" viewBox="0 0 24 24"><path d="M10 2v7.5a2 2 0 0 1-.2.9L4.7 20.6a1 1 0 0 0 .9 1.4h12.8a1 1 0 0 0 .9-1.4l-5.1-10.2a2 2 0 0 1-.2-.9V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+    <symbol id="i-bascula" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.9.6-1.9 1-3 1s-2.1-.4-3-1Z"/><path d="m2 16 3-8 3 8c-.9.6-1.9 1-3 1s-2.1-.4-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+    <symbol id="i-pizarra" viewBox="0 0 24 24"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></symbol>
+    <symbol id="i-diseno" viewBox="0 0 24 24"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></symbol>
+    <symbol id="i-historial" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+    <symbol id="i-tijeras" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></symbol>
+    <symbol id="i-casa" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .7-1.5l7-6a2 2 0 0 1 2.6 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-hoja" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+    <symbol id="i-microfono" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol>
+    <symbol id="i-nube" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+    <symbol id="i-sello" viewBox="0 0 24 24"><path d="M5 22h14"/><path d="M19.27 13.73A2.5 2.5 0 0 0 17.5 13h-11A2.5 2.5 0 0 0 4 15.5V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1.5c0-.66-.26-1.3-.73-1.77Z"/><path d="M14 13V8.5C14 7 15 7 15 5a3 3 0 0 0-6 0c0 2 1 2 1 3.5V13"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.66-2.15.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.32-3.54ZM14.18 6.13c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.69-.93 2.69.98.08 1.98-.5 2.59-1.23Z"/></symbol>
+    <symbol id="i-entrar" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></symbol>
+    <symbol id="i-externo" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-correo" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-capas" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></symbol>
+    <symbol id="i-texto" viewBox="0 0 24 24"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></symbol>
+    <symbol id="i-imagen" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></symbol>
+    <symbol id="i-cursor" viewBox="0 0 24 24"><path d="M4 4l7 17 2.5-7.5L21 11Z"/></symbol>
+    <symbol id="i-receta" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h6"/><path d="M12 12v6"/></symbol>
+    <symbol id="i-grafica" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+    <symbol id="i-gafete" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 18c.6-1.8 2.2-3 4-3s3.4 1.2 4 3"/></symbol>
+    <symbol id="i-pc" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5Z"/></symbol>
+    <symbol id="i-mensaje" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></symbol>
+    <symbol id="i-enviar" viewBox="0 0 24 24"><path d="M14.5 21.7a.5.5 0 0 0 .9 0L22 2.5a.5.5 0 0 0-.6-.6L2.3 8.6a.5.5 0 0 0 0 .9l8 3.2a2 2 0 0 1 1 1.1Z"/><path d="m21.9 2.1-10.9 11"/></symbol>
+    <symbol id="i-ayuda" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+  </defs>
+</svg>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
 
-  <header class="nav" data-nav>
-    <div class="nav__marco">
-      <a class="marca" href="/" aria-label="PetCard, inicio"><span class="isotipo" aria-hidden="true"></span><span class="marca__texto">Pet<b>Card</b></span></a>
-      <nav class="nav__enlaces" id="menu" data-menu aria-label="Principal">
-        <a href="/funciones">Funciones</a>
-        <a href="/veterinarias">Veterinarias</a>
-        <div class="desplegable" data-desplegable>
-          <button class="desplegable__boton" type="button" aria-expanded="false" aria-controls="menu-plataformas">Plataformas<i class="ph-bold ph-caret-down" aria-hidden="true"></i></button>
-          <div class="desplegable__panel" id="menu-plataformas">
-            <a class="producto" href="/funciones">
-              <span class="producto__img producto__img--petcard"><img src="/img/petcard.svg" alt=""></span>
-              <span class="producto__texto"><strong>PetCard</strong><small>Para ti y tus mascotas</small></span>
-            </a>
-            <a class="producto" href="/veterinarias">
-              <span class="producto__img producto__img--vet"><img src="/img/animales/perro.svg" alt=""></span>
-              <span class="producto__texto"><strong>PetCard <em>Vet</em></strong><small>Para clínicas y médicos veterinarios</small></span>
-            </a>
-            <a class="producto" href="https://zootrack.cloud" target="_blank" rel="noopener">
-              <span class="producto__img producto__img--zootrack"><img src="/img/animales/rino-cara.svg" alt=""></span>
-              <span class="producto__texto"><strong>ZooTrack</strong><small>Para UMAs, zoológicos y santuarios</small></span><i class="ph-bold ph-arrow-up-right producto__ir" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <a href="/contacto">Contáctanos</a>
-        <a class="boton nav__entrar-movil" href="https://platform.petcard.cloud" data-app>Iniciar sesión<i class="ph-fill ph-paw-print huella" aria-hidden="true"></i></a>
-      </nav>
-      <a class="boton boton--chico nav__entrar" href="https://platform.petcard.cloud" data-app data-iman>Iniciar sesión<i class="ph-fill ph-paw-print huella" aria-hidden="true"></i></a>
-      <button class="nav__hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu" data-hamburguesa><span></span><span></span></button>
-    </div>
-  </header>
+<header class="nav">
+  <a class="marca" href="/" aria-label="PetCard, inicio"><svg class="perro" aria-hidden="true"><use href="#perro"/></svg>PetCard</a>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="/funcionamiento">Cómo funciona</a>
+    <a href="/veterinarias">Veterinarias</a>
+    <a href="/ceiba">Ceiba</a>
+    <a href="/planes">Planes</a>
+    <a href="/contacto">Contacto</a>
+  </nav>
+  <div class="nav__acciones">
+    <a class="boton boton--blanco boton--chico" href="https://platform.petcard.cloud/"><svg class="ico"><use href="#i-entrar"/></svg>Iniciar sesión</a>
+    <a class="boton boton--naranja boton--chico" href="/descargar">Descargar</a>
+  </div>
+  <button class="nav__menu" type="button" aria-label="Menú" aria-expanded="false" aria-controls="menu-movil"><svg class="ico"><use href="#i-menu"/></svg></button>
+</header>
+<nav class="menu-movil" id="menu-movil" aria-label="Menú" hidden>
+  <a href="/funcionamiento">Cómo funciona</a>
+  <a href="/veterinarias">Veterinarias</a>
+  <a href="/ceiba">Ceiba</a>
+  <a href="/planes">Planes</a>
+  <a href="/contacto">Contacto</a>
+  <a class="boton boton--naranja" href="/descargar">Descargar PetCard</a>
+  <a class="boton boton--blanco" href="https://platform.petcard.cloud/" style="background:var(--crema)"><svg class="ico"><use href="#i-entrar"/></svg>Iniciar sesión</a>
+</nav>
 
-  <main id="contenido">
-    <!-- Portada -->
-    <section class="portada" id="inicio">
-      <div class="portada__texto">
-        <h1 class="titular" data-titular>La salud de tu mascota <span class="resalta">en tu bolsillo</span></h1>
-        <p class="portada__bajada entra" style="--i:5">Cartilla, citas, estudios y una placa con QR y NFC para que siempre vuelva a casa. Todo lo de tu mascota en un solo lugar, conectado con su veterinaria.</p>
-        <div class="portada__botones entra" style="--i:6">
-          <a class="boton boton--grande" href="#descargar" data-iman>Descarga la app<i class="ph-fill ph-paw-print huella" aria-hidden="true"></i></a>
-          <a class="boton boton--borde boton--grande" href="/veterinarias" data-iman><i class="ph-bold ph-stethoscope" aria-hidden="true"></i>Soy veterinaria</a>
-        </div>
-        <ul class="portada__sellos entra" style="--i:7">
-          <li><i class="ph-bold ph-identification-card" aria-hidden="true"></i>Cartilla digital</li>
-          <li><i class="ph-bold ph-qr-code" aria-hidden="true"></i>Placa QR y NFC</li>
-          <li><span class="cara-ceiba" aria-hidden="true"><span></span></span>Ceiba con IA</li>
-        </ul>
-      </div>
-
-      <div class="sabana-marco entra" style="--i:2">
-        <svg class="marco-hojas marco-hojas--ai" viewBox="-100 -100 200 200" aria-hidden="true"><g transform="rotate(160) scale(1.15)"><g class="boletin__hojita" style="--k:0"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="rotate(190) scale(1.3)"><g class="boletin__hojita" style="--k:1"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g><g transform="rotate(220) scale(1.05)"><g class="boletin__hojita" style="--k:2"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFDDB8"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/></g></g><g transform="rotate(250) scale(0.9)"><g class="boletin__hojita" style="--k:3"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#E8743B"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#C4561F"/></g></g><g transform="rotate(135) scale(0.8)"><g class="boletin__hojita" style="--k:4"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="rotate(278) scale(0.7)"><g class="boletin__hojita" style="--k:5"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g></svg><svg class="marco-hojas marco-hojas--ad" viewBox="-100 -100 200 200" aria-hidden="true"><g transform="rotate(-60) scale(1.15)"><g class="boletin__hojita" style="--k:0"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="rotate(-30) scale(1.3)"><g class="boletin__hojita" style="--k:1"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g><g transform="rotate(0) scale(1.05)"><g class="boletin__hojita" style="--k:2"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFDDB8"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/></g></g><g transform="rotate(30) scale(0.9)"><g class="boletin__hojita" style="--k:3"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#E8743B"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#C4561F"/></g></g><g transform="rotate(-85) scale(0.8)"><g class="boletin__hojita" style="--k:4"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="rotate(58) scale(0.7)"><g class="boletin__hojita" style="--k:5"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g></svg><svg class="marco-hojas marco-hojas--bi" viewBox="-100 -100 200 200" aria-hidden="true"><g transform="rotate(110) scale(1.0)"><g class="boletin__hojita" style="--k:0"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="rotate(140) scale(1.15)"><g class="boletin__hojita" style="--k:1"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g><g transform="rotate(170) scale(0.9)"><g class="boletin__hojita" style="--k:2"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFDDB8"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/></g></g><g transform="rotate(85) scale(0.7)"><g class="boletin__hojita" style="--k:3"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#E8743B"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#C4561F"/></g></g></svg><svg class="marco-hojas marco-hojas--bd" viewBox="-100 -100 200 200" aria-hidden="true"><g transform="rotate(0) scale(1.15)"><g class="boletin__hojita" style="--k:0"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="rotate(30) scale(1.3)"><g class="boletin__hojita" style="--k:1"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g><g transform="rotate(60) scale(1.05)"><g class="boletin__hojita" style="--k:2"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFDDB8"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/></g></g><g transform="rotate(90) scale(0.9)"><g class="boletin__hojita" style="--k:3"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#E8743B"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#C4561F"/></g></g><g transform="rotate(-25) scale(0.8)"><g class="boletin__hojita" style="--k:4"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="rotate(118) scale(0.7)"><g class="boletin__hojita" style="--k:5"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g></svg><svg class="marco-hojas marco-hojas--md" viewBox="-100 -100 200 200" aria-hidden="true"><g transform="rotate(-35) scale(1.0)"><g class="boletin__hojita" style="--k:0"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="rotate(-5) scale(1.15)"><g class="boletin__hojita" style="--k:1"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g><g transform="rotate(25) scale(0.9)"><g class="boletin__hojita" style="--k:2"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFDDB8"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/></g></g><g transform="rotate(-60) scale(0.7)"><g class="boletin__hojita" style="--k:3"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#E8743B"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#C4561F"/></g></g></svg><svg class="marco-hojas marco-hojas--mi" viewBox="-100 -100 200 200" aria-hidden="true"><g transform="rotate(155) scale(1.0)"><g class="boletin__hojita" style="--k:0"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="rotate(185) scale(1.15)"><g class="boletin__hojita" style="--k:1"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g><g transform="rotate(215) scale(0.9)"><g class="boletin__hojita" style="--k:2"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFDDB8"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/></g></g><g transform="rotate(130) scale(0.7)"><g class="boletin__hojita" style="--k:3"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#E8743B"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#C4561F"/></g></g></svg>
-      <div class="sabana consultorio" data-sabana aria-hidden="true">
-        <img class="sabana__capa" src="/img/escenas/rescate.svg" alt="">
-        <img class="consultorio__vet" src="/img/personas/veterinaria-completa.svg" alt="" width="120" height="260">
-        <img class="consultorio__perro" src="/img/animales/perro.svg" alt="" width="300" height="160">
-        <img class="consultorio__loro" src="/img/animales/loro.svg" alt="" width="90" height="140">
-        <img class="sabana__capa sabana__capa--frente" src="/img/escenas/rescate-frente.svg" alt="">
-        <div class="flotante flotante--salud">
-          <span class="flotante__icono flotante__icono--vacuna"><i class="ph-bold ph-syringe" aria-hidden="true"></i></span>
-          <span><strong>Rabia · Al día</strong><small>Refuerzo el 12 de diciembre</small></span>
-        </div>
-        <div class="flotante flotante--comida">
-          <span class="flotante__avatar flotante__avatar--mono"><img src="/img/animales/perro.svg" alt=""></span>
-          <span class="flotante__cuerpo"><strong>Amelie</strong><small>Salchicha · 6 años</small>
-            <span class="barra" data-barra-viva><span></span></span>
-            <small class="flotante__estado" data-estado-comida><i class="ph-fill ph-check-circle"></i>Comió justo ahora</small>
-          </span>
-        </div>
-        <div class="flotante flotante--nfc">
-          <span class="flotante__icono flotante__icono--sabana"><i class="ph-bold ph-qr-code" aria-hidden="true"></i></span>
-          <span><strong>Placa NFC</strong><small>Lista para el paseo</small></span>
-        </div>
-      </div>
-      </div>
-    </section>
-
-    <!-- Para quién es -->
-    <section class="seccion para-quien">
-      <svg class="liston liston--quien" viewBox="0 0 240 640" aria-hidden="true" data-liston><defs><linearGradient id="g4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB57F"/><stop offset="1" stop-color="#E8743B"/></linearGradient></defs><path d="M200 -20C120 60 40 90 70 170C100 250 210 220 190 150C170 80 60 140 90 260C120 380 230 380 200 470C175 545 90 560 120 660" stroke="url(#g4)"/></svg>
-      <div class="para-quien__texto revela">
-        <p class="etiqueta">Para quién es</p>
-        <h2>Hecho para cada mascota<br><span class="tenue">desliza y conoce la tuya</span></h2>
-        <p class="para-quien__bajada">Perros, gatos, aves, reptiles y más. PetCard se adapta a la especie de cada una, y a la veterinaria que la cuida</p>
-        <div class="mazo__controles">
-          <button class="mazo__boton" type="button" data-mazo-prev aria-label="Anterior"><i class="ph-bold ph-arrow-left"></i></button>
-          <button class="mazo__boton" type="button" data-mazo-next aria-label="Siguiente"><i class="ph-bold ph-arrow-right"></i></button>
-          <div class="mazo__progreso" data-mazo-puntos><button type="button" aria-label="Perros"><b></b></button><button type="button" aria-label="Gatos"><b></b></button><button type="button" aria-label="Aves"><b></b></button><button type="button" aria-label="Reptiles"><b></b></button><button type="button" aria-label="Acuáticos"><b></b></button><button type="button" aria-label="Refugios y rescates"><b></b></button><button type="button" aria-label="Veterinarias"><b></b></button></div>
-          <span class="mazo__cuenta" data-mazo-cuenta>01 / 07</span>
-        </div>
-      </div>
-      <div class="mazo revela" style="--i:1" data-mazo aria-label="Tipos de mascota">
-          <article class="carta carta--naranja" data-carta aria-roledescription="carta" aria-label="Perros">
-            <div class="escena">
-              <img class="escena__fondo" src="/img/escenas/uma.svg" alt="">
-              <img class="escena__animal" src="/img/animales/perro.svg" alt="" style="right:4%;bottom:16%;width:46%">
-              <img class="escena__persona" src="/img/personas/cuidador.svg" alt="" style="left:5%;bottom:12%;width:40%">
-              <img class="escena__frente" src="/img/escenas/uma-frente.svg" alt="">
-              <span class="escena__num">01</span>
-            </div>
-            <div class="carta__cuerpo">
-              <span class="carta__accion"><i class="ph-bold ph-person-simple-walk" aria-hidden="true"></i>De paseo con Amelie</span>
-              <h3><i class="ph-bold ph-dog" aria-hidden="true"></i>Perros</h3>
-              <p>Cartilla, vacunas, paseos y su placa para cada salida</p>
-            </div>
-          </article>
-          <article class="carta carta--rosa" data-carta aria-roledescription="carta" aria-label="Gatos">
-            <div class="escena">
-              <img class="escena__fondo" src="/img/escenas/santuario.svg" alt="">
-              <img class="escena__animal" src="/img/animales/cacomixtle.svg" alt="" style="right:4%;bottom:16%;width:44%">
-              <img class="escena__persona" src="/img/personas/biologa.svg" alt="" style="left:4%;bottom:10%;width:40%">
-              <img class="escena__frente" src="/img/escenas/santuario-frente.svg" alt="">
-              <span class="escena__num">02</span>
-            </div>
-            <div class="carta__cuerpo">
-              <span class="carta__accion"><i class="ph-bold ph-heart" aria-hidden="true"></i>Consintiendo a Luna</span>
-              <h3><i class="ph-bold ph-cat" aria-hidden="true"></i>Gatos</h3>
-              <p>Vacunas, desparasitación y su peso, mes con mes</p>
-            </div>
-          </article>
-          <article class="carta carta--arena" data-carta aria-roledescription="carta" aria-label="Aves">
-            <div class="escena">
-              <img class="escena__fondo" src="/img/escenas/aviario.svg" alt="">
-              <img class="escena__animal" src="/img/animales/loro.svg" alt="" style="right:8%;bottom:16%;width:30%">
-              <img class="escena__persona" src="/img/personas/biologa.svg" alt="" style="left:4%;bottom:12%;width:40%">
-              <img class="escena__frente" src="/img/escenas/aviario-frente.svg" alt="">
-              <span class="escena__num">03</span>
-            </div>
-            <div class="carta__cuerpo">
-              <span class="carta__accion"><i class="ph-bold ph-binoculars" aria-hidden="true"></i>Revisando sus plumas</span>
-              <h3><i class="ph-bold ph-bird" aria-hidden="true"></i>Aves</h3>
-              <p>Muda, pico y uñas, y su alimentación por especie</p>
-            </div>
-          </article>
-          <article class="carta carta--oliva" data-carta aria-roledescription="carta" aria-label="Reptiles">
-            <div class="escena">
-              <img class="escena__fondo" src="/img/escenas/criadero.svg" alt="">
-              <img class="escena__animal" src="/img/animales/serpiente.svg" alt="" style="right:6%;bottom:18%;width:36%">
-              <img class="escena__persona" src="/img/personas/cuidador.svg" alt="" style="left:4%;bottom:12%;width:40%">
-              <img class="escena__frente" src="/img/escenas/criadero-frente.svg" alt="">
-              <span class="escena__num">04</span>
-            </div>
-            <div class="carta__cuerpo">
-              <span class="carta__accion"><i class="ph-bold ph-thermometer" aria-hidden="true"></i>Midiendo su terrario</span>
-              <h3><i class="ph-bold ph-drop-half" aria-hidden="true"></i>Reptiles</h3>
-              <p>Mudas de piel, temperatura y suplementos con recordatorio</p>
-            </div>
-          </article>
-          <article class="carta carta--agua" data-carta aria-roledescription="carta" aria-label="Acuáticos">
-            <div class="escena">
-              <img class="escena__fondo" src="/img/escenas/acuario.svg" alt="">
-              <img class="escena__animal" src="/img/animales/pulpo.svg" alt="" style="right:10%;bottom:40%;width:30%">
-              <img class="escena__persona" src="/img/personas/biologa.svg" alt="" style="left:2%;bottom:14%;width:40%">
-              <img class="escena__frente" src="/img/escenas/acuario-frente.svg" alt="">
-              <span class="escena__num">05</span>
-            </div>
-            <div class="carta__cuerpo">
-              <span class="carta__accion"><i class="ph-bold ph-drop" aria-hidden="true"></i>Cuidando el agua</span>
-              <h3><i class="ph-bold ph-fish" aria-hidden="true"></i>Acuáticos</h3>
-              <p>Peces, tortugas y anfibios con su historial completo</p>
-            </div>
-          </article>
-          <article class="carta carta--rojo" data-carta aria-roledescription="carta" aria-label="Refugios y rescates">
-            <div class="escena">
-              <img class="escena__fondo" src="/img/escenas/rescate.svg" alt="">
-              <img class="escena__animal" src="/img/animales/perro.svg" alt="" style="right:6%;bottom:27%;width:40%">
-              <img class="escena__persona" src="/img/personas/veterinaria.svg" alt="" style="left:4%;bottom:12%;width:40%">
-              <img class="escena__frente" src="/img/escenas/rescate-frente.svg" alt="">
-              <span class="escena__num">06</span>
-            </div>
-            <div class="carta__cuerpo">
-              <span class="carta__accion"><i class="ph-bold ph-house-line" aria-hidden="true"></i>Buscándole un hogar</span>
-              <h3><i class="ph-bold ph-hand-heart" aria-hidden="true"></i>Refugios y rescates</h3>
-              <p>Fichas, adopciones y la placa que los regresa a casa</p>
-            </div>
-          </article>
-          <article class="carta carta--violeta" data-carta aria-roledescription="carta" aria-label="Veterinarias">
-            <div class="escena">
-              <img class="escena__fondo" src="/img/escenas/vet.svg" alt="">
-              <img class="escena__animal" src="/img/animales/perro.svg" alt="" style="right:6%;bottom:27%;width:40%">
-              <img class="escena__persona" src="/img/personas/veterinaria.svg" alt="" style="left:4%;bottom:12%;width:40%">
-              <img class="escena__frente" src="/img/escenas/vet-frente.svg" alt="">
-              <span class="escena__num">07</span>
-            </div>
-            <div class="carta__cuerpo">
-              <span class="carta__accion"><i class="ph-bold ph-syringe" aria-hidden="true"></i>Vacunando a Amelie</span>
-              <h3><i class="ph-bold ph-stethoscope" aria-hidden="true"></i>Veterinarias</h3>
-              <p>Expedientes, recetas y estudios que llegan a la app del dueño</p>
-            </div>
-          </article>
-      </div>
-    </section>
-
-    <!-- Nuestra misión -->
-    <section class="seccion mision">
-      <div class="mision__panel revela">
-        <div class="mision__texto">
-          <p class="etiqueta">Sobre nosotros</p>
-          <h2>Nuestra misión es que cada mascota<br><span class="tenue">tenga su historia completa</span></h2>
-          <p class="mision__bajada">Nacimos en México, junto a ZooTrack, para que la salud de tu mascota deje de vivir en cartillas de papel, fotos sueltas y mensajes. Una sola historia que va con ella a todas partes, para ti y para su veterinaria</p>
-          <ul class="mision__valores">
-            <li><span class="mision__icono"><i class="ph-bold ph-heart" aria-hidden="true"></i></span><div><strong>Su salud primero</strong><span>Vacunas, consultas y tratamientos a tiempo, con recordatorios que sí llegan</span></div></li>
-            <li><span class="mision__icono"><i class="ph-bold ph-house-line" aria-hidden="true"></i></span><div><strong>Siempre vuelve a casa</strong><span>Placa con QR y NFC, huella de nariz y alerta a la comunidad si se pierde</span></div></li>
-            <li><span class="mision__icono"><i class="ph-bold ph-stethoscope" aria-hidden="true"></i></span><div><strong>Conectada con su veterinaria</strong><span>Consultas, recetas y estudios llegan solos a tu app</span></div></li>
-          </ul>
-          <a class="boton boton--grande mision__boton" href="/funciones">Conoce todo lo que hace<i class="ph-bold ph-arrow-right" aria-hidden="true"></i></a>
-        </div>
-        <div class="mision__fotos fotos" data-fotos aria-roledescription="carrusel" aria-label="Fotos de PetCard">
-          <div class="fotos__pista">
-            <figure class="fotos__item activa" data-foto><img src="/img/amelie-foto.jpg" alt="Amelie, la salchicha de PetCard" style="object-position:50% 40%" loading="lazy" decoding="async"></figure>
-            <figure class="fotos__item" data-foto><img src="/img/veterinario.jpg" alt="Veterinario revisando a un perro" style="object-position:50% 35%" loading="lazy" decoding="async"></figure>
-            <figure class="fotos__item" data-foto><img src="/img/fotos/iguana.jpg" alt="Veterinaria revisando una iguana" style="object-position:50% 40%" loading="lazy" decoding="async"></figure>
-          </div>
-          <div class="fotos__controles">
-            <button class="mazo__boton fotos__boton" type="button" data-fotos-prev aria-label="Foto anterior"><i class="ph-bold ph-arrow-left"></i></button>
-            <button class="mazo__boton fotos__boton" type="button" data-fotos-next aria-label="Foto siguiente"><i class="ph-bold ph-arrow-right"></i></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- La app en bento -->
-    <section class="seccion" id="plataforma">
-      <svg class="liston liston--plataforma" viewBox="0 0 420 560" aria-hidden="true" data-liston><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2A541"/><stop offset="1" stop-color="#E8743B"/></linearGradient></defs><path d="M-40 520C120 520 230 430 210 300C190 170 70 160 80 250C90 340 260 360 330 230C390 120 360 40 300 -20" stroke="url(#g1)"/></svg>
-      <header class="seccion__cabeza revela">
-        <svg class="calcomania-hojas calcomania-hojas--mono" viewBox="0 0 320 300" aria-hidden="true"><g transform="translate(160 150) rotate(200) translate(18 0) scale(1.35)"><g class="boletin__hojita" style="--k:0"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="translate(160 150) rotate(235) translate(18 0) scale(1.15)"><g class="boletin__hojita" style="--k:1"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g><g transform="translate(160 150) rotate(270) translate(18 0) scale(1.45)"><g class="boletin__hojita" style="--k:2"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFDDB8"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/></g></g><g transform="translate(160 150) rotate(305) translate(18 0) scale(1.2)"><g class="boletin__hojita" style="--k:3"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="translate(160 150) rotate(340) translate(18 0) scale(1.3)"><g class="boletin__hojita" style="--k:4"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g><g transform="translate(160 150) rotate(15) translate(18 0) scale(1.0)"><g class="boletin__hojita" style="--k:5"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFDDB8"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/></g></g><g transform="translate(160 150) rotate(160) translate(18 0) scale(1.1)"><g class="boletin__hojita" style="--k:6"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g><g transform="translate(160 150) rotate(125) translate(18 0) scale(0.95)"><g class="boletin__hojita" style="--k:7"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g><g transform="translate(160 150) rotate(55) translate(18 0) scale(0.9)"><g class="boletin__hojita" style="--k:8"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFDDB8"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g></svg>
-        <img class="calcomania calcomania--mono" src="/img/animales/perro.svg" alt="" aria-hidden="true">
-        <p class="etiqueta">La app</p>
-        <h2>Todo lo de tu mascota,<br><span class="tenue">en una sola app</span></h2>
-      </header>
-
-      <div class="bento">
-        <article class="caja caja--panel revela" data-luz>
-          <div class="caja__texto">
-            <div class="caja__cabeza"><span class="caja__icono"><i class="ph-bold ph-heartbeat" aria-hidden="true"></i></span><h3>Su salud de un vistazo</h3></div>
-            <p>Cada mascota muestra cómo está, qué vacuna le toca y cuándo comió por última vez</p>
-          </div>
-          <div class="tabla-mini" aria-hidden="true" data-marco="Mis mascotas" data-color="naranja">
-            <div class="tabla-mini__resumen"><span class="mini-barra"><span style="--n:.75"></span></span><span><strong>3 de 4</strong> con vacunas al día</span><span class="chip-alerta"><i class="ph-bold ph-syringe" aria-hidden="true"></i>1 vacuna por poner</span></div>
-            <div class="fila"><span class="avatar avatar--naranja"><img src="/img/animales/perro.svg" alt=""></span><span class="fila__nombre"><strong>Amelie</strong><small>Salchicha</small></span><span class="salud salud--verde"><i class="ph-fill ph-heart"></i>Sano</span><span class="comida comida--verde"><span class="comida__barra"><span style="--n:.92"></span></span><small>hace 40 min</small></span></div>
-            <div class="fila"><span class="avatar avatar--rosa"><img src="/img/animales/cacomixtle.svg" alt=""></span><span class="fila__nombre"><strong>Luna</strong><small>Gata</small></span><span class="salud salud--verde"><i class="ph-fill ph-heart"></i>Sano</span><span class="comida comida--verde"><span class="comida__barra"><span style="--n:.7"></span></span><small>hace 2 h</small></span></div>
-            <div class="fila"><span class="avatar avatar--arena"><img src="/img/animales/loro.svg" alt=""></span><span class="fila__nombre"><strong>Kiwi</strong><small>Guacamaya</small></span><span class="salud salud--azul"><i class="ph-fill ph-eye"></i>Observación</span><span class="comida comida--ambar"><span class="comida__barra"><span style="--n:.4"></span></span><small>hace 6 h</small></span></div>
-            <div class="fila"><span class="avatar avatar--azul"><img src="/img/animales/serpiente.svg" alt=""></span><span class="fila__nombre"><strong>Nala</strong><small>Pitón bola</small></span><span class="salud salud--ambar"><i class="ph-fill ph-calendar-x"></i>Vacuna pendiente</span><span class="comida comida--verde"><span class="comida__barra"><span style="--n:.64"></span></span><small>hace 5 días</small></span></div>
-          </div>
-        </article>
-
-        <article class="caja caja--tecno revela" style="--i:1" data-luz>
-          <div class="maqueta caja__maqueta caja__maqueta--placa" aria-hidden="true">
-            <div class="placa-qr"><span class="placa-qr__aro"></span><span class="placa-qr__codigo"></span><b>AMELIE</b></div>
-            <span class="lectura"><i class="ph-bold ph-broadcast" aria-hidden="true"></i><b>NFC</b> · listo</span>
-          </div>
-          <div class="caja__cabeza"><span class="caja__icono"><i class="ph-bold ph-qr-code" aria-hidden="true"></i></span><h3>Placa con QR y NFC</h3></div>
-          <p>Quien encuentre a tu mascota la escanea con su celular y te avisa al momento, sin ver tus datos privados</p>
-        </article>
-
-        <article class="caja caja--difusion revela" style="--i:2" data-luz>
-          <div class="maqueta maqueta--pages caja__maqueta" aria-hidden="true">
-            <div class="maqueta__barra"><span></span><span></span><span></span><p>petcard.cloud/m/amelie</p></div>
-            <div class="maqueta__web"><span class="bloque bloque--hero"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span></div>
-            <span class="cursor cursor--1"><i class="ph-fill ph-cursor"></i><b>Vecina</b></span>
-            <span class="cursor cursor--2"><i class="ph-fill ph-cursor"></i><b>Tú</b></span>
-          </div>
-          <div class="caja__cabeza"><span class="caja__icono"><i class="ph-bold ph-siren" aria-hidden="true"></i></span><h3>Si se pierde, SOS</h3></div>
-          <p>Su perfil público con foto y cómo contactarte, y la alerta a la comunidad cercana</p>
-        </article>
-
-        <article class="caja caja--inventario revela" style="--i:1" data-luz>
-          <div class="caja__cabeza"><span class="caja__icono"><i class="ph-bold ph-bell-ringing" aria-hidden="true"></i></span><h3>Recordatorios</h3></div>
-          <p>Vacunas, desparasitaciones y cada toma de su medicamento</p>
-          <div class="stock" aria-hidden="true">
-            <div class="stock__fila"><span class="avatar avatar--naranja stock__icono stock__icono--ic"><i class="ph-bold ph-syringe" aria-hidden="true"></i></span><span class="stock__nombre"><strong>Refuerzo de rabia</strong><span class="comida comida--verde"><span class="comida__barra"><span style="--n:.62"></span></span><small>12 dic</small></span></span></div>
-            <div class="stock__fila"><span class="avatar avatar--rosa stock__icono stock__icono--ic"><i class="ph-bold ph-pill" aria-hidden="true"></i></span><span class="stock__nombre"><strong>Carprofeno</strong><span class="comida comida--ambar"><span class="comida__barra"><span style="--n:.28"></span></span><small>2 de 7 tomas</small></span></span><span class="chip-alerta"><i class="ph-bold ph-clock" aria-hidden="true"></i>9:00</span></div>
-            <div class="stock__fila"><span class="avatar avatar--arena stock__icono stock__icono--ic"><i class="ph-bold ph-bug-beetle" aria-hidden="true"></i></span><span class="stock__nombre"><strong>Desparasitación</strong><span class="comida comida--rojo"><span class="comida__barra"><span style="--n:.08"></span></span><small>Hoy</small></span></span><span class="chip-alerta chip-alerta--rojo"><i class="ph-bold ph-warning-circle" aria-hidden="true"></i>Toca hoy</span></div>
-            <div class="stock__fila"><span class="avatar avatar--azul stock__icono stock__icono--ic"><i class="ph-bold ph-scissors" aria-hidden="true"></i></span><span class="stock__nombre"><strong>Baño y corte</strong><span class="comida comida--verde"><span class="comida__barra"><span style="--n:.86"></span></span><small>En 3 semanas</small></span></span></div>
-          </div>
-          <img class="caja__animal caja__animal--avestruz" src="/img/animales/loro.svg" alt="" aria-hidden="true">
-        </article>
-
-        <article class="caja caja--equipo revela" style="--i:2" data-luz>
-          <div class="caja__cabeza"><span class="caja__icono"><i class="ph-bold ph-users-three" aria-hidden="true"></i></span><h3>Toda la familia</h3></div>
-          <p>Comparte su perfil con quien la cuida y con su veterinaria</p>
-          <ul class="equipo" aria-hidden="true">
-            <li><span class="avatar avatar--azul biologo"><img src="/img/personas/veterinaria.svg" alt=""></span><span><strong>Dra. Fernanda</strong><small>Su veterinaria</small></span><span class="asignar"><i class="ph-bold ph-calendar-plus" aria-hidden="true"></i>Pedir cita</span></li>
-            <li><span class="avatar avatar--naranja biologo"><img src="/img/personas/biologa.svg" alt=""></span><span><strong>María</strong><small>Familia</small></span><span class="asignar"><i class="ph-bold ph-share-network" aria-hidden="true"></i>Compartir</span></li>
-            <li><span class="avatar avatar--arena biologo"><img src="/img/personas/cuidador.svg" alt=""></span><span><strong>Luis</strong><small>Paseador</small></span><span class="asignar"><i class="ph-bold ph-share-network" aria-hidden="true"></i>Compartir</span></li>
-          </ul>
-        </article>
-
-        <article class="caja caja--docs revela" style="--i:3" data-luz>
-          <div class="caja__cabeza"><span class="caja__icono"><i class="ph-bold ph-first-aid-kit" aria-hidden="true"></i></span><h3>Consultas, recetas y estudios</h3></div>
-          <p>Lo que registra su veterinaria llega solo a tu app: consultas, recetas firmadas y resultados</p>
-          <div class="tarjeta-ui caja__receta" aria-hidden="true">
-            <div class="ui-fila" style="--k:0"><span class="ui-icono"><i class="ph-bold ph-stethoscope" aria-hidden="true"></i></span><span class="ui-texto"><strong>Consulta general</strong><small>Hoy · Clínica Patitas</small></span><i class="ph-fill ph-check-circle ui-ok" aria-hidden="true"></i></div>
-            <div class="ui-fila" style="--k:1"><span class="ui-icono"><i class="ph-bold ph-prescription" aria-hidden="true"></i></span><span class="ui-texto"><strong>Receta firmada</strong><small>Carprofeno · cada 12 h · 7 días</small></span></div>
-            <div class="ui-fila" style="--k:2"><span class="ui-icono"><i class="ph-bold ph-flask" aria-hidden="true"></i></span><span class="ui-texto"><strong>Biometría hemática</strong><small>Resultados listos</small></span></div>
-          </div>
-          <img class="caja__animal caja__animal--cocodrilo" src="/img/animales/serpiente.svg" alt="" aria-hidden="true">
-        </article>
-      </div>
-    </section>
-
-    <!-- Ceiba -->
-    <section class="seccion" id="ceiba">
-      <header class="seccion__cabeza revela">
-        <img class="calcomania calcomania--loro" src="/img/animales/loro.svg" alt="" aria-hidden="true">
-        <p class="etiqueta">Inteligencia artificial</p>
-        <h2>Conoce a Ceiba,<br><span class="tenue">la asistente que sí conoce a tu mascota</span></h2>
-      </header>
-      <article class="detalle tema-pet">
-        <div class="detalle__texto revela">
-          <p class="detalle__etiqueta"><span class="cara-ceiba" aria-hidden="true"><span></span></span>Ceiba · IA</p>
-          <h3>Pregúntale, llámale o pídele una cita</h3>
-          <p>Ceiba conoce su cartilla, sus vacunas y su calendario. Te responde a cualquier hora, te recuerda lo que toca y agenda con su veterinaria por ti. En la clínica escucha la consulta y prepara los documentos</p>
-          <ul class="detalle__puntos"><li><i class="ph-bold ph-chats-circle" aria-hidden="true"></i>Responde con los datos de tu mascota</li><li><i class="ph-bold ph-phone-call" aria-hidden="true"></i>Chat, llamada y videollamada</li><li><i class="ph-bold ph-camera" aria-hidden="true"></i>Pasa su cartilla de papel con una foto</li></ul>
-        </div>
-        <div class="vista revela" style="--i:1" aria-hidden="true"><div class="tarjeta-ui ui-chat">
-          <p class="ui-titulo"><span class="cara-ceiba" aria-hidden="true"><span></span></span>Ceiba</p>
-          <p class="ui-burbuja ui-burbuja--yo">¿Cuándo le toca su vacuna a Amelie?</p>
-          <p class="ui-burbuja">Su refuerzo de rabia toca el <b>12 de diciembre</b>. ¿Te agendo con la Dra. Fernanda?</p>
-          <p class="ui-burbuja ui-burbuja--yo">Sí, en la mañana</p>
-          <div class="ui-fila" style="--k:0"><span class="ui-icono"><i class="ph-bold ph-check" aria-hidden="true"></i></span><span class="ui-texto"><strong>Cita solicitada</strong><small>Vie 12 dic · 10:00 · Clínica Patitas</small></span></div>
-        </div><img class="vista__animal vista__animal--arriba" src="/img/animales/perro.svg" alt=""></div>
-      </article>
-    </section>
-
-    <!-- PetCard+ -->
-    <section class="seccion" id="planes">
-      <header class="seccion__cabeza revela">
-        <p class="etiqueta">PetCard+</p>
-        <h2>Empieza gratis,<br><span class="tenue">crece con PetCard+</span></h2>
-      </header>
-      <div class="planes">
-        <article class="plan revela">
-          <div class="plan__cabeza"><span class="plan__icono"><i class="ph-bold ph-paw-print" aria-hidden="true"></i></span><div><h3>Gratis</h3><p>Para empezar con tu mascota</p></div></div>
-          <p class="plan__precio"><strong>$0</strong><span>para siempre</span></p>
-          <ul class="plan__lista"><li><i class="ph-bold ph-check" aria-hidden="true"></i>1 mascota</li><li><i class="ph-bold ph-check" aria-hidden="true"></i>Cartilla, citas y recordatorios</li><li><i class="ph-bold ph-check" aria-hidden="true"></i>Placa QR, huella de nariz y SOS</li><li><i class="ph-bold ph-check" aria-hidden="true"></i>Conexión con tu veterinaria</li></ul>
-          <a class="boton boton--borde plan__boton" href="#descargar" data-iman>Descargar gratis</a>
-        </article>
-        <article class="plan plan--plus revela" style="--i:1">
-          <span class="plan__sello">Más completo</span>
-          <div class="plan__cabeza"><span class="plan__icono plan__icono--z" aria-hidden="true"><span class="isotipo"></span><b>+</b></span><div><h3>PetCard<b>+</b></h3><p>Para toda la familia de mascotas</p></div></div>
-          <p class="plan__precio"><strong>$129</strong><span>MXN al mes</span></p>
-          <ul class="plan__lista"><li><i class="ph-bold ph-check" aria-hidden="true"></i>Mascotas ilimitadas</li><li><i class="ph-bold ph-check" aria-hidden="true"></i>Chat y llamada con Ceiba</li><li><i class="ph-bold ph-check" aria-hidden="true"></i>Condición corporal con una foto</li><li><i class="ph-bold ph-check" aria-hidden="true"></i>Migra su cartilla de papel con IA</li></ul>
-          <a class="boton plan__boton" href="#descargar" data-iman>Probar PetCard+<i class="ph-fill ph-paw-print huella" aria-hidden="true"></i></a>
-        </article>
-      </div>
-      <p class="planes__nota revela"><i class="ph-bold ph-lock-simple" aria-hidden="true"></i>PetCard+ se compra dentro de la app con tu Apple ID y se renueva cada mes. PetCard Vet es gratis para veterinarias</p>
-    </section>
-
-    <!-- Cómo funciona -->
-    <section class="seccion como" id="como">
-      <svg class="liston liston--como" viewBox="0 0 1320 240" aria-hidden="true" data-liston><defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB57F"/><stop offset="1" stop-color="#F2A541"/></linearGradient></defs><path d="M-20 60C200 -20 360 160 560 100C760 40 820 220 1060 160C1200 125 1280 60 1340 80" stroke="url(#g3)"/></svg>
-      <header class="seccion__cabeza revela">
-        <img class="calcomania calcomania--jirafa" src="/img/animales/loro.svg" alt="" aria-hidden="true">
-        <p class="etiqueta">Cómo funciona</p>
-        <h2>Listo en tres pasos.</h2>
-      </header>
-      <div class="ruta" data-ruta>
-        <ol class="pasos">
-          <li class="paso revela"><i class="paso__icono ph-fill ph-device-mobile" aria-hidden="true"></i><span class="paso__num">01</span><h3>Descarga PetCard</h3><p>Crea tu cuenta en un minuto desde tu iPhone o iPad</p></li>
-          <li class="paso revela" style="--i:1"><i class="paso__icono ph-fill ph-dog" aria-hidden="true"></i><span class="paso__num">02</span><h3>Agrega a tu mascota</h3><p>Su foto, especie, vacunas y todo lo que necesitas recordar</p></li>
-          <li class="paso revela" style="--i:2"><i class="paso__icono ph-fill ph-qr-code" aria-hidden="true"></i><span class="paso__num">03</span><h3>Vincula su placa y su veterinaria</h3><p>Ponle su placa con QR y NFC y conéctala con su clínica para recibir todo al instante</p></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Descarga -->
-    <section class="seccion" id="descargar">
-      <div class="llamado tema-pet revela">
-        <div class="llamado__texto">
-          <h2>Lleva a tu mascota en tu bolsillo.</h2>
-          <p>Disponible muy pronto en iPhone y iPad, y después en Android. Las veterinarias ya pueden usar PetCard Vet en la web.</p>
-          <div class="tiendas">
-            <a class="tienda tienda--oscura" href="/#descargar" aria-label="PetCard en App Store, muy pronto"><i class="ph-fill ph-apple-logo" aria-hidden="true"></i><span><small>Muy pronto en</small><b>App Store</b></span></a>
-            <a class="tienda" href="/#descargar" aria-label="PetCard en Google Play, muy pronto"><i class="ph-fill ph-google-play-logo" aria-hidden="true"></i><span><small>Muy pronto en</small><b>Google Play</b></span></a>
-            <a class="tienda" href="https://platform.petcard.cloud"><i class="ph-bold ph-desktop" aria-hidden="true"></i><span><small>Para veterinarias</small><b>Web</b></span></a>
-          </div>
-        </div>
-        <img class="llamado__animal" src="/img/animales/perro.svg" alt="" aria-hidden="true">
-      </div>
-    </section>
-
-    <!-- Preguntas frecuentes -->
-    <section class="seccion faq" id="faq">
-      <header class="faq__cabeza revela">
-        <img class="calcomania calcomania--rino" src="/img/animales/cacomixtle.svg" alt="" aria-hidden="true">
-        <p class="etiqueta">Preguntas frecuentes</p>
-        <h2>Lo que más<br><span class="tenue">nos preguntan.</span></h2>
-        <p class="faq__nota">¿No encuentras tu respuesta?</p>
-        <a class="boton boton--borde" href="/contacto" data-escribenos aria-haspopup="dialog"><i class="ph-bold ph-chat-circle-dots" aria-hidden="true"></i>Escríbenos</a>
-      </header>
-      <div class="preguntas revela" style="--i:1">
-          <div class="pregunta abierta">
-            <h3><button type="button" aria-expanded="true" aria-controls="faq-0" id="faq-b0" data-pregunta>¿Qué es PetCard?<span class="pregunta__mas" aria-hidden="true"><i></i><i></i></span></button></h3>
-            <div class="pregunta__respuesta" id="faq-0" role="region" aria-labelledby="faq-b0"><p>Es la app donde vive toda la salud de tu mascota: cartilla, citas, estudios, recetas, recordatorios y una placa con QR y NFC para que siempre vuelva a casa. Todo conectado con su veterinaria.</p></div>
-          </div>
-          <div class="pregunta">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-1" id="faq-b1" data-pregunta>¿PetCard es gratis?<span class="pregunta__mas" aria-hidden="true"><i></i><i></i></span></button></h3>
-            <div class="pregunta__respuesta" id="faq-1" role="region" aria-labelledby="faq-b1" hidden><p>Sí. El plan Gratis incluye una mascota con cartilla, citas, recordatorios, placa QR, huella de nariz y SOS. Con PetCard+ tienes mascotas ilimitadas y a Ceiba.</p></div>
-          </div>
-          <div class="pregunta">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-2" id="faq-b2" data-pregunta>¿Sirve para mascotas que no son perros o gatos?<span class="pregunta__mas" aria-hidden="true"><i></i><i></i></span></button></h3>
-            <div class="pregunta__respuesta" id="faq-2" role="region" aria-labelledby="faq-b2" hidden><p>Sí. Aves, conejos, reptiles, tortugas, peces, roedores y más. La consulta y la cartilla se adaptan a cada especie.</p></div>
-          </div>
-          <div class="pregunta">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-3" id="faq-b3" data-pregunta>¿Qué pasa si mi mascota se pierde?<span class="pregunta__mas" aria-hidden="true"><i></i><i></i></span></button></h3>
-            <div class="pregunta__respuesta" id="faq-3" role="region" aria-labelledby="faq-b3" hidden><p>Repórtala como perdida desde su perfil. Quien escanee su placa QR o NFC verá cómo contactarte, y la comunidad cercana recibe el aviso.</p></div>
-          </div>
-          <div class="pregunta">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-4" id="faq-b4" data-pregunta>¿Cómo paso su cartilla de papel?<span class="pregunta__mas" aria-hidden="true"><i></i><i></i></span></button></h3>
-            <div class="pregunta__respuesta" id="faq-4" role="region" aria-labelledby="faq-b4" hidden><p>Toma una foto de la cartilla y Ceiba la pasa a la app con sus vacunas y fechas (PetCard+).</p></div>
-          </div>
-          <div class="pregunta">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-5" id="faq-b5" data-pregunta>¿En qué dispositivos funciona?<span class="pregunta__mas" aria-hidden="true"><i></i><i></i></span></button></h3>
-            <div class="pregunta__respuesta" id="faq-5" role="region" aria-labelledby="faq-b5" hidden><p>En iPhone y iPad con la app de PetCard, y muy pronto en Android. Las veterinarias también la usan en la web en platform.petcard.cloud. Todo se sincroniza al instante.</p></div>
-          </div>
-          <div class="pregunta">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-6" id="faq-b6" data-pregunta>¿Cuánto cuesta PetCard Vet?<span class="pregunta__mas" aria-hidden="true"><i></i><i></i></span></button></h3>
-            <div class="pregunta__respuesta" id="faq-6" role="region" aria-labelledby="faq-b6" hidden><p>Registrar tu veterinaria es gratis. Incluye agenda, expediente, recetas, estudios, hospitalización, estancias, inventario, equipo y tu página.</p></div>
-          </div>
-          <div class="pregunta">
-            <h3><button type="button" aria-expanded="false" aria-controls="faq-7" id="faq-b7" data-pregunta>¿Cómo elimino mi cuenta?<span class="pregunta__mas" aria-hidden="true"><i></i><i></i></span></button></h3>
-            <div class="pregunta__respuesta" id="faq-7" role="region" aria-labelledby="faq-b7" hidden><p>Desde la app en Configuración › Eliminar mi cuenta. Se borran tus datos y los de tus mascotas de forma definitiva.</p></div>
-          </div>
-      </div>
-    </section>
-
-    <!-- Contacto -->
-    <section class="seccion contacto" id="contacto">
-      <div class="contacto__panel revela">
-        <h2>Hablemos de tu mascota o tu clínica</h2>
-        <p>Escríbenos tus dudas o pide una demo de PetCard Vet para tu veterinaria</p>
-        <div class="contacto__cuenta">
-          <span>¿Tienes veterinaria?</span>
-          <a class="boton boton--claro" href="https://platform.petcard.cloud" data-app data-iman>Iniciar sesión<i class="ph-fill ph-paw-print huella" aria-hidden="true"></i></a>
-        </div>
-        <img class="contacto__leon" src="/img/animales/perro.svg" alt="" aria-hidden="true">
-      </div>
-      <form class="formulario revela" style="--i:1" novalidate data-contacto>
-        <div class="formulario__fila">
-          <div class="campo" data-campo="nombre">
-            <label for="nombre">Nombre</label>
-            <div class="campo__caja"><input id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" maxlength="80" required><button class="campo__limpiar" type="button" aria-label="Borrar" tabindex="-1" data-limpiar><i class="ph-bold ph-x" aria-hidden="true"></i></button></div>
-            <p class="campo__error" role="alert"></p>
-          </div>
-          <div class="campo" data-campo="correo">
-            <label for="correo">Correo electrónico</label>
-            <div class="campo__caja"><input id="correo" name="correo" placeholder="tucorreo@ejemplo.com" type="email" inputmode="email" autocomplete="email" maxlength="120" required><button class="campo__limpiar" type="button" aria-label="Borrar" tabindex="-1" data-limpiar><i class="ph-bold ph-x" aria-hidden="true"></i></button></div>
-            <p class="campo__error" role="alert"></p>
-          </div>
-        </div>
-        <div class="formulario__fila">
-          <div class="campo">
-            <label for="organizacion">Mascota o veterinaria <span>(opcional)</span></label>
-            <div class="campo__caja"><input id="organizacion" name="organizacion" placeholder="Nombre de tu mascota o clínica" autocomplete="organization" maxlength="120"><button class="campo__limpiar" type="button" aria-label="Borrar" tabindex="-1" data-limpiar><i class="ph-bold ph-x" aria-hidden="true"></i></button></div>
-          </div>
-          <div class="campo">
-            <span class="campo__etiqueta" id="tipo-etiqueta">Eres</span>
-            <div class="selector" data-selector>
-              <input type="hidden" name="tipo" value="familia">
-              <button class="selector__boton" type="button" id="tipo" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="tipo-etiqueta tipo"><span class="selector__valor" data-selector-valor><span class="selector__icono"><i class="ph-bold ph-paw-print"></i></span>Tengo mascota</span><i class="ph-bold ph-caret-down selector__flecha" aria-hidden="true"></i></button>
-              <ul class="selector__lista" role="listbox" aria-labelledby="tipo-etiqueta" tabindex="-1"><li role="option" id="tipo-familia" data-valor="familia" aria-selected="true"><span class="selector__icono"><i class="ph-bold ph-paw-print"></i></span>Tengo mascota<i class="ph-bold ph-check selector__check" aria-hidden="true"></i></li><li role="option" id="tipo-veterinaria" data-valor="veterinaria" aria-selected="false"><span class="selector__icono"><i class="ph-bold ph-stethoscope"></i></span>Veterinaria<i class="ph-bold ph-check selector__check" aria-hidden="true"></i></li><li role="option" id="tipo-refugio" data-valor="refugio" aria-selected="false"><span class="selector__icono"><i class="ph-bold ph-hand-heart"></i></span>Refugio o rescate<i class="ph-bold ph-check selector__check" aria-hidden="true"></i></li><li role="option" id="tipo-criador" data-valor="criador" aria-selected="false"><span class="selector__icono"><i class="ph-bold ph-house-line"></i></span>Criador<i class="ph-bold ph-check selector__check" aria-hidden="true"></i></li><li role="option" id="tipo-otro" data-valor="otro" aria-selected="false"><span class="selector__icono"><i class="ph-bold ph-dots-three"></i></span>Otro<i class="ph-bold ph-check selector__check" aria-hidden="true"></i></li></ul>
-            </div>
-          </div>
-        </div>
-        <div class="campo" data-campo="mensaje">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos en qué te ayudamos…" maxlength="2000" required></textarea>
-          <p class="campo__error" role="alert"></p>
-        </div>
-        <label class="trampa" aria-hidden="true">No llenar<input name="sitio" tabindex="-1" autocomplete="off"></label>
-        <div class="formulario__pie">
-          <button class="boton boton--grande formulario__enviar" type="submit" data-iman><span>Enviar mensaje</span><i class="ph-bold ph-paper-plane-tilt" aria-hidden="true"></i></button>
-        </div>
-      </form>
-      <p class="contacto__mas"><span>¿Necesitas más información? Contáctanos</span> <a href="mailto:contacto@zootrack.com">contacto@zootrack.com</a></p>
-    </section>
-
-    <!-- Boletín -->
-    <section class="seccion boletin-seccion">
-      <div class="boletin revela">
-        <svg class="boletin__hojas boletin__hojas--sup" viewBox="0 0 200 200" aria-hidden="true"><g transform="translate(200 0) rotate(150) scale(1.25)"><g class="boletin__hojita" style="--k:0"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="translate(200 0) rotate(120) scale(1.0)"><g class="boletin__hojita" style="--k:1"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g><g transform="translate(200 0) rotate(175) scale(0.95)"><g class="boletin__hojita" style="--k:2"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFDDB8"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/></g></g><g transform="translate(200 0) rotate(100) scale(0.8)"><g class="boletin__hojita" style="--k:3"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="translate(200 0) rotate(195) scale(0.75)"><g class="boletin__hojita" style="--k:4"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g></svg><svg class="boletin__hojas boletin__hojas--inf" viewBox="0 0 200 200" aria-hidden="true"><g transform="translate(0 200) rotate(-30) scale(1.25)"><g class="boletin__hojita" style="--k:0"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="translate(0 200) rotate(-60) scale(1.0)"><g class="boletin__hojita" style="--k:1"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g><g transform="translate(0 200) rotate(-5) scale(0.95)"><g class="boletin__hojita" style="--k:2"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFDDB8"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/></g></g><g transform="translate(0 200) rotate(-80) scale(0.8)"><g class="boletin__hojita" style="--k:3"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#FFC58F"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#F2A541"/></g></g><g transform="translate(0 200) rotate(15) scale(0.75)"><g class="boletin__hojita" style="--k:4"><path d="M0 0C14-22 44-32 76-28C62-4 32 10 0 0Z" fill="#F2A541"/><path d="M0 0C24-8 50-18 76-28C62-4 32 10 0 0Z" fill="#E8743B"/></g></g></svg>
-        <div class="boletin__texto">
-          <h2>Recibe las novedades de PetCard</h2>
-          <p>Consejos de cuidado, nuevas funciones y lo último de PetCard directo en tu correo.</p>
-        </div>
-        <form class="boletin__form" novalidate data-boletin>
-          <label class="boletin__campo"><i class="ph-bold ph-envelope-simple" aria-hidden="true"></i><input type="email" name="correo" placeholder="tu@correo.com" autocomplete="email" maxlength="120" aria-label="Correo electrónico"><button class="campo__limpiar" type="button" aria-label="Borrar" tabindex="-1" data-limpiar><i class="ph-bold ph-x" aria-hidden="true"></i></button></label>
-          <div class="boletin__accion">
-            <span class="boletin__escena" aria-hidden="true">
-              <img class="boletin__animal boletin__animal--avestruz" src="/img/animales/loro.svg" alt="">
-              <img class="boletin__animal boletin__animal--mono" src="/img/animales/perro.svg" alt="">
-            </span>
-            <button class="boton boton--grande boletin__boton" type="submit" data-iman><span>Suscribirme</span><i class="ph-bold ph-paper-plane-tilt" aria-hidden="true"></i></button>
-          </div>
-          <p class="boletin__error" role="alert"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- Hoja de Escríbenos y Solicita una demo -->
-  <dialog class="hoja" data-hoja aria-labelledby="hoja-titulo">
-    <div class="hoja__caja">
-      <header class="hoja__cabeza">
-        <img class="hoja__animal" src="/img/animales/perro.svg" alt="" aria-hidden="true">
+<main id="contenido">
+  <!-- Portada -->
+  <section class="portada" id="inicio">
+    <div class="portada__fondo" aria-hidden="true"></div>
+    <div class="contenedor">
+      <div class="portada__grid">
         <div>
-          <h2 id="hoja-titulo"><span class="solo-contacto">Escríbenos</span><span class="solo-demo">Solicita una demo</span></h2>
-          <p><span class="solo-contacto">Cuéntanos en qué te ayudamos y te respondemos a tu correo</span><span class="solo-demo">Te mostramos PetCard Vet en vivo con tu clínica</span></p>
+          <h1 data-entra style="--i:0">La salud de tu mascota <span class="resalte">en tu bolsillo</span></h1>
+          <p class="portada__sub" data-entra style="--i:2">Cartilla, citas, estudios y una placa con QR para que siempre vuelva a casa. Todo lo de tu mascota en un solo lugar, conectado con su veterinaria.</p>
+          <div class="tiendas" data-entra style="--i:3"><a class="boton boton--oscuro tienda" href="/descargar" aria-label="PetCard en App Store, muy pronto"><svg class="ico"><use href="#i-apple"/></svg><span><small>Muy pronto en</small><b>App Store</b></span></a><a class="boton boton--blanco tienda" href="/descargar" aria-label="PetCard en Google Play, muy pronto"><svg class="ico"><use href="#i-play"/></svg><span><small>Muy pronto en</small><b>Google Play</b></span></a><a class="boton boton--blanco tienda" href="https://platform.petcard.cloud/"><svg class="ico"><use href="#i-pc"/></svg><span><small>Para veterinarias</small><b>Web</b></span></a></div>
+          <p class="portada__nota" data-entra style="--i:4">Gratis para empezar · PetCard Vet gratis para veterinarias</p>
         </div>
-        <button class="hoja__cerrar" type="button" aria-label="Cerrar" data-hoja-cerrar><i class="ph-bold ph-x" aria-hidden="true"></i></button>
-      </header>
-      <div class="hoja__paso" data-hoja-paso="form">
-          <form class="formulario hoja__form" novalidate data-contacto>
-              <fieldset class="campo solo-demo plat-campo">
-                <legend>¿Qué plataforma te interesa?</legend>
-                <div class="plat-toggle" data-plat-toggle>
-                  <button class="plat-toggle__boton" type="button" aria-expanded="false" aria-haspopup="listbox"><span class="plat-toggle__icono"><i class="ph-bold ph-stethoscope" aria-hidden="true" data-plat-icono></i></span><span data-plat-nombre>PetCard Vet</span><i class="ph-bold ph-caret-down plat-toggle__flecha" aria-hidden="true"></i></button>
-                  <div class="plat-toggle__menu" role="listbox">
-                    <label class="plat-toggle__opcion plat-toggle__opcion--vet"><input type="radio" name="plataforma" value="PetCard Vet" data-icono="stethoscope" checked><span class="plat-toggle__icono"><i class="ph-bold ph-stethoscope" aria-hidden="true"></i></span><span><strong>PetCard Vet</strong><small>Clínicas y médicos veterinarios</small></span><i class="ph-bold ph-check plat-toggle__check" aria-hidden="true"></i></label>
-                    <label class="plat-toggle__opcion"><input type="radio" name="plataforma" value="PetCard" data-icono="paw-print"><span class="plat-toggle__icono"><i class="ph-bold ph-paw-print" aria-hidden="true"></i></span><span><strong>PetCard</strong><small>Para ti y tus mascotas</small></span><i class="ph-bold ph-check plat-toggle__check" aria-hidden="true"></i></label>
-                  </div>
-                </div>
-              </fieldset>
-        <div class="formulario__fila">
-          <div class="campo" data-campo="nombre">
-            <label for="h-nombre">Nombre</label>
-            <div class="campo__caja"><input id="h-nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" maxlength="80" required><button class="campo__limpiar" type="button" aria-label="Borrar" tabindex="-1" data-limpiar><i class="ph-bold ph-x" aria-hidden="true"></i></button></div>
-            <p class="campo__error" role="alert"></p>
+        <div class="portada__visual portada__visual--app">
+          <div class="escena" data-entra style="--i:1">
+            <svg class="perro escena__perro" aria-hidden="true"><use href="#perro"/></svg>
+            <img class="escena__atras" src="/img/app/placa.webp" alt="Placa NFC y código QR de Amelie en PetCard" width="900" height="1650" decoding="async">
+            <img class="escena__frente" src="/img/app/inicio.webp" alt="Inicio de la app de PetCard con Amelie y sus pendientes del día" width="900" height="1546" fetchpriority="high" decoding="async">
           </div>
-          <div class="campo" data-campo="correo">
-            <label for="h-correo">Correo electrónico</label>
-            <div class="campo__caja"><input id="h-correo" name="correo" placeholder="tucorreo@ejemplo.com" type="email" inputmode="email" autocomplete="email" maxlength="120" required><button class="campo__limpiar" type="button" aria-label="Borrar" tabindex="-1" data-limpiar><i class="ph-bold ph-x" aria-hidden="true"></i></button></div>
-            <p class="campo__error" role="alert"></p>
-          </div>
-        </div>
-        <div class="formulario__fila">
-          <div class="campo">
-            <label for="h-organizacion">Mascota o veterinaria <span>(opcional)</span></label>
-            <div class="campo__caja"><input id="h-organizacion" name="organizacion" placeholder="Nombre de tu mascota o clínica" autocomplete="organization" maxlength="120"><button class="campo__limpiar" type="button" aria-label="Borrar" tabindex="-1" data-limpiar><i class="ph-bold ph-x" aria-hidden="true"></i></button></div>
-          </div>
-          <div class="campo">
-            <span class="campo__etiqueta" id="h-tipo-etiqueta">Eres</span>
-            <div class="selector" data-selector>
-              <input type="hidden" name="tipo" value="familia">
-              <button class="selector__boton" type="button" id="h-tipo" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="h-tipo-etiqueta h-tipo"><span class="selector__valor" data-selector-valor><span class="selector__icono"><i class="ph-bold ph-paw-print"></i></span>Tengo mascota</span><i class="ph-bold ph-caret-down selector__flecha" aria-hidden="true"></i></button>
-              <ul class="selector__lista" role="listbox" aria-labelledby="h-tipo-etiqueta" tabindex="-1"><li role="option" id="h-tipo-familia" data-valor="familia" aria-selected="true"><span class="selector__icono"><i class="ph-bold ph-paw-print"></i></span>Tengo mascota<i class="ph-bold ph-check selector__check" aria-hidden="true"></i></li><li role="option" id="h-tipo-veterinaria" data-valor="veterinaria" aria-selected="false"><span class="selector__icono"><i class="ph-bold ph-stethoscope"></i></span>Veterinaria<i class="ph-bold ph-check selector__check" aria-hidden="true"></i></li><li role="option" id="h-tipo-refugio" data-valor="refugio" aria-selected="false"><span class="selector__icono"><i class="ph-bold ph-hand-heart"></i></span>Refugio o rescate<i class="ph-bold ph-check selector__check" aria-hidden="true"></i></li><li role="option" id="h-tipo-criador" data-valor="criador" aria-selected="false"><span class="selector__icono"><i class="ph-bold ph-house-line"></i></span>Criador<i class="ph-bold ph-check selector__check" aria-hidden="true"></i></li><li role="option" id="h-tipo-otro" data-valor="otro" aria-selected="false"><span class="selector__icono"><i class="ph-bold ph-dots-three"></i></span>Otro<i class="ph-bold ph-check selector__check" aria-hidden="true"></i></li></ul>
-            </div>
-          </div>
-        </div>
-            <div class="formulario__fila solo-demo">
-              <div class="campo">
-            <label for="h-telefono">Teléfono <span>(opcional)</span></label>
-            <div class="campo__caja"><input id="h-telefono" name="telefono" placeholder="744 000 0000" type="tel" inputmode="tel" autocomplete="tel" maxlength="30"><button class="campo__limpiar" type="button" aria-label="Borrar" tabindex="-1" data-limpiar><i class="ph-bold ph-x" aria-hidden="true"></i></button></div>
-          </div>
-              <fieldset class="campo opciones-animales">
-                <legend>¿Cuántos pacientes atienden al mes?</legend>
-                <div class="pildoras">
-                  <label><input type="radio" name="animales" value="Menos de 100" checked><span>Menos de 100</span></label>
-                  <label><input type="radio" name="animales" value="100 a 500"><span>100 a 500</span></label>
-                  <label><input type="radio" name="animales" value="Más de 500"><span>Más de 500</span></label>
-                </div>
-              </fieldset>
-            </div>
-        <div class="campo" data-campo="mensaje">
-          <label for="h-mensaje"><span class="solo-contacto">Mensaje</span><span class="solo-demo">¿Qué te gustaría ver en la demo? <span>(opcional)</span></span></label>
-          <textarea id="h-mensaje" name="mensaje" rows="4" placeholder="Cuéntanos en qué te ayudamos…" maxlength="2000" required></textarea>
-          <p class="campo__error" role="alert"></p>
-        </div>
-        <label class="trampa" aria-hidden="true">No llenar<input name="sitio" tabindex="-1" autocomplete="off"></label>
-        <div class="formulario__pie">
-          <button class="boton boton--grande formulario__enviar" type="submit" data-iman><span>Enviar mensaje</span><i class="ph-bold ph-paper-plane-tilt" aria-hidden="true"></i></button>
-        </div>
-      </form>
-      </div>
-      <div class="hoja__paso hoja__estado" data-hoja-paso="listo" hidden>
-        <span class="hoja__exito" aria-hidden="true"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg></span>
-        <h3><span class="solo-contacto">¡Mensaje enviado!</span><span class="solo-demo">¡Demo solicitada!</span></h3>
-        <p><span class="solo-contacto">Gracias por escribirnos, te responderemos a</span><span class="solo-demo">Te escribiremos para agendar tu demo a</span> <strong data-hoja-correo></strong></p>
-        <div class="hoja__acciones">
-          <button class="boton boton--borde solo-contacto" type="button" data-hoja-otro><i class="ph-bold ph-arrow-counter-clockwise" aria-hidden="true"></i>Enviar otro</button>
-          <button class="boton" type="button" data-hoja-cerrar data-hoja-foco>Listo<i class="ph-bold ph-check" aria-hidden="true"></i></button>
+          <div class="flotante flotante--ceiba" data-entra style="--i:3"><i class="cara-ceiba" aria-hidden="true"><span></span></i><div><b>Ceiba</b><small>¿Cuándo le toca su vacuna?</small></div></div>
+          <div class="flotante flotante--android" data-entra style="--i:4"><i><svg class="ico"><use href="#i-play"/></svg></i><div><b>Android</b><small>Muy pronto</small></div></div>
         </div>
       </div>
-      <div class="hoja__paso hoja__estado" data-hoja-paso="error" hidden>
-        <span class="hoja__falla" aria-hidden="true"><i class="ph-bold ph-wifi-slash"></i></span>
-        <h3>No se pudo enviar</h3>
-        <p>Revisa tu conexión e inténtalo de nuevo, o escríbenos directo a <a href="mailto:contacto@zootrack.com">contacto@zootrack.com</a></p>
-        <div class="hoja__acciones">
-          <button class="boton boton--borde" type="button" data-hoja-cerrar>Cerrar</button>
-          <button class="boton" type="button" data-hoja-reintentar data-hoja-foco>Intentar de nuevo<i class="ph-bold ph-arrow-clockwise" aria-hidden="true"></i></button>
-        </div>
+      <div class="portada__pie" data-entra style="--i:5">
+        <span class="pildora"><i style="background:var(--durazno);color:var(--naranja-oscuro)"><svg class="ico"><use href="#i-archivo"/></svg></i>Cartilla digital</span>
+        <span class="pildora"><i style="background:var(--salvia);color:var(--salvia-t)"><svg class="ico"><use href="#i-calendario"/></svg></i>Citas y recordatorios</span>
+        <span class="pildora"><i style="background:var(--lila);color:var(--lila-t)"><svg class="ico"><use href="#i-qr"/></svg></i>Placa QR y NFC</span>
+        <span class="pildora"><i style="background:var(--cielo);color:var(--cielo-t)"><svg class="ico"><use href="#i-huella"/></svg></i>Huella de nariz</span>
+        <span class="pildora"><i style="background:var(--rosa);color:var(--rosa-t)"><svg class="ico"><use href="#i-estetoscopio"/></svg></i>PetCard Vet</span>
       </div>
     </div>
-  </dialog>
+  </section>
 
-  <footer class="pie">
-    <div class="pie__tarjeta">
-      <div class="pie__arriba">
-        <div class="pie__marca">
-          <a class="marca" href="/" aria-label="PetCard, inicio"><span class="isotipo" aria-hidden="true"></span><span class="marca__texto">Pet<b>Card</b></span></a>
-          <p class="pie__lema">Todo lo de tu mascota en un solo lugar</p>
-          <a class="boton boton--chico" href="https://platform.petcard.cloud" data-app data-iman>Iniciar sesión<i class="ph-fill ph-paw-print huella" aria-hidden="true"></i></a>
-        </div>
-        <nav class="pie__columnas" aria-label="Pie de página">
-          <div><h3>Producto</h3><a href="/funciones">PetCard</a><a href="/veterinarias">PetCard Vet</a><a href="/#descargar">Descargar la app</a><a href="https://zootrack.cloud" target="_blank" rel="noopener">ZooTrack</a></div>
-          <div><h3>PetCard+</h3><a href="/#planes">Planes y precios</a><a href="/#ceiba">Ceiba, nuestra IA</a><a href="/funciones#placa">Placa QR y NFC</a></div>
-          <div><h3>Ayuda</h3><a href="/#faq">Preguntas frecuentes</a><a href="/contacto">Contáctanos</a><a href="/soporte">Ayuda y soporte</a></div>
-          <div><h3>Legal</h3><a href="/privacidad">Aviso de privacidad</a><a href="/terminos">Términos de uso</a><a href="/soporte#eliminar">Eliminar mi cuenta</a></div>
-          <div><h3>Escríbenos</h3><a class="pie__contacto" href="mailto:contacto@zootrack.com">contacto@zootrack.com<i class="ph-bold ph-arrow-up-right" aria-hidden="true"></i></a><a class="pie__contacto" href="tel:+527443526194">+52 744 352 6194<i class="ph-bold ph-arrow-up-right" aria-hidden="true"></i></a></div>
-        </nav>
+  <section class="seccion" id="explora">
+    <div class="contenedor">
+      <div class="cabeza cabeza--centro">
+        <p class="chip" data-aparece><i><svg class="ico"><use href="#i-chispas"/></svg></i>Conoce PetCard</p>
+        <h2 class="titulo" data-aparece>Todo lo que puedes hacer, <span class="acento">en una sola app</span></h2>
+        <p class="bajada" data-aparece>Para familias en iPhone, iPad y muy pronto Android, y para veterinarias también en la web.</p>
       </div>
-      <div class="pie__abajo">
-        <p>© <span data-anio>2026</span> PetCard · Hecho en México</p>
-        <a class="potenciado" href="https://zootrack.cloud" target="_blank" rel="noopener"><span class="potenciado__logo" aria-hidden="true"></span><span>Potenciado por <b>ZooTrack</b></span></a>
-        <a class="pie__subir" href="#contenido">Volver arriba<i class="ph-bold ph-arrow-up" aria-hidden="true"></i></a>
+      <div class="explora">
+        <a class="explora__tarjeta explora__tarjeta--grande" href="/funcionamiento" style="--fondo:var(--durazno)" data-aparece><i><svg class="ico"><use href="#i-pata"/></svg></i><h3>Cómo funciona</h3><p>Registra a tu mascota, conecta su placa y recibe todo de su veterinaria.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span><span class="explora__foto"><img src="/img/app/perfil.webp" alt="Perfil de Amelie en PetCard" loading="lazy" decoding="async" width="900" height="1650"></span></a><a class="explora__tarjeta explora__tarjeta--grande" href="/veterinarias" style="--fondo:var(--salvia)" data-aparece><i><svg class="ico"><use href="#i-estetoscopio"/></svg></i><h3>PetCard Vet</h3><p>Agenda, expediente, recetas, hospital, tu página y tu equipo. Gratis.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span><span class="explora__foto"><img src="/img/app/vet.webp" alt="Inicio de PetCard Vet" loading="lazy" decoding="async" width="900" height="1650"></span></a><a class="explora__tarjeta explora__tarjeta--grande" href="/ceiba" style="--fondo:var(--lila)" data-aparece><i class="cara-ceiba" aria-hidden="true"><span></span></i><h3>Ceiba</h3><p>La asistente con IA que ya conoce a tu mascota y agenda por ti.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span><span class="explora__foto"><img src="/img/app/ceiba.webp" alt="Chat con Ceiba" loading="lazy" decoding="async" width="900" height="1650"></span></a><a class="explora__tarjeta" href="/planes" style="--fondo:var(--cielo)" data-aparece><i><svg class="ico"><use href="#i-boleto"/></svg></i><h3>Planes</h3><p>Empieza gratis. PetCard+ para mascotas ilimitadas y Ceiba.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span></a><a class="explora__tarjeta" href="/descargar" style="--fondo:var(--rosa)" data-aparece><i><svg class="ico"><use href="#i-telefono"/></svg></i><h3>Descargar</h3><p>iPhone, iPad, web y muy pronto Android, sincronizados al instante.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span></a><a class="explora__tarjeta" href="/preguntas" style="--fondo:var(--blanco)" data-aparece><i><svg class="ico"><use href="#i-mas"/></svg></i><h3>Preguntas</h3><p>Respuestas para familias y veterinarias.</p><span class="explora__ir">Ver más<svg class="ico"><use href="#i-flecha"/></svg></span></a>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <aside class="petcard petcard--zoo" data-petcard aria-label="ZooTrack">
-    <span class="petcard__logo"><span class="petcard__hoja" aria-hidden="true"></span></span>
-    <div class="petcard__texto"><strong>Conoce <span>ZooTrack</span></strong><span>La plataforma hermana para UMAs, zoológicos y santuarios.</span></div>
-    <a class="petcard__boton" href="https://zootrack.cloud" target="_blank" rel="noopener">Ir a ZooTrack<i class="ph-bold ph-arrow-up-right" aria-hidden="true"></i></a>
-    <button class="petcard__cerrar" type="button" aria-label="Cerrar" data-petcard-cerrar><i class="ph-bold ph-x" aria-hidden="true"></i></button>
-  </aside>
+  <!-- Frase -->
+  <section class="seccion">
+    <div class="contenedor frase">
+      <div class="frase__ilustra" data-aparece aria-hidden="true">
+        <span class="burbuja burbuja--1"><svg class="ico"><use href="#i-corazon"/></svg></span><span class="burbuja burbuja--2"><svg class="ico"><use href="#i-pata"/></svg></span><span class="burbuja burbuja--3"><svg class="ico"><use href="#i-jeringa"/></svg></span>
+        <svg class="perro" viewBox="28 576 1943 847"><use href="#perro"/></svg>
+      </div>
+      <blockquote data-aparece style="--i:1"><p>«¿PetCard? Muchas vacunas, cero papeles. Muy ordenada.»</p><cite>— Amelie, salchicha y probadora oficial</cite></blockquote>
+    </div>
+  </section>
 
-  <div class="avisos" aria-live="polite" data-avisos></div>
+  <!-- Franja -->
+  <section class="franja" aria-label="Lo que pasa en PetCard">
+    <div class="franja__giro">
+      <div class="franja__fila"><div class="cupon cupon--durazno"><i><svg class="ico"><use href="#i-jeringa"/></svg></i><div><b>Rabia · Al día</b><small>Amelie · próximo refuerzo 12 dic</small></div></div><div class="cupon cupon--salvia"><i><svg class="ico"><use href="#i-calendario"/></svg></i><div><b>Cita confirmada</b><small>Mañana · 10:00 · Clínica Patitas</small></div></div><div class="cupon cupon--lila"><i class="cara-ceiba" aria-hidden="true"><span></span></i><div><b>Ceiba</b><small>¿Cuánto debe comer al día?</small></div></div><div class="cupon cupon--cielo"><i><svg class="ico"><use href="#i-matraz"/></svg></i><div><b>Estudio listo</b><small>Radiografía de tórax</small></div></div><div class="cupon cupon--rosa"><i><svg class="ico"><use href="#i-boleto"/></svg></i><div><b>15% en consulta</b><small>Cupón de tu veterinaria</small></div></div><div class="cupon cupon--blanco"><i><svg class="ico"><use href="#i-qr"/></svg></i><div><b>Placa escaneada</b><small>Luna está a salvo</small></div></div><div class="cupon cupon--durazno"><i><svg class="ico"><use href="#i-bascula"/></svg></i><div><b>Peso ideal</b><small>Max · 6.2 kg</small></div></div></div>
+      <div class="franja__fila"><div class="cupon cupon--cielo"><i><svg class="ico"><use href="#i-campana"/></svg></i><div><b>Desparasitación</b><small>Toby · en 3 días</small></div></div><div class="cupon cupon--blanco"><i><svg class="ico"><use href="#i-receta"/></svg></i><div><b>Receta firmada</b><small>PDF listo en su expediente</small></div></div><div class="cupon cupon--salvia"><i><svg class="ico"><use href="#i-sello"/></svg></i><div><b>Cliente frecuente</b><small>8 de 10 visitas</small></div></div><div class="cupon cupon--rosa"><i><svg class="ico"><use href="#i-corazon"/></svg></i><div><b>En adopción</b><small>Kiwi busca familia</small></div></div><div class="cupon cupon--lila"><i><svg class="ico"><use href="#i-nfc"/></svg></i><div><b>Placa NFC</b><small>Vinculada con su perfil</small></div></div><div class="cupon cupon--durazno"><i><svg class="ico"><use href="#i-tijeras"/></svg></i><div><b>Baño y corte</b><small>Listo para recoger</small></div></div><div class="cupon cupon--salvia"><i><svg class="ico"><use href="#i-huella"/></svg></i><div><b>Huella de nariz</b><small>Registrada</small></div></div></div>
+    </div>
+  </section>
+
+  <!-- Manifiesto -->
+  <section class="seccion">
+    <div class="contenedor manifiesto" data-aparece>
+      <div>
+        <h2 class="titulo">Tecnología para que cada mascota <span class="acento">reciba mejor cuidado</span></h2>
+        <p>Hacemos herramientas sencillas para familias y veterinarias de México: menos papeles, mejores expedientes y mascotas que siempre vuelven a casa.</p>
+      </div>
+      <div class="acciones">
+        <a class="boton boton--naranja" href="https://platform.petcard.cloud/#registro">Registrar mi veterinaria<svg class="ico"><use href="#i-flecha"/></svg></a>
+        <a class="boton boton--blanco" href="mailto:contacto@zootrack.com?subject=PetCard"><svg class="ico"><use href="#i-correo"/></svg>Hablemos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZooTrack -->
+  <section class="seccion">
+    <div class="contenedor hermana" data-aparece>
+      <span class="hermana__logo"><svg class="ico"><use href="#i-hoja"/></svg></span>
+      <div><h2>¿Trabajas con fauna silvestre?</h2><p>Conoce ZooTrack, la plataforma hermana para UMA, zoológicos, santuarios y PIMVS.</p></div>
+      <a class="boton boton--oscuro" href="https://zootrack.cloud/">Conocer ZooTrack<svg class="ico"><use href="#i-externo"/></svg></a>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="pie__panel">
+    <div class="pie__marca"><svg class="perro" aria-hidden="true"><use href="#perro"/></svg><b>PetCard</b><p>Todo lo de tu mascota en un solo lugar</p></div>
+    <div class="pie__cols">
+      <div class="pie__col"><h3>Ayuda</h3><a href="/funcionamiento">Cómo funciona</a><a href="/planes">Planes</a><a href="/soporte">Ayuda y soporte</a><a href="/contacto">Contacto</a><a href="/preguntas">Preguntas frecuentes</a></div>
+      <div class="pie__col"><h3>Veterinarias</h3><a href="https://platform.petcard.cloud/#registro">Registrar mi veterinaria<svg class="ico"><use href="#i-externo"/></svg></a><a href="https://platform.petcard.cloud/">Iniciar sesión<svg class="ico"><use href="#i-externo"/></svg></a><a href="/veterinarias#paginas">Creador de páginas</a><a href="mailto:contacto@zootrack.com">contacto@zootrack.com</a></div>
+      <div class="pie__col"><h3>Descarga la app</h3><a class="boton boton--oscuro tienda boton--chico" href="/descargar" aria-label="PetCard en App Store, muy pronto"><svg class="ico"><use href="#i-apple"/></svg><span><small>Muy pronto en</small><b>App Store</b></span></a><a class="boton boton--blanco tienda boton--chico" href="/descargar" aria-label="PetCard en Google Play, muy pronto"><svg class="ico"><use href="#i-play"/></svg><span><small>Muy pronto en</small><b>Google Play</b></span></a><a class="boton boton--blanco tienda boton--chico" href="https://platform.petcard.cloud/"><svg class="ico"><use href="#i-pc"/></svg><span><small>Para veterinarias</small><b>Web</b></span></a></div>
+      <div class="pie__col"><h3>Legal</h3><a href="/privacidad">Aviso de privacidad</a><a href="/terminos">Términos de uso</a><a href="/soporte#s1">Eliminar mi cuenta</a></div>
+    </div>
+    <div class="pie__legal"><span>© <span data-anio>2026</span> PetCard · Hecho en México</span><a class="potenciado" href="https://zootrack.cloud/" aria-label="Potenciado por ZooTrack"><i><svg class="ico"><use href="#i-hoja"/></svg></i><span>Potenciado por <b>ZooTrack</b></span></a><nav aria-label="Legal"><a href="/terminos">Términos</a><a href="/privacidad">Privacidad</a></nav></div>
+  </div>
+</footer>
+
+<script src="/js/publi.js?v=2" defer></script>
 </body>
 </html>
