@@ -12,8 +12,29 @@
   });
   menu?.addEventListener("click", e => { if (e.target.closest("a")) { menu.hidden = true; boton.setAttribute("aria-expanded", "false"); } });
 
-  const vistos = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); vistos.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" });
+  // Al terminar la aparición se quitan blur y recorte para no afectar el rendimiento
+  const asentar = el => setTimeout(() => el.classList.add("asentado"), 1300 + (parseFloat(getComputedStyle(el).getPropertyValue("--i")) || 0) * 70);
+  const vistos = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); asentar(e.target); vistos.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" });
   document.querySelectorAll("[data-aparece]").forEach(el => vistos.observe(el));
+
+  // Cápsula que sigue al cursor en el menú
+  const enlaces = document.querySelector(".nav__links");
+  if (enlaces) {
+    const pildora = Object.assign(document.createElement("span"), { className: "nav__pildora" });
+    pildora.setAttribute("aria-hidden", "true"); enlaces.prepend(pildora);
+    const ir = a => { if (!a) return pildora.classList.remove("activa"); pildora.style.setProperty("--x", `${a.offsetLeft}px`); pildora.style.width = `${a.offsetWidth}px`; pildora.classList.add("activa"); };
+    const actual = () => enlaces.querySelector("[aria-current]");
+    enlaces.querySelectorAll("a").forEach(a => { a.addEventListener("pointerenter", () => ir(a)); a.addEventListener("focus", () => ir(a)); });
+    enlaces.addEventListener("pointerleave", () => ir(actual()));
+    requestAnimationFrame(() => { pildora.style.transition = "none"; ir(actual()); requestAnimationFrame(() => pildora.style.transition = ""); });
+    addEventListener("resize", () => ir(actual()));
+  }
+
+  // El relleno de los botones nace donde entra el cursor
+  document.querySelectorAll(".boton, .tienda").forEach(b => b.addEventListener("pointerenter", e => {
+    const r = b.getBoundingClientRect();
+    b.style.setProperty("--mx", `${e.clientX - r.left}px`); b.style.setProperty("--my", `${e.clientY - r.top}px`);
+  }));
 
   document.querySelectorAll("[data-anio]").forEach(el => el.textContent = new Date().getFullYear());
 
