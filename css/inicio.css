@@ -569,3 +569,49 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
   .menu-movil { animation: none; }
 }
 .boton:not(.boton--claro):hover, .tienda:hover { color: var(--texto); }
+
+/* Haz crecer tu clínica */
+.crecer { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.crecer__tarjeta { display: flex; flex-direction: column; gap: 12px; padding: 14px 14px 30px; border-radius: 32px; background: var(--marfil); transition: transform .8s var(--resorte); }
+.crecer__tarjeta:hover { transform: translateY(-4px); }
+.crecer__tarjeta > :not(.crecer__visual) { margin-inline: 16px; }
+.crecer__tarjeta h3 { margin-top: 10px; font: 600 22px/1.2 var(--titulos); letter-spacing: -.02em; }
+.crecer__tarjeta > p { color: var(--suave); line-height: 1.55; }
+.crecer__tarjeta .lista { margin-top: 4px; }
+.crecer__visual { position: relative; display: grid; place-items: center; height: 250px; border-radius: 24px; overflow: hidden; background: var(--luz); }
+.crecer__visual > * { transition: transform .9s var(--resorte); }
+.crecer__tarjeta:hover .crecer__visual > * { transform: rotate(-3deg) scale(1.04); }
+
+.cupon { --muesca: radial-gradient(circle at 0 50%, transparent 11px, #000 11.5px); display: grid; grid-template-columns: 1.3fr 1fr; width: 82%; border-radius: 20px; background: #fff; box-shadow: 0 0 0 1px var(--linea); rotate: -4deg; }
+.cupon > div { display: grid; gap: 4px; padding: 20px; }
+.cupon small { font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--tenue); }
+.cupon__izq b { font: 700 46px/1 var(--titulos); letter-spacing: -.04em; background: var(--degradado); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cupon__izq span, .cupon__der span { font-size: 13px; color: var(--suave); }
+.cupon__der { border-left: 2px dashed var(--linea); align-content: center; }
+.cupon__der code { font: 600 15px/1.2 var(--titulos); letter-spacing: .04em; padding: 6px 10px; border-radius: 999px; background: var(--marfil); justify-self: start; }
+
+.sellos { width: 84%; padding: 18px; border-radius: 22px; background: var(--degradado); color: #4A2309; rotate: 3deg; }
+.sellos p { display: grid; gap: 2px; margin-bottom: 14px; }
+.sellos p b { font: 600 17px/1.1 var(--titulos); }
+.sellos p span, .sellos small { font-size: 12px; opacity: .8; }
+.sellos__rejilla { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 12px; }
+.sellos__rejilla i { aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, .3); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .6); font: 600 10px/1 var(--titulos); font-style: normal; }
+.sellos__rejilla i.lleno { background: #fff; box-shadow: none; }
+.sellos__rejilla i:last-child { background: #4A2309; color: #fff; box-shadow: none; }
+.sellos__rejilla .ico { width: 16px; height: 16px; color: var(--naranja-oscuro); }
+.crecer__tarjeta:hover .sellos__rejilla i:nth-child(6) { animation: sello .7s var(--resorte) both; }
+@keyframes sello { from { scale: .4; background: #fff; } to { scale: 1; background: #fff; } }
+
+.mini-web { width: 82%; border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 0 0 1px var(--linea); rotate: -3deg; }
+.mini-web__barra { display: flex; align-items: center; gap: 5px; padding: 9px 12px; background: var(--marfil); }
+.mini-web__barra i { width: 7px; height: 7px; border-radius: 50%; background: rgba(29, 27, 25, .15); }
+.mini-web__barra span { margin-left: 8px; padding: 3px 10px; border-radius: 999px; background: #fff; font-size: 10px; color: var(--suave); }
+.mini-web__cuerpo { display: grid; grid-template-columns: 1fr 88px; grid-auto-rows: min-content; gap: 8px 14px; padding: 16px; }
+.mini-web__cuerpo > :not(.mini-web__img) { grid-column: 1; }
+.mini-web__cuerpo em { justify-self: start; padding: 3px 9px; border-radius: 999px; background: #FFF1DE; font: 500 10px/1.3 var(--texto-f); font-style: normal; color: var(--naranja-oscuro); }
+.mini-web__cuerpo b { height: 11px; border-radius: 6px; background: var(--texto); }
+.mini-web__cuerpo b + b { width: 70%; background: rgba(29, 27, 25, .25); }
+.mini-web__cuerpo span { justify-self: start; margin-top: 4px; padding: 6px 12px; border-radius: 999px; background: var(--degradado); font: 600 10px/1 var(--texto-f); color: #4A2309; }
+.mini-web__img { grid-column: 2; grid-row: 1 / span 4; border-radius: 12px; background: url(/img/amelie-foto.jpg) center / cover, var(--marfil); }
+
+@media (max-width: 1000px) { .crecer { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; } }
