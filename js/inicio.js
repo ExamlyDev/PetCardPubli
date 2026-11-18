@@ -32,4 +32,51 @@
     pila.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); girar(); programar(); } });
     programar();
   }
+
+  // Pestañas de preguntas con indicador que se desliza
+  const lista = document.querySelector(".pestanas");
+  if (lista) {
+    const pestanas = [...lista.querySelectorAll(".pestana")], indicador = lista.querySelector(".pestanas__indicador");
+    const mover = p => { if (indicador) { indicador.style.height = `${p.offsetHeight}px`; indicador.style.transform = `translateY(${p.offsetTop}px)`; } };
+    const elegir = (p, foco) => {
+      pestanas.forEach(x => {
+        const si = x === p;
+        x.setAttribute("aria-selected", String(si)); x.tabIndex = si ? 0 : -1;
+        const panel = document.getElementById(x.getAttribute("aria-controls")); if (panel) panel.hidden = !si;
+      });
+      mover(p); if (foco) p.focus();
+    };
+    pestanas.forEach((p, i) => {
+      p.addEventListener("click", () => elegir(p));
+      p.addEventListener("keydown", e => { const d = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key]; if (d) { e.preventDefault(); elegir(pestanas[(i + d + pestanas.length) % pestanas.length], true); } });
+    });
+    const actual = () => pestanas.find(p => p.getAttribute("aria-selected") === "true") || pestanas[0];
+    requestAnimationFrame(() => mover(actual())); addEventListener("resize", () => mover(actual()));
+  }
+
+  // Preguntas: una abierta por panel
+  document.querySelectorAll(".panel-faq").forEach(panel => panel.querySelectorAll("details").forEach(d => d.addEventListener("toggle", () => {
+    if (d.open) panel.querySelectorAll("details").forEach(o => { if (o !== d) o.open = false; });
+  })));
+
+  // Contacto: valida y abre el correo con el mensaje listo
+  const forma = document.querySelector("[data-contacto]");
+  if (forma) {
+    const aviso = forma.querySelector(".formulario__aviso");
+    const avisar = (t, mal) => { aviso.hidden = false; aviso.textContent = t; aviso.classList.toggle("mal", !!mal); };
+    forma.addEventListener("submit", e => {
+      e.preventDefault();
+      const d = Object.fromEntries(new FormData(forma)), malos = [];
+      if (!String(d.nombre || "").trim()) malos.push("nombre");
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(d.correo || "").trim())) malos.push("correo");
+      if (!String(d.mensaje || "").trim()) malos.push("mensaje");
+      forma.querySelectorAll(".campo").forEach(c => c.classList.toggle("error", malos.includes(c.querySelector("input, textarea")?.name)));
+      if (malos.length) { avisar(malos.includes("correo") && malos.length === 1 ? "Ese correo no parece válido. Revisa que tenga @ y dominio" : "Revisa los campos marcados para continuar", true); forma.querySelector(`[name="${malos[0]}"]`)?.focus(); return; }
+      const asunto = `${d.perfil === "Veterinaria" ? "PetCard Vet" : "PetCard"} · Mensaje de ${d.nombre.trim()}`;
+      const cuerpo = `${d.mensaje.trim()}\n\n${d.nombre.trim()}\n${d.correo.trim()}\n${d.perfil}`;
+      location.href = `mailto:contacto@zootrack.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+      avisar(`Gracias, ${d.nombre.trim().split(" ")[0]}. Abrimos tu correo con el mensaje listo, solo envíalo.`);
+    });
+    forma.querySelectorAll("input, textarea").forEach(el => el.addEventListener("input", () => el.closest(".campo")?.classList.remove("error")));
+  }
 })();

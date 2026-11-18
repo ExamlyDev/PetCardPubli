@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Ceiba | La asistente con IA de PetCard</title>
   <meta name="description" content="Ceiba responde sobre el cuidado de tu mascota, revisa su calendario y agenda con su veterinaria. En la clínica escucha la consulta y prepara documentos.">
-  <meta name="theme-color" content="#F4EBE2">
+  <meta name="theme-color" content="#FDFCFA">
   <meta name="color-scheme" content="light only">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PetCard">
@@ -22,9 +22,10 @@
   <link rel="icon" href="/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
   <link rel="manifest" href="/manifest.webmanifest">
+
   <link rel="preload" href="/fonts/Urbanist-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/publi.css?v=6">
-<link rel="stylesheet" href="/css/suave.css?v=1">
+  <link rel="preload" href="/fonts/SpaceGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/inicio.css?v=4">
   <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__petcardListo)document.documentElement.classList.remove("js")},3500);</script>
 </head>
 <body>
@@ -93,70 +94,76 @@
     <symbol id="i-ayuda" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
   </defs>
 </svg>
-<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<a class="saltar" href="#contenido">Ir al contenido</a>
 
 <header class="nav">
-  <a class="marca" href="/" aria-label="PetCard, inicio"><svg class="perro" aria-hidden="true"><use href="#perro"/></svg>PetCard</a>
-  <nav class="nav__links" aria-label="Principal">
-    <a href="/funcionamiento">Cómo funciona</a>
-    <a href="/veterinarias">Veterinarias</a>
-    <a href="/ceiba" aria-current="page">Ceiba</a>
-    <a href="/planes">Planes</a>
-    <a href="/contacto">Contacto</a>
-  </nav>
-  <div class="nav__acciones">
-    <a class="boton boton--blanco boton--chico" href="https://platform.petcard.cloud/"><svg class="ico"><use href="#i-entrar"/></svg>Iniciar sesión</a>
-    <a class="boton boton--naranja boton--chico" href="/descargar">Descargar</a>
+  <div class="contenedor nav__dentro">
+    <a class="marca" href="/" aria-label="PetCard, inicio"><svg class="perro" aria-hidden="true"><use href="#perro"/></svg>PetCard</a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="/funcionamiento">Cómo funciona</a>
+      <a href="/veterinarias">Veterinarias</a>
+      <a href="/ceiba" aria-current="page">Ceiba</a>
+      <a href="/planes">Planes</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
+    <div class="nav__acciones">
+      <a class="nav__entrar" href="https://platform.petcard.cloud/">Iniciar sesión</a>
+      <a class="boton" href="/descargar">Descarga la app</a>
+      <button class="nav__menu" type="button" aria-label="Menú" aria-expanded="false" aria-controls="menu-movil"><svg class="ico"><use href="#i-menu"/></svg></button>
+    </div>
   </div>
-  <button class="nav__menu" type="button" aria-label="Menú" aria-expanded="false" aria-controls="menu-movil"><svg class="ico"><use href="#i-menu"/></svg></button>
 </header>
 <nav class="menu-movil" id="menu-movil" aria-label="Menú" hidden>
   <a href="/funcionamiento">Cómo funciona</a>
   <a href="/veterinarias">Veterinarias</a>
-  <a href="/ceiba" aria-current="page">Ceiba</a>
+  <a href="/ceiba">Ceiba</a>
   <a href="/planes">Planes</a>
   <a href="/contacto">Contacto</a>
-  <a class="boton boton--naranja" href="/descargar">Descargar PetCard</a>
-  <a class="boton boton--blanco" href="https://platform.petcard.cloud/" style="background:var(--crema)"><svg class="ico"><use href="#i-entrar"/></svg>Iniciar sesión</a>
+  <a href="https://platform.petcard.cloud/">Iniciar sesión</a>
+  <a class="boton" href="/descargar">Descarga la app</a>
 </nav>
 
-<main id="contenido" class="pagina">
-  <!-- Ceiba -->
-  <section class="seccion" id="ceiba">
-    <div class="contenedor ceiba">
-      <div>
-        <p class="chip" data-aparece><i class="cara-ceiba" aria-hidden="true"><span></span></i>Ceiba</p>
-        <h1 class="titulo" data-aparece style="margin-top:14px">¿Dudas a las 2 a.m.? <span class="acento">Pregúntale a Ceiba</span></h1>
-        <p class="bajada" data-aparece>La asistente con IA de PetCard responde sobre su cuidado, revisa su calendario y agenda con su veterinaria. En la clínica escucha la consulta, la resume y prepara documentos.</p>
-        <ul class="chips-ceiba" data-aparece>
-          <li><i class="cara-ceiba" aria-hidden="true"><span></span></i>Chat</li><li><i><svg class="ico"><use href="#i-llamada"/></svg></i>Llamada</li><li><i><svg class="ico"><use href="#i-video"/></svg></i>Videollamada</li><li><i><svg class="ico"><use href="#i-microfono"/></svg></i>Resume consultas</li><li><i><svg class="ico"><use href="#i-archivo"/></svg></i>Documentos</li><li><i><svg class="ico"><use href="#i-video"/></svg></i>Videos narrados</li><li><i><svg class="ico"><use href="#i-nube"/></svg></i>IA en la nube</li><li><i><svg class="ico"><use href="#i-chip"/></svg></i>IA local, sin internet</li>
-        </ul>
+<main id="contenido">
+  <section class="encabezado">
+    <div class="contenedor dividido">
+      <div class="dividido__texto">
+        <p class="etiqueta" data-aparece>Ceiba</p>
+        <h1 data-aparece style="--i:1">¿Dudas a las 2 a.m.? <span class="degradado">Pregúntale a Ceiba</span></h1>
+        <p class="texto" data-aparece style="--i:2">La asistente con IA de PetCard responde sobre su cuidado, revisa su calendario y agenda con su veterinaria. En la clínica escucha la consulta, la resume y prepara documentos.</p>
+        <div class="pildoras" data-aparece style="--i:3"><span>Chat</span><span>Llamada</span><span>Videollamada</span><span>Resume consultas</span><span>Documentos</span><span>Videos narrados</span><span>IA en la nube</span><span>IA local, sin internet</span></div>
       </div>
-      <figure class="captura captura--blanca" data-aparece><img src="/img/app/ceiba.webp" alt="Conversación con Ceiba en la app de PetCard" loading="lazy" decoding="async" width="900" height="1751"></figure>
+      <div class="vitrina vitrina--luz" data-aparece style="--i:1"><img src="/img/app/ceiba.webp" alt="Chat con Ceiba en PetCard" width="900" height="1751"></div>
     </div>
   </section>
-
   <section class="seccion">
-    <div class="contenedor cta" data-aparece>
-      <div><h2>Empieza gratis con PetCard</h2><p>Lleva la cartilla, las citas y la placa de tu mascota en tu bolsillo. Y si tienes veterinaria, PetCard Vet es gratis.</p></div>
-      <div class="tiendas"><a class="boton boton--oscuro tienda" href="/descargar" aria-label="PetCard en App Store, muy pronto"><svg class="ico"><use href="#i-apple"/></svg><span><small>Muy pronto en</small><b>App Store</b></span></a><a class="boton boton--blanco tienda" href="/descargar" aria-label="PetCard en Google Play, muy pronto"><svg class="ico"><use href="#i-play"/></svg><span><small>Muy pronto en</small><b>Google Play</b></span></a><a class="boton boton--blanco tienda" href="https://platform.petcard.cloud/"><svg class="ico"><use href="#i-pc"/></svg><span><small>Para veterinarias</small><b>Web</b></span></a></div>
+    <div class="contenedor">
+      <div class="llamado" data-aparece>
+        <svg class="perro" aria-hidden="true"><use href="#perro"/></svg>
+        <h2 class="titulo">Empieza gratis con PetCard</h2>
+        <p class="texto">Lleva la cartilla, las citas y la placa de tu mascota en tu bolsillo. Y si tienes veterinaria, PetCard Vet es gratis.</p>
+        <div class="tiendas">
+          <a class="tienda" href="/descargar" aria-label="PetCard en App Store, muy pronto"><svg class="ico"><use href="#i-apple"/></svg><span><small>Muy pronto en</small><b>App Store</b></span></a>
+          <a class="tienda" href="/descargar" aria-label="PetCard en Google Play, muy pronto"><svg class="ico"><use href="#i-play"/></svg><span><small>Muy pronto en</small><b>Google Play</b></span></a>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="pie">
-  <div class="pie__panel">
-    <div class="pie__marca"><svg class="perro" aria-hidden="true"><use href="#perro"/></svg><b>PetCard</b><p>Todo lo de tu mascota en un solo lugar</p></div>
-    <div class="pie__cols">
-      <div class="pie__col"><h3>Ayuda</h3><a href="/funcionamiento">Cómo funciona</a><a href="/planes">Planes</a><a href="/soporte">Ayuda y soporte</a><a href="/contacto">Contacto</a><a href="/preguntas">Preguntas frecuentes</a></div>
-      <div class="pie__col"><h3>Veterinarias</h3><a href="https://platform.petcard.cloud/#registro">Registrar mi veterinaria<svg class="ico"><use href="#i-externo"/></svg></a><a href="https://platform.petcard.cloud/">Iniciar sesión<svg class="ico"><use href="#i-externo"/></svg></a><a href="/veterinarias#paginas">Creador de páginas</a><a href="mailto:contacto@zootrack.com">contacto@zootrack.com</a></div>
-      <div class="pie__col"><h3>Descarga la app</h3><a class="boton boton--oscuro tienda boton--chico" href="/descargar" aria-label="PetCard en App Store, muy pronto"><svg class="ico"><use href="#i-apple"/></svg><span><small>Muy pronto en</small><b>App Store</b></span></a><a class="boton boton--blanco tienda boton--chico" href="/descargar" aria-label="PetCard en Google Play, muy pronto"><svg class="ico"><use href="#i-play"/></svg><span><small>Muy pronto en</small><b>Google Play</b></span></a><a class="boton boton--blanco tienda boton--chico" href="https://platform.petcard.cloud/"><svg class="ico"><use href="#i-pc"/></svg><span><small>Para veterinarias</small><b>Web</b></span></a></div>
+  <div class="contenedor">
+    <div class="pie__arriba">
+      <div class="pie__marca"><a class="marca" href="/"><svg class="perro" aria-hidden="true"><use href="#perro"/></svg>PetCard</a><p>Todo lo de tu mascota<br>en un solo lugar</p></div>
+      <div class="pie__col"><h3>Ayuda</h3><a href="/funcionamiento">Cómo funciona</a><a href="/planes">Planes</a><a href="/soporte">Ayuda y soporte</a><a href="/preguntas">Preguntas frecuentes</a></div>
+      <div class="pie__col"><h3>Veterinarias</h3><a href="/veterinarias">PetCard Vet</a><a href="https://platform.petcard.cloud/#registro">Registrar mi veterinaria</a><a href="https://platform.petcard.cloud/">Iniciar sesión</a></div>
+      <div class="pie__col"><h3>PetCard</h3><a href="/descargar">Descargar</a><a href="/ceiba">Ceiba</a><a href="/contacto">Contacto</a></div>
       <div class="pie__col"><h3>Legal</h3><a href="/privacidad">Aviso de privacidad</a><a href="/terminos">Términos de uso</a><a href="/soporte#s1">Eliminar mi cuenta</a></div>
     </div>
-    <div class="pie__legal"><span>© <span data-anio>2026</span> PetCard · Hecho en México</span><a class="potenciado" href="https://zootrack.cloud/" aria-label="Potenciado por ZooTrack"><i><svg class="ico"><use href="#i-hoja"/></svg></i><span>Potenciado por <b>ZooTrack</b></span></a><nav aria-label="Legal"><a href="/terminos">Términos</a><a href="/privacidad">Privacidad</a></nav></div>
+    <div class="pie__abajo"><span>© <span data-anio>2026</span> PetCard · Hecho en México</span><a class="potenciado" href="https://zootrack.cloud/"><svg class="ico" aria-hidden="true"><use href="#i-hoja"/></svg>Potenciado por <b>ZooTrack</b></a></div>
   </div>
 </footer>
 
-<script src="/js/publi.js?v=2" defer></script>
+<script src="/js/inicio.js?v=4" defer></script>
 </body>
 </html>

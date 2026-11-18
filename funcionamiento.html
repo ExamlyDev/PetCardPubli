@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Cómo funciona PetCard | Registro, placa y expediente</title>
   <meta name="description" content="Registra a tu mascota, vincula su placa con QR y NFC, y recibe consultas, recetas y estudios de su veterinaria en PetCard.">
-  <meta name="theme-color" content="#F4EBE2">
+  <meta name="theme-color" content="#FDFCFA">
   <meta name="color-scheme" content="light only">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PetCard">
@@ -22,9 +22,10 @@
   <link rel="icon" href="/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
   <link rel="manifest" href="/manifest.webmanifest">
+
   <link rel="preload" href="/fonts/Urbanist-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/publi.css?v=6">
-<link rel="stylesheet" href="/css/suave.css?v=1">
+  <link rel="preload" href="/fonts/SpaceGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/inicio.css?v=4">
   <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__petcardListo)document.documentElement.classList.remove("js")},3500);</script>
 </head>
 <body>
@@ -93,79 +94,97 @@
     <symbol id="i-ayuda" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
   </defs>
 </svg>
-<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<a class="saltar" href="#contenido">Ir al contenido</a>
 
 <header class="nav">
-  <a class="marca" href="/" aria-label="PetCard, inicio"><svg class="perro" aria-hidden="true"><use href="#perro"/></svg>PetCard</a>
-  <nav class="nav__links" aria-label="Principal">
-    <a href="/funcionamiento" aria-current="page">Cómo funciona</a>
-    <a href="/veterinarias">Veterinarias</a>
-    <a href="/ceiba">Ceiba</a>
-    <a href="/planes">Planes</a>
-    <a href="/contacto">Contacto</a>
-  </nav>
-  <div class="nav__acciones">
-    <a class="boton boton--blanco boton--chico" href="https://platform.petcard.cloud/"><svg class="ico"><use href="#i-entrar"/></svg>Iniciar sesión</a>
-    <a class="boton boton--naranja boton--chico" href="/descargar">Descargar</a>
+  <div class="contenedor nav__dentro">
+    <a class="marca" href="/" aria-label="PetCard, inicio"><svg class="perro" aria-hidden="true"><use href="#perro"/></svg>PetCard</a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="/funcionamiento" aria-current="page">Cómo funciona</a>
+      <a href="/veterinarias">Veterinarias</a>
+      <a href="/ceiba">Ceiba</a>
+      <a href="/planes">Planes</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
+    <div class="nav__acciones">
+      <a class="nav__entrar" href="https://platform.petcard.cloud/">Iniciar sesión</a>
+      <a class="boton" href="/descargar">Descarga la app</a>
+      <button class="nav__menu" type="button" aria-label="Menú" aria-expanded="false" aria-controls="menu-movil"><svg class="ico"><use href="#i-menu"/></svg></button>
+    </div>
   </div>
-  <button class="nav__menu" type="button" aria-label="Menú" aria-expanded="false" aria-controls="menu-movil"><svg class="ico"><use href="#i-menu"/></svg></button>
 </header>
 <nav class="menu-movil" id="menu-movil" aria-label="Menú" hidden>
-  <a href="/funcionamiento" aria-current="page">Cómo funciona</a>
+  <a href="/funcionamiento">Cómo funciona</a>
   <a href="/veterinarias">Veterinarias</a>
   <a href="/ceiba">Ceiba</a>
   <a href="/planes">Planes</a>
   <a href="/contacto">Contacto</a>
-  <a class="boton boton--naranja" href="/descargar">Descargar PetCard</a>
-  <a class="boton boton--blanco" href="https://platform.petcard.cloud/" style="background:var(--crema)"><svg class="ico"><use href="#i-entrar"/></svg>Iniciar sesión</a>
+  <a href="https://platform.petcard.cloud/">Iniciar sesión</a>
+  <a class="boton" href="/descargar">Descarga la app</a>
 </nav>
 
-<main id="contenido" class="pagina">
-  <!-- Cómo funciona -->
-  <section class="seccion" id="como">
-    <div class="contenedor pasos">
-      <div class="cabeza cabeza--centro">
-        <p class="chip" data-aparece><i><svg class="ico"><use href="#i-pata"/></svg></i>Cómo funciona</p>
-        <h1 class="titulo" data-aparece>De su registro a su <span class="acento">expediente completo</span></h1>
-        <p class="bajada" data-aparece>Tres pasos, sin cartillas de papel.</p>
+<main id="contenido">
+  <section class="encabezado">
+    <div class="contenedor">
+      <div class="encabezado__dentro">
+        <p class="etiqueta" data-aparece>Cómo funciona</p>
+        <h1 data-aparece style="--i:1">De su registro a su expediente completo</h1>
+        <p class="texto" data-aparece style="--i:2">Tres pasos, sin cartillas de papel.</p>
       </div>
-      <ol class="pasos__lista"><li class="paso" data-aparece style="--i:0"><figure class="captura captura--durazno"><img src="/img/app/perfil.webp" alt="Perfil de Amelie en la app de PetCard" loading="lazy" decoding="async" width="900" height="1753"></figure><div class="paso__texto"><span class="paso__num">1</span><h3>Registra a tu mascota</h3><p>Su nombre, foto, raza y peso. Pasa su cartilla de papel con una foto y listo.</p></div></li><li class="paso" data-aparece style="--i:1"><figure class="captura captura--cielo"><img src="/img/app/placa.webp" alt="Placa NFC, código QR y huella de nariz en PetCard" loading="lazy" decoding="async" width="900" height="1650"></figure><div class="paso__texto"><span class="paso__num">2</span><h3>Conecta su placa</h3><p>Vincula su placa con QR y NFC. Si se pierde, quien la encuentre te avisa con un toque.</p></div></li><li class="paso" data-aparece style="--i:2"><figure class="captura captura--lila"><img src="/img/app/receta.webp" alt="Receta de la veterinaria con recordatorio de cada toma" loading="lazy" decoding="async" width="900" height="1642"></figure><div class="paso__texto"><span class="paso__num">3</span><h3>Tu veterinaria lo actualiza</h3><p>Consultas, recetas firmadas y estudios llegan solos a su expediente, con recordatorios.</p></div></li></ol>
     </div>
   </section>
-
-  <!-- Para ti -->
-  <section class="seccion" id="para-ti">
-    <div class="contenedor dos-columnas">
-      <div class="cabeza">
-        <p class="chip" data-aparece><i><svg class="ico"><use href="#i-corazon"/></svg></i>Para ti y tu mascota</p>
-        <h2 class="titulo" data-aparece>Todo lo de tu mascota <span class="acento">va contigo</span></h2>
-        <p class="bajada" data-aparece>Su salud, su identificación y su veterinaria, ordenados en una sola app.</p>
-      </div>
-      <div class="barras"><div class="barra barra--durazno abierta" data-aparece style="--i:0"><button type="button" aria-expanded="true"><i><svg class="ico"><use href="#i-archivo"/></svg></i>Cartilla y salud<svg class="ico flecha"><use href="#i-abajo"/></svg></button><div class="barra__cuerpo"><div><ul><li><svg class="ico"><use href="#i-check"/></svg><span>Vacunas, desparasitaciones, alergias y peso en un solo lugar</span></li><li><svg class="ico"><use href="#i-check"/></svg><span>Consultas, recetas y estudios que manda tu veterinaria</span></li><li><svg class="ico"><use href="#i-check"/></svg><span>Recordatorios con el ladrido de tu mascota</span></li><li><svg class="ico"><use href="#i-check"/></svg><span>Condición corporal con una foto</span></li></ul></div></div></div><div class="barra barra--salvia" data-aparece style="--i:1"><button type="button" aria-expanded="false"><i><svg class="ico"><use href="#i-qr"/></svg></i>Identificación y seguridad<svg class="ico flecha"><use href="#i-abajo"/></svg></button><div class="barra__cuerpo"><div><ul><li><svg class="ico"><use href="#i-check"/></svg><span>Placa con QR y NFC con su perfil público</span></li><li><svg class="ico"><use href="#i-check"/></svg><span>Huella de nariz, única como una huella digital</span></li><li><svg class="ico"><use href="#i-check"/></svg><span>SOS veterinario para urgencias</span></li><li><svg class="ico"><use href="#i-check"/></svg><span>Mascotas perdidas y encontradas cerca de ti</span></li></ul></div></div></div><div class="barra barra--cielo" data-aparece style="--i:2"><button type="button" aria-expanded="false"><i><svg class="ico"><use href="#i-pin"/></svg></i>Veterinarias y servicios<svg class="ico flecha"><use href="#i-abajo"/></svg></button><div class="barra__cuerpo"><div><ul><li><svg class="ico"><use href="#i-check"/></svg><span>Veterinarias cerca de ti, con horario y servicios</span></li><li><svg class="ico"><use href="#i-check"/></svg><span>Pide cita y llena su cuestionario antes de llegar</span></li><li><svg class="ico"><use href="#i-check"/></svg><span>Cupones y tarjeta de cliente frecuente de tu vete</span></li><li><svg class="ico"><use href="#i-check"/></svg><span>Adopciones y fichas de más de 12 especies</span></li></ul></div></div></div><div class="barra barra--lila" data-aparece style="--i:3"><button type="button" aria-expanded="false"><i class="cara-ceiba" aria-hidden="true"><span></span></i>Ceiba, tu asistente<svg class="ico flecha"><use href="#i-abajo"/></svg></button><div class="barra__cuerpo"><div><ul><li><svg class="ico"><use href="#i-check"/></svg><span>Pregúntale por su cuidado, comida o vacunas</span></li><li><svg class="ico"><use href="#i-check"/></svg><span>Pasa su cartilla de papel a la app con una foto</span></li><li><svg class="ico"><use href="#i-check"/></svg><span>Prepara su próxima consulta contigo</span></li><li><svg class="ico"><use href="#i-check"/></svg><span>Habla con ella por llamada</span></li></ul></div></div></div></div>
+  <section class="seccion" style="padding-top:72px">
+    <div class="contenedor pasos">
+      <article class="paso" data-aparece><div class="vitrina vitrina--luz"><img src="/img/app/perfil.webp" alt="Perfil de Amelie en PetCard" width="900" height="1753" loading="lazy"></div><span class="paso__num"><b>01</b>Paso</span><h3>Registra a tu mascota</h3><p>Su nombre, foto, raza y peso. Pasa su cartilla de papel con una foto y listo.</p></article>
+      <article class="paso" data-aparece style="--i:1"><div class="vitrina"><img src="/img/app/placa.webp" alt="Placa NFC y código QR en PetCard" width="900" height="1650" loading="lazy"></div><span class="paso__num"><b>02</b>Paso</span><h3>Conecta su placa</h3><p>Vincula su placa con QR y NFC. Si se pierde, quien la encuentre te avisa con un toque.</p></article>
+      <article class="paso" data-aparece style="--i:2"><div class="vitrina vitrina--luz"><img src="/img/app/receta.webp" alt="Receta firmada en PetCard" width="900" height="1642" loading="lazy"></div><span class="paso__num"><b>03</b>Paso</span><h3>Tu veterinaria lo actualiza</h3><p>Consultas, recetas firmadas y estudios llegan solos a su expediente, con recordatorios.</p></article>
     </div>
   </section>
 
   <section class="seccion">
-    <div class="contenedor cta" data-aparece>
-      <div><h2>Empieza gratis con PetCard</h2><p>Lleva la cartilla, las citas y la placa de tu mascota en tu bolsillo. Y si tienes veterinaria, PetCard Vet es gratis.</p></div>
-      <div class="tiendas"><a class="boton boton--oscuro tienda" href="/descargar" aria-label="PetCard en App Store, muy pronto"><svg class="ico"><use href="#i-apple"/></svg><span><small>Muy pronto en</small><b>App Store</b></span></a><a class="boton boton--blanco tienda" href="/descargar" aria-label="PetCard en Google Play, muy pronto"><svg class="ico"><use href="#i-play"/></svg><span><small>Muy pronto en</small><b>Google Play</b></span></a><a class="boton boton--blanco tienda" href="https://platform.petcard.cloud/"><svg class="ico"><use href="#i-pc"/></svg><span><small>Para veterinarias</small><b>Web</b></span></a></div>
+    <div class="contenedor">
+      <div class="cabeza">
+        <p class="etiqueta" data-aparece>Para ti y tu mascota</p>
+        <h2 class="titulo" data-aparece style="--i:1">Todo lo de tu mascota <em>va contigo</em></h2>
+        <p class="texto" data-aparece style="--i:2">Su salud, su identificación y su veterinaria, ordenados en una sola app.</p>
+      </div>
+      <div class="grupos">
+        <article class="grupo" data-aparece><div class="grupo__cabeza"><span class="funcion__icono"><svg class="ico"><use href="#i-archivo"/></svg></span><h3>Cartilla y salud</h3></div><ul class="lista"><li>Vacunas, desparasitaciones, alergias y peso en un solo lugar</li><li>Consultas, recetas y estudios que manda tu veterinaria</li><li>Recordatorios con el ladrido de tu mascota</li><li>Condición corporal con una foto</li></ul></article>
+        <article class="grupo" data-aparece style="--i:1"><div class="grupo__cabeza"><span class="funcion__icono"><svg class="ico"><use href="#i-qr"/></svg></span><h3>Identificación y seguridad</h3></div><ul class="lista"><li>Placa con QR y NFC con su perfil público</li><li>Huella de nariz, única como una huella digital</li><li>SOS veterinario para urgencias</li><li>Mascotas perdidas y encontradas cerca de ti</li></ul></article>
+        <article class="grupo" data-aparece style="--i:2"><div class="grupo__cabeza"><span class="funcion__icono"><svg class="ico"><use href="#i-estetoscopio"/></svg></span><h3>Veterinarias y servicios</h3></div><ul class="lista"><li>Veterinarias cerca de ti, con horario y servicios</li><li>Pide cita y llena su cuestionario antes de llegar</li><li>Cupones y tarjeta de cliente frecuente de tu vete</li><li>Adopciones y fichas de más de 12 especies</li></ul></article>
+        <article class="grupo" data-aparece style="--i:3"><div class="grupo__cabeza"><span class="funcion__icono"><svg class="ico"><use href="#i-chispas"/></svg></span><h3>Ceiba, tu asistente</h3></div><ul class="lista"><li>Pregúntale por su cuidado, comida o vacunas</li><li>Pasa su cartilla de papel a la app con una foto</li><li>Prepara su próxima consulta contigo</li><li>Habla con ella por llamada</li></ul></article>
+      </div>
+    </div>
+  </section>
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="llamado" data-aparece>
+        <svg class="perro" aria-hidden="true"><use href="#perro"/></svg>
+        <h2 class="titulo">Empieza gratis con PetCard</h2>
+        <p class="texto">Lleva la cartilla, las citas y la placa de tu mascota en tu bolsillo. Y si tienes veterinaria, PetCard Vet es gratis.</p>
+        <div class="tiendas">
+          <a class="tienda" href="/descargar" aria-label="PetCard en App Store, muy pronto"><svg class="ico"><use href="#i-apple"/></svg><span><small>Muy pronto en</small><b>App Store</b></span></a>
+          <a class="tienda" href="/descargar" aria-label="PetCard en Google Play, muy pronto"><svg class="ico"><use href="#i-play"/></svg><span><small>Muy pronto en</small><b>Google Play</b></span></a>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="pie">
-  <div class="pie__panel">
-    <div class="pie__marca"><svg class="perro" aria-hidden="true"><use href="#perro"/></svg><b>PetCard</b><p>Todo lo de tu mascota en un solo lugar</p></div>
-    <div class="pie__cols">
-      <div class="pie__col"><h3>Ayuda</h3><a href="/funcionamiento">Cómo funciona</a><a href="/planes">Planes</a><a href="/soporte">Ayuda y soporte</a><a href="/contacto">Contacto</a><a href="/preguntas">Preguntas frecuentes</a></div>
-      <div class="pie__col"><h3>Veterinarias</h3><a href="https://platform.petcard.cloud/#registro">Registrar mi veterinaria<svg class="ico"><use href="#i-externo"/></svg></a><a href="https://platform.petcard.cloud/">Iniciar sesión<svg class="ico"><use href="#i-externo"/></svg></a><a href="/veterinarias#paginas">Creador de páginas</a><a href="mailto:contacto@zootrack.com">contacto@zootrack.com</a></div>
-      <div class="pie__col"><h3>Descarga la app</h3><a class="boton boton--oscuro tienda boton--chico" href="/descargar" aria-label="PetCard en App Store, muy pronto"><svg class="ico"><use href="#i-apple"/></svg><span><small>Muy pronto en</small><b>App Store</b></span></a><a class="boton boton--blanco tienda boton--chico" href="/descargar" aria-label="PetCard en Google Play, muy pronto"><svg class="ico"><use href="#i-play"/></svg><span><small>Muy pronto en</small><b>Google Play</b></span></a><a class="boton boton--blanco tienda boton--chico" href="https://platform.petcard.cloud/"><svg class="ico"><use href="#i-pc"/></svg><span><small>Para veterinarias</small><b>Web</b></span></a></div>
+  <div class="contenedor">
+    <div class="pie__arriba">
+      <div class="pie__marca"><a class="marca" href="/"><svg class="perro" aria-hidden="true"><use href="#perro"/></svg>PetCard</a><p>Todo lo de tu mascota<br>en un solo lugar</p></div>
+      <div class="pie__col"><h3>Ayuda</h3><a href="/funcionamiento">Cómo funciona</a><a href="/planes">Planes</a><a href="/soporte">Ayuda y soporte</a><a href="/preguntas">Preguntas frecuentes</a></div>
+      <div class="pie__col"><h3>Veterinarias</h3><a href="/veterinarias">PetCard Vet</a><a href="https://platform.petcard.cloud/#registro">Registrar mi veterinaria</a><a href="https://platform.petcard.cloud/">Iniciar sesión</a></div>
+      <div class="pie__col"><h3>PetCard</h3><a href="/descargar">Descargar</a><a href="/ceiba">Ceiba</a><a href="/contacto">Contacto</a></div>
       <div class="pie__col"><h3>Legal</h3><a href="/privacidad">Aviso de privacidad</a><a href="/terminos">Términos de uso</a><a href="/soporte#s1">Eliminar mi cuenta</a></div>
     </div>
-    <div class="pie__legal"><span>© <span data-anio>2026</span> PetCard · Hecho en México</span><a class="potenciado" href="https://zootrack.cloud/" aria-label="Potenciado por ZooTrack"><i><svg class="ico"><use href="#i-hoja"/></svg></i><span>Potenciado por <b>ZooTrack</b></span></a><nav aria-label="Legal"><a href="/terminos">Términos</a><a href="/privacidad">Privacidad</a></nav></div>
+    <div class="pie__abajo"><span>© <span data-anio>2026</span> PetCard · Hecho en México</span><a class="potenciado" href="https://zootrack.cloud/"><svg class="ico" aria-hidden="true"><use href="#i-hoja"/></svg>Potenciado por <b>ZooTrack</b></a></div>
   </div>
 </footer>
 
-<script src="/js/publi.js?v=2" defer></script>
+<script src="/js/inicio.js?v=4" defer></script>
 </body>
 </html>
