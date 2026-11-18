@@ -2,3 +2,5 @@
 /m/*  /m.html  200
 /politicas  /privacidad  301
 /politicas/  /privacidad  301
+/entrar  https://platform.petcard.cloud/  302
+/funciones  /funcionamiento  301
